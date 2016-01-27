@@ -1,0 +1,11 @@
+{{! 标签云 }}
+<div class="widget widget-tag-cloud">
+	<div class="tag-cloud-title">
+		<span>标签云</span>
+	</div>
+	<div class="tag-cloud-content">
+		{{#foreach tags}}
+		<a href="{{url}}" class="tag-item">{{name}}<span class="post-count">{{post_count}}</span></a>
+		{{/foreach}}
+	</div>
+</div>
