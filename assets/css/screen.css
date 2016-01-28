@@ -261,9 +261,9 @@ body {
     max-height: 100%;
     font-family: "Microsoft Yahei", "Monaco", Helvetica, Arial, sans-serif, serif !important;
     letter-spacing: 0.01rem;
-    font-size: 1.8rem;
-    line-height: 1.75em;
-    color: #3A4145;
+    font-size: 1.6em !important;
+    line-height: 1.75em !important;
+    color: #2C3F51 !important;
     -webkit-font-feature-settings: 'kern' 1;
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
@@ -282,6 +282,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #2E2E2E;
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
+    font-weight: bold !important;
     font-family: "Open Sans", sans-serif;
     text-rendering: geometricPrecision;
 }
@@ -319,6 +320,7 @@ p, ul, ol, dl {
     -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     margin: 0 0 1.75em 0;
     text-rendering: geometricPrecision;
+    line-height: 1.75em;
 }
 ol, ul {
     padding-left: 3rem;
@@ -359,12 +361,13 @@ hr {
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    padding: 15px 20px;
     margin: 1.75em 0 1.75em -2.2em;
-    padding: 0 0 0 1.75em;
     border-left: #4A4A4A 0.4em solid;
+    background-color: rgba(102,128,153,0.05);
+    border-left: 5px solid rgba(102,128,153,0.075) !important;
 }
 blockquote p {
-    margin: 0.8em 0;
     font-style: italic;
 }
 blockquote small {
@@ -390,7 +393,6 @@ code, tt {
     font-family: Monaco, monospace, sans-serif !important;
     font-size: 0.85em;
     white-space: pre-wrap;
-    border: #E3EDF3 1px solid;
     background: #F7FAFB;
     border-radius: 2px;
 }
@@ -400,6 +402,7 @@ pre {
     font-size: 0.9em !important;
     white-space: pre;
     background: #F7FAFB;
+    border: 0px !important;
 }
 pre code, pre tt {
     font-size: inherit;
