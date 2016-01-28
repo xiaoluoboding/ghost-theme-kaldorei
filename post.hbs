@@ -15,85 +15,84 @@
     </nav>
 </header>
 
-<main class="content" role="main">
-    <article class="{{post_class}}">
+<main id="container" class="container" role="main">
+    <div id="content" class="content col-sm-12 col-md-8 col-lg-8">
+        <article class="{{post_class}}">
+            <header class="post-header">
+                <h2 class="post-title">{{title}}</h2>
+                <section class="post-meta">
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+                </section>
+            </header>
 
-        <header class="post-header">
-            <h1 class="post-title">{{title}}</h1>
-            <section class="post-meta">
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+            <section class="post-content">
+                {{content}}
             </section>
-        </header>
 
-        <section class="post-content">
-            {{content}}
-        </section>
+            <footer class="post-footer">
+                {{! Everything inside the #author tags pulls data from the author }}
+                {{#author}}
 
-        <footer class="post-footer">
-
-        {{! Everything inside the #author tags pulls data from the author }}
-        {{#author}}
-
-            {{#if image}}
-            <figure class="author-image">
-                <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
-            </figure>
-            {{/if}}
-
-            <section class="author">
-                <h4><a href="{{url}}">{{name}}</a></h4>
-
-                {{#if bio}}
-                    <p>{{bio}}</p>
-                {{else}}
-                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                {{#if image}}
+                <figure class="author-image">
+                    <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                </figure>
                 {{/if}}
-                <div class="author-meta">
-                    {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
-                    {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
-                </div>
-            </section>
 
-        {{/author}}
+                <section class="author">
+                    <h4><a href="{{url}}">{{name}}</a></h4>
 
-            <section class="share">
-                <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+                    {{#if bio}}
+                    <p>{{bio}}</p>
+                    {{else}}
+                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                    {{/if}}
+                    <div class="author-meta">
+                        {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
+                        {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                    </div>
+                </section>
+
+                {{/author}}
+
+                <section class="share">
+                    <h4>Share this post</h4>
+                    <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="hidden">Twitter</span>
-                </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                    </a>
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <span class="hidden">Facebook</span>
-                </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    </a>
+                    <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
+                    </a>
+                </section>
+            </footer>
+        </article>
+
+        <aside class="post-nav">
+            {{#prev_post}}
+            <span class="post-nav-prev">
+                上一篇
+                <a href="{{url}}">
+                    {{title}}
                 </a>
-            </section>
+            </span>
+            {{/prev_post}}
 
-        </footer>
-
-    </article>
+            {{#next_post}}
+            <span class="post-nav-next" >
+                <a href="{{url}}">
+                    {{title}}
+                </a>
+                下一篇
+            </span>
+            {{/next_post}}
+        </aside>
+    </div>
+    {{> sidebar}}
 </main>
-
-<aside class="read-next">
-    {{#next_post}}
-    <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <section class="post">
-            <h2>{{title}}</h2>
-            <p>{{excerpt words="19"}}&hellip;</p>
-        </section>
-    </a>
-    {{/next_post}}
-    {{#prev_post}}
-    <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <section class="post">
-            <h2>{{title}}</h2>
-            <p>{{excerpt words="19"}}&hellip;</p>
-        </section>
-    </a>
-    {{/prev_post}}
-</aside>
-
 {{/post}}

@@ -20,6 +20,16 @@
             $("body").toggleClass("nav-opened nav-closed");
         });
 
+        $(window).scroll(function(){
+			var scroller = $('.backTop');
+			document.documentElement.scrollTop+document.body.scrollTop>200?scroller.fadeIn():scroller.fadeOut();
+		})
+
+        // #backTop Button Event
+        $("#backTop").on("click", function() {
+            scrollToTop();
+        });
+
     });
 
     // Arctic Scroll by Paul Adam Davis
@@ -54,3 +64,14 @@
 
     };
 })(jQuery);
+
+function scrollToTop(name, speed){
+    if( !speed ) speed = 300
+    if( !name ){
+        $('html,body').animate({scrollTop: 0},speed)
+    }else{
+        if( $(name).length>0 ){
+            $('html,body').animate({scrollTop: $(name).offset().top},speed)
+        }
+    }
+}
