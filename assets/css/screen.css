@@ -61,7 +61,6 @@ a:focus {
 }
 a:active, a:hover {
     outline: 0;
-    text-decoration: none !important;
 }
 h1 {
     font-size: 2em;
@@ -361,14 +360,12 @@ hr {
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 15px 20px;
+    padding: 15px 20px !important;
     margin: 1.75em 0 1.75em -2.2em;
+    font-size: 1.6rem !important;
     border-left: #4A4A4A 0.4em solid;
-    background-color: rgba(102,128,153,0.05);
-    border-left: 5px solid rgba(102,128,153,0.075) !important;
-}
-blockquote p {
-    font-style: italic;
+    background-color: rgba(102, 128, 153, 0.05);
+    border-left: 5px solid rgba(102, 128, 153, 0.075) !important;
 }
 blockquote small {
     display: inline-block;
@@ -955,7 +952,8 @@ body.nav-opened .nav {
     box-shadow: #FFF 0 0 0 5px;
 }
 .post-title a {
-    text-decoration: none;
+    color: #2C3F51;
+    text-decoration: none !important;
 }
 .post-excerpt p {
     margin: 0;
@@ -1145,6 +1143,65 @@ body.nav-opened .nav {
     color: #111;
 }
 
+/* author-info after post content */
+
+.author-info {
+    border: 1px solid #EEE;
+    background: #FFF;
+    margin-bottom: 10px;
+}
+.author-info .author-info-title {
+    border-bottom: 1px solid #eee;
+    padding: 6px 10px;
+    font-size: 15px;
+    background: #F9F9F9;
+}
+.author-info .author-info-title h5 {
+    margin: 4px 0px;
+}
+.author-info .author-info-content {
+    padding: 10px;
+}
+.author-info-bio {
+    font-size: 1.4rem;
+    line-height: 1.75em;
+}
+
+/* author social links */
+
+.author-social {
+    margin-top: 10px;
+}
+.author-social a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 4px 7px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+.author-social a:hover {
+    color: #FFF;
+    text-decoration: none;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+.author-social .author-social-website {
+    background-color: #428BCA;
+    margin-right: 10px;
+}
+.author-social .author-social-weibo {
+    background-color: #D9534F;
+    margin-right: 10px;
+}
+.author-social .author-social-sf {
+    background-color: #5CB85C;
+    margin-right: 10px;
+}
+.author-social .author-social-feature {
+    background-color: #567E95;
+    margin-right: 10px;
+}
+
 /* Create some space to the right for the share links */
 
 .post-footer .author {
@@ -1261,6 +1318,20 @@ body.nav-opened .nav {
     background-size: cover;
     background-position: center center;
     border-radius: 100%;
+    -webkit-transition: .8s;
+    -moz-transition: .8s;
+    -o-transition: .8s;
+    -ms-transition: .8s;
+}
+.author-image .img:hover {
+    transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
+    border-radius: 35px !important;
+    filter: alpha(opacity=100) !important;
+    opacity: 1 !important;
 }
 .author-profile .author-image {
     position: relative;
@@ -2040,7 +2111,8 @@ body.nav-opened .nav {
     display: inline-block;
     margin: 0 5px 5px 0;
     padding: 0 6px;
-    line-height: 21px
+    line-height: 21px;
+    text-decoration: none !important;
 }
 .tag-cloud-content a:hover {
     color: #fff;
