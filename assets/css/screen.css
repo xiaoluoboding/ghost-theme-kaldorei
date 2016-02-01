@@ -23,6 +23,7 @@
     15. Widget
     16. Post Nav
     17. BackTop Button
+    18. TOC
 
 */
 
@@ -547,6 +548,9 @@ body.nav-opened .site-wrapper {
 }
 .main-header .inner {
     width: 80%;
+}
+.main-header a {
+    text-decoration: none !important;
 }
 .main-nav {
     position: relative;
@@ -2062,7 +2066,7 @@ body.nav-opened .nav {
     margin-bottom: 10px;
     background-color: #FFF;
 }
-.tag-cloud-title {
+.widget-title {
     padding: 6px 15px;
     font-size: 15px;
     background-color: #FFF;
@@ -2172,6 +2176,16 @@ body.nav-opened .nav {
 .backTop .btn i {
     position: relative;
     top: -1px;
+}
+
+/* ==========================================================================
+   18. TOC
+   ========================================================================== */
+
+.widget-toc-fixed {
+    top: 10px;
+    width: 320px;
+    position: fixed;
 }
 
 /* ==========================================================================

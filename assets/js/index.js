@@ -1,5 +1,5 @@
 /**
- * Main JS file for Casper behaviours
+ * Main JS file for OneGhost behaviours
  */
 
 /* globals jQuery, document */
@@ -23,11 +23,20 @@
         $(window).scroll(function(){
 			var scroller = $('.backTop');
 			document.documentElement.scrollTop+document.body.scrollTop>200?scroller.fadeIn():scroller.fadeOut();
-		})
+		});
 
         // #backTop Button Event
         $("#backTop").on("click", function() {
             scrollToTop();
+        });
+
+        $(window).scroll(function() {
+            var scroller = $('.widget-toc');
+            if(document.documentElement.scrollTop+document.body.scrollTop>250) {
+                scroller.addClass("widget-toc-fixed");
+            } else {
+                scroller.removeClass("widget-toc-fixed");
+            }
         });
 
     });
@@ -74,4 +83,8 @@ function scrollToTop(name, speed){
             $('html,body').animate({scrollTop: $(name).offset().top},speed)
         }
     }
+}
+
+function fixedToc () {
+
 }
