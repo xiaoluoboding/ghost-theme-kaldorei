@@ -32,11 +32,7 @@
 
         $(window).scroll(function() {
             var scroller = $('.widget-toc');
-            if(document.documentElement.scrollTop+document.body.scrollTop>250) {
-                scroller.addClass("widget-toc-fixed");
-            } else {
-                scroller.removeClass("widget-toc-fixed");
-            }
+            document.documentElement.scrollTop+document.body.scrollTop>250?scroller.addClass("widget-toc-fixed"):scroller.removeClass("widget-toc-fixed");
         });
 
     });
@@ -83,8 +79,4 @@ function scrollToTop(name, speed){
             $('html,body').animate({scrollTop: $(name).offset().top},speed)
         }
     }
-}
-
-function fixedToc () {
-
 }
