@@ -24,6 +24,7 @@
     16. Post Nav
     17. BackTop Button
     18. TOC
+    19. Profile
 
 */
 
@@ -994,11 +995,13 @@ body.nav-opened .nav {
     padding: 0.3rem 40px 0 100px;
     min-height: 77px;
 }
-.post-date {
-    display: inline-block;
+.post-meta-date {
     margin-left: 8px;
     padding-left: 12px;
     border-left: #d5dbde 1px solid;
+}
+.post-date {
+    display: inline-block;
     text-transform: uppercase;
     font-size: 1.3rem;
     white-space: nowrap;
@@ -1044,9 +1047,6 @@ body.nav-opened .nav {
 }
 .post-template .post-title {
     margin-bottom: 0;
-}
-.post-template .post-meta {
-    margin: 0;
 }
 .post-template .post-date {
     padding: 0;
@@ -1115,7 +1115,7 @@ body.nav-opened .nav {
 
 .post-footer {
     position: relative;
-    margin: 6rem 0 0 0;
+    margin: 6rem 0 6rem;
     padding: 6rem 0 0 0;
     border-top: #EBF2F6 1px solid;
 }
@@ -1173,35 +1173,39 @@ body.nav-opened .nav {
 
 /* author social links */
 
-.author-social {
+.author-info-social {
     margin-top: 10px;
 }
-.author-social a {
+.author-info-social a {
     color: #FFF;
     text-decoration: none;
     padding: 4px 7px;
     font-size: 14px;
     white-space: nowrap;
 }
-.author-social a:hover {
+.author-info-social a:hover {
     color: #FFF;
     text-decoration: none;
     filter: alpha(opacity=70);
     opacity: 0.7;
 }
-.author-social .author-social-website {
+.author-info-social .author-info-social-website {
     background-color: #428BCA;
     margin-right: 10px;
 }
-.author-social .author-social-weibo {
+.author-info-social .author-info-social-weibo {
     background-color: #D9534F;
     margin-right: 10px;
 }
-.author-social .author-social-sf {
+.author-info-social .author-info-social-github {
+    background-color: #4A4A4A;
+    margin-right: 10px;
+}
+.author-info-social .author-info-social-sf {
     background-color: #5CB85C;
     margin-right: 10px;
 }
-.author-social .author-social-feature {
+.author-info-social .author-info-social-feature {
     background-color: #567E95;
     margin-right: 10px;
 }
@@ -1549,6 +1553,7 @@ body.nav-opened .nav {
 .pagination a {
     color: #9EABB3;
     transition: all 0.2s ease;
+    text-decoration: none !important;
 }
 
 /* Push the previous/next links out to the left/right */
@@ -1563,7 +1568,7 @@ body.nav-opened .nav {
     transition: border 0.3s ease;
 }
 .older-posts {
-    right: 0;
+    right: 20px;
 }
 .page-number {
     display: inline-block;
@@ -1571,7 +1576,7 @@ body.nav-opened .nav {
     min-width: 100px;
 }
 .newer-posts {
-    left: 0;
+    left: 20px;
 }
 .older-posts:hover, .newer-posts:hover {
     color: #889093;
@@ -2029,6 +2034,7 @@ body.nav-opened .nav {
 
 .container {
     min-width: 320px;
+    padding: 0px !important;
     margin: 0px auto 10px;
     max-width: 1080px;
     text-align: left;
@@ -2129,12 +2135,12 @@ body.nav-opened .nav {
    ========================================================================== */
 
 .post-nav {
-    border-top: 1px solid #F2F2F2;
-    background-color: #FBFBFB;
+    border-top: 1px solid #EBF2F6;
     overflow: hidden;
     padding: 15px 20px;
     font-size: 14px;
     color: #BBB;
+    margin: 0px -20px;
 }
 .post-nav span {
     float: left;
@@ -2183,9 +2189,31 @@ body.nav-opened .nav {
    ========================================================================== */
 
 .widget-toc-fixed {
-    top: 10px;
-    width: 320px;
+    top: 0px;
+    width: 330px;
     position: fixed;
+}
+
+/* ==========================================================================
+   19. Profile
+   ========================================================================== */
+
+.widget-profile > a {
+    position: relative;
+    left: 115px;
+}
+.widget-profile > a > img {
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+    width: 10rem;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    margin-top: 55px;
+}
+.widget-profile-title {
+    text-align: center;
+}
+.widget-profile-desc {
+    padding: 20px;
 }
 
 /* ==========================================================================

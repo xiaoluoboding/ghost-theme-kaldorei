@@ -1,29 +1,30 @@
 {{! Everything inside the #author tags pulls data from the author }}
 {{#author}}
-
 {{#if image}}
 <figure class="author-image">
     <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
 </figure>
 {{/if}}
+{{/author}}
 <div class="author-info">
     <div class="author-info-title">
-        <h5><time class="post-date pull-right" datetime="{{date format='YYYY-MM-DD'}}">最后编辑：{{date format="YYYY-MM-DD"}}</time></h5>
+        <h5><time class="post-date pull-right" datetime="{{date format='YYYY-MM-DD'}}">发表于：{{date format="YYYY-MM-DD"}}</time></h5>
+        {{#author}}
         <h5>作者：{{name}}</h5>
     </div>
     <div class="author-info-content">
         {{#if bio}}
-        <span class="author-bio">{{bio}}</span>
+        <span class="author-info-bio">{{bio}}</span>
         {{else}}
         <p>Read <a href="{{url}}">more posts</a> by this author.</p>
         {{/if}}
-        <section class="author-social">
-            {{#if website}}<a href="{{website}}" class="author-social-website">我的站点</a>{{/if}}
-            <a href="{{url}}" class="author-social-feature">我的专栏</a>
-            <a href="#" class="author-social-weibo">新浪微博</a>
-            <a href="#" class="author-social-sf">SegmentFault</a>
+        <section class="author-info-social">
+            {{#if website}}<a href="{{website}}" class="author-info-social-website">我的站点</a>{{/if}}
+            <a href="{{url}}" class="author-info-social-feature">我的专栏</a>
+            <a href="#" class="author-info-social-weibo">新浪微博</a>
+            <a href="#" class="author-info-social-github">GitHub</a>
+            <a href="#" class="author-info-social-sf">SegmentFault</a>
         </section>
+        {{/author}}
     </div>
 </div>
-
-{{/author}}

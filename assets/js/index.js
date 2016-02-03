@@ -21,18 +21,15 @@
         });
 
         $(window).scroll(function(){
-			var scroller = $('.backTop');
-			document.documentElement.scrollTop+document.body.scrollTop>200?scroller.fadeIn():scroller.fadeOut();
+			var scrollerToTop = $('.backTop');
+            var scrollerTOC = $('.widget-toc');
+			document.documentElement.scrollTop+document.body.scrollTop>200?scrollerToTop.fadeIn():scrollerToTop.fadeOut();
+            document.documentElement.scrollTop+document.body.scrollTop>250?scrollerTOC.addClass("widget-toc-fixed"):scrollerTOC.removeClass("widget-toc-fixed");
 		});
 
         // #backTop Button Event
         $("#backTop").on("click", function() {
             scrollToTop();
-        });
-
-        $(window).scroll(function() {
-            var scroller = $('.widget-toc');
-            document.documentElement.scrollTop+document.body.scrollTop>250?scroller.addClass("widget-toc-fixed"):scroller.removeClass("widget-toc-fixed");
         });
 
     });

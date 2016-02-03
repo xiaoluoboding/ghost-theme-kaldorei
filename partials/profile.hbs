@@ -1,0 +1,12 @@
+{{! 站点信息 }}
+<div class="widget widget-profile">
+    {{#if @blog.logo}}
+    <a class="widget-profile-logo" href="{{@blog.url}}">
+        <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+    </a>
+    {{/if}}
+    <h1 class="widget-profile-title">{{@blog.title}}</h1>
+    <p class="widget-profile-desc">
+        {{@blog.description}}
+    </p>
+</div>
