@@ -25,7 +25,6 @@
     17. BackTop Button
     18. TOC
     19. Profile
-    20. Social
 
 */
 
@@ -2214,12 +2213,12 @@ body.nav-opened .nav {
 .widget-profile-title {
   text-align: center;
   display: inherit !important;
-  margin: 20px 110px !important;
+  margin: 20px 80px !important;
   font-size: 18px !important;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
 }
 .widget-profile-desc {
-  padding: 20px;
+  padding: 0px 20px;
   text-align: center;
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
 }
@@ -2282,86 +2281,6 @@ body.nav-opened .nav {
 .label-info.arrowed-in-right:after {
   border-color: #5BC0DE transparent #5BC0DE #5BC0DE;
   -moz-border-left-colors: #5BC0DE;
-}
-.label-primary.arrowed:before {
-  border-right-color: #428bca;
-  -moz-border-right-colors: #428bca;
-}
-.label-primary.arrowed-in:before {
-  border-color: #428bca #428bca #428bca transparent;
-  -moz-border-right-colors: #428bca;
-}
-.label-primary.arrowed-right:after {
-  border-left-color: #428bca;
-  -moz-border-left-colors: #428bca;
-}
-.label-primary.arrowed-in-right:after {
-  border-color: #428bca transparent #428bca #428bca;
-  -moz-border-left-colors: #428bca;
-}
-.label-success.arrowed:before {
-  border-right-color: #82af6f;
-  -moz-border-right-colors: #82af6f;
-}
-.label-success.arrowed-in:before {
-  border-color: #82af6f #82af6f #82af6f transparent;
-  -moz-border-right-colors: #82af6f;
-}
-.label-success.arrowed-right:after {
-  border-left-color: #82af6f;
-  -moz-border-left-colors: #82af6f;
-}
-.label-success.arrowed-in-right:after {
-  border-color: #82af6f transparent #82af6f #82af6f;
-  -moz-border-left-colors: #82af6f;
-}
-.label-warning.arrowed:before {
-  border-right-color: #f89406;
-  -moz-border-right-colors: #f89406;
-}
-.label-warning.arrowed-in:before {
-  border-color: #f89406 #f89406 #f89406 transparent;
-  -moz-border-right-colors: #f89406;
-}
-.label-warning.arrowed-right:after {
-  border-left-color: #f89406;
-  -moz-border-left-colors: #f89406;
-}
-.label-warning.arrowed-in-right:after {
-  border-color: #f89406 transparent #f89406 #f89406;
-  -moz-border-left-colors: #f89406;
-}
-.label-important.arrowed:before {
-  border-right-color: #d15b47;
-  -moz-border-right-colors: #d15b47;
-}
-.label-important.arrowed-in:before {
-  border-color: #d15b47 #d15b47 #d15b47 transparent;
-  -moz-border-right-colors: #d15b47;
-}
-.label-important.arrowed-right:after {
-  border-left-color: #d15b47;
-  -moz-border-left-colors: #d15b47;
-}
-.label-important.arrowed-in-right:after {
-  border-color: #d15b47 transparent #d15b47 #d15b47;
-  -moz-border-left-colors: #d15b47;
-}
-.label-danger.arrowed:before {
-  border-right-color: #d15b47;
-  -moz-border-right-colors: #d15b47;
-}
-.label-danger.arrowed-in:before {
-  border-color: #d15b47 #d15b47 #d15b47 transparent;
-  -moz-border-right-colors: #d15b47;
-}
-.label-danger.arrowed-right:after {
-  border-left-color: #d15b47;
-  -moz-border-left-colors: #d15b47;
-}
-.label-danger.arrowed-in-right:after {
-  border-color: #d15b47 transparent #d15b47 #d15b47;
-  -moz-border-left-colors: #d15b47;
 }
 .label {
   font-size: 12px;
@@ -2431,9 +2350,7 @@ body.nav-opened .nav {
   border-width: 14px 7px;
 }
 
-/* ==========================================================================
-   20. Social
-   ========================================================================== */
+/* Social Style */
 
 .navigation.social {
   padding-bottom: 10px;
@@ -2464,7 +2381,30 @@ body.nav-opened .nav {
 .social .social-rss:hover {
   color: #FF7500;
 }
+.navigation.site-stat {
+  padding: 0px 20px;
+}
 
+/* Site Stat Style */
+
+.site-stat-item {
+    display: inline-block;
+    padding: 0px 30px;
+    border-left: 1px solid #EEE;
+}
+.site-stat-item:first-child {
+    border-left: none;
+}
+.site-stat-item-count {
+    display: block;
+    text-align: center;
+}
+.site-stat-item-name {
+    text-align: center;
+}
+.site-stat-item-name:hover {
+    color: #428BCA;
+}
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
