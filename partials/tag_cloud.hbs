@@ -4,8 +4,14 @@
 		<span>标签云</span>
 	</div>
 	<div class="tag-cloud-content">
-		{{#foreach tags}}
+		<!-- {{#foreach tags}}
 		<a href="{{url}}" class="tag-item">{{name}}<span class="post-count">{{post_count}}</span></a>
-		{{/foreach}}
+		{{/foreach}} -->
+		{{! Tag Cloud }}
+        {{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
+			{{#foreach tags}}
+        		<a href="/tag/{{slug}}" class="tag-item">{{name}}({{count.posts}})</a>
+        	{{/foreach}}
+        {{/get}}
 	</div>
 </div>
