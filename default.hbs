@@ -25,7 +25,7 @@
     {{ghost_head}}
 </head>
 <body class="{{body_class}} nav-closed">
-    
+
     <div class="site-wrapper">
 
         {{! Everything else gets inserted here }}
@@ -63,7 +63,7 @@
             hljs.initHighlightingOnLoad();
 
             //toc config
-            $("#toc").toc({content: "div.content", headings: "h2,h3,h4"});
+            $("#toc").toc({content: ".post-content", headings: "h2,h3,h4,h5"});
 
             if($("#toc").children().length == 0) $(".widget-toc").hide();
 

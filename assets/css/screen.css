@@ -64,10 +64,6 @@ a:focus {
 a:active, a:hover {
   outline: 0;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -272,9 +268,11 @@ body {
 }
 ::-moz-selection {
   background: #D6EDFF;
+  color: #666;
 }
 ::selection {
   background: #D6EDFF;
+  color: #666;
 }
 h1, h2, h3, h4, h5, h6 {
   -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
@@ -288,25 +286,25 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: geometricPrecision;
 }
 h1 {
-  font-size: 5rem;
+  font-size: 3.6rem;
   letter-spacing: -2px;
   text-indent: -3px;
 }
 h2 {
-  font-size: 3.6rem;
+  font-size: 3rem;
   letter-spacing: -1px;
 }
 h3 {
-  font-size: 3rem;
+  font-size: 2.4rem;
 }
 h4 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
 }
 h5 {
-  font-size: 2rem;
+  font-size: 1.6rem !important;
 }
 h6 {
-  font-size: 2rem;
+  font-size: 1.4rem !important;
 }
 a {
   color: #4A4A4A;
@@ -538,13 +536,14 @@ body.nav-opened .site-wrapper {
 
 .main-header {
   position: relative;
-  display: table;
   width: 100%;
   margin-bottom: 20px;
   text-align: center;
   background: #FFF no-repeat center center;
   overflow: hidden;
   border-bottom: 1px solid #EEE;
+  height: 80px;
+  max-height: 80px;
   z-index: 2;
 }
 .main-header .inner {
@@ -557,33 +556,34 @@ body.nav-opened .site-wrapper {
   position: relative;
   padding: 35px 40px;
   margin: 0 auto 0 !important;
+  height: 80px;
 }
 .main-nav a {
   text-decoration: none;
   font-family: 'Microsoft Yahei', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #2C3F51;
+  padding: 26px 10px 22px;
 }
 .main-nav-title {
-    margin: 24px;
-    font-size: 24px;
+    margin: 26px 20px;
+    font-size: 30px;
 }
 
 /* Navigation */
-.nav {
-    margin: 20px !important;
-}
 .nav > ul {
-    margin: 0;
+    margin: 0 35px;
     padding: 0;
+    height: 80px;
 }
 .nav > ul > li {
     display: inline-block;
-    padding: 0px 15px;
+    padding: 26px 10px 22px;
+    margin: 0;
 }
 .nav > ul > li:hover {
-    border-bottom: 2px solid #2C3F51;
-    margin-bottom: -2px;
+    border-bottom: 4px solid #2C3F51;
+    margin-bottom: -4px;
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
@@ -659,6 +659,9 @@ body.nav-opened .site-wrapper {
   background: #FFF;
   border-radius: 100%;
   box-shadow: #FFF 0 0 0 5px;
+}
+.post-title {
+  font-size: 30px;
 }
 .post-title a {
   color: #2C3F51;
@@ -1762,9 +1765,13 @@ body.nav-opened .site-wrapper {
 .content {
   background: #FFF;
   display: block;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .sidebar {
   display: block;
+  padding-left: 20px !important;
+  padding-right: 0px !important;
 }
 
 /* ==========================================================================
@@ -1785,6 +1792,8 @@ body.nav-opened .site-wrapper {
   position: relative;
   margin: 0px;
   line-height: 20px;
+  color: #2C3F51;
+  font-weight: 700;
 }
 .tag-cloud-content {
   padding: 12px;
@@ -1844,7 +1853,6 @@ body.nav-opened .site-wrapper {
   padding: 15px 20px;
   font-size: 14px;
   color: #BBB;
-  margin: 0px -20px;
 }
 .post-nav span {
   float: left;
@@ -1924,7 +1932,7 @@ body.nav-opened .site-wrapper {
 .widget-profile-desc {
   padding: 0px 20px;
   text-align: center;
-  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
 .widget-profile hr {
   margin: 20px;
@@ -2086,7 +2094,7 @@ body.nav-opened .site-wrapper {
   color: #FF7500;
 }
 .navigation.site-stat {
-  padding: 0px 20px;
+  padding: 0px 25px;
 }
 
 /* Site Stat Style */

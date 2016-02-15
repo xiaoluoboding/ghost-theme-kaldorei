@@ -21,13 +21,13 @@
         });
 
         $(window).scroll(function(){
-			var scrollerToTop = $('.backTop');
+            var scrollerToTop = $('.backTop');
             var scrollerTOC = $('.widget-toc');
             var tagCloud = $('.widget-tag-cloud');
-			document.documentElement.scrollTop+document.body.scrollTop>200?scrollerToTop.fadeIn():scrollerToTop.fadeOut();
+			      document.documentElement.scrollTop+document.body.scrollTop>200?scrollerToTop.fadeIn():scrollerToTop.fadeOut();
             document.documentElement.scrollTop+document.body.scrollTop>250?scrollerTOC.addClass("widget-toc-fixed"):scrollerTOC.removeClass("widget-toc-fixed");
             document.documentElement.scrollTop+document.body.scrollTop>250?tagCloud.hide():tagCloud.show();
-		});
+		    });
 
         // #backTop Button Event
         $("#backTop").on("click", function() {
