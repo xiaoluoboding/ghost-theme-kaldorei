@@ -44,7 +44,7 @@
             $(thisOptions.content).find(thisOptions.headings).attr("id", function (index, attr) {
                 // Generate a valid ID: must start with a letter, and contain only letters and
                 // numbers. All other characters are replaced with underscores.
-                return $(this).text().replace(/\s+/g,'-');
+                return $(this).text().replace(/(\w+)(\W+)/g,'$1$2').replace(/\s+/g,'-').replace(/\?|\!|\,|\.|\}|\)|\>$/,'');
                 //return attr ||
                     // $(this).text().replace(/^[^A-Za-z]*/, "").replace(/[^A-Za-z0-9]+/g, "_");
             }).each(function () {
