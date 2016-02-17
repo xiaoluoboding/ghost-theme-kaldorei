@@ -567,6 +567,9 @@ body.nav-opened .site-wrapper {
     color: #2C3F51;
     padding: 26px 10px 22px;
 }
+.main-nav a:hover {
+    color: #009a61;
+}
 .main-nav-title {
     margin: 26px 20px;
     font-size: 30px;
@@ -717,13 +720,13 @@ body.nav-opened .site-wrapper {
 }
 .post-meta-tags a {
     opacity: 0.80;
-    filter: alpha(opacity=80);
     color: #017e66;
     background-color: rgba(1, 126, 102, .08);
     display: inline-block;
-    margin: 0 5px 5px 0;
+    margin: 0 5px;
     padding: 0 6px;
-    line-height: 21px;
+    line-height: 22px;
+    font-size: 13px;
     text-decoration: none !important;
 }
 .post-meta-tags a:hover {
@@ -1838,6 +1841,7 @@ body.nav-opened .site-wrapper {
     padding: 12px;
     font-size: 14px;
 }
+
 /*
 .tag-cloud-content a:nth-child(9n) {
   background-color: #4A4A4A;
@@ -1871,13 +1875,12 @@ body.nav-opened .site-wrapper {
     opacity: 0.80;
     filter: alpha(opacity=80);
     color: #017e66;
-    /*color: #fff;
-  background-color: #009a61;*/
+    /*color: #fff;*/
     background-color: rgba(1, 126, 102, .08);
     display: inline-block;
     margin: 0 5px 5px 0;
-    padding: 0 6px;
-    line-height: 21px;
+    padding: 2px 6px;
+    line-height: 22px;
     text-decoration: none !important;
 }
 .tag-cloud-content a:hover {
@@ -1975,6 +1978,10 @@ body.nav-opened .site-wrapper {
 .toc a:hover {
     color: #004e31;
 }
+.toc > li.active > a, .toc > li li.active > a {
+    color: #2C3F51;
+    font-weight: 600;
+}
 
 /* ==========================================================================
    19. Profile
@@ -1982,7 +1989,7 @@ body.nav-opened .site-wrapper {
 
 .widget-profile > a {
     position: relative;
-    left: 115px;
+    left: 120px;
 }
 .widget-profile > a > img {
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
