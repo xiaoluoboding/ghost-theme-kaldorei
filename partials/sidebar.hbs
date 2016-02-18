@@ -1,9 +1,20 @@
 <div id="sidebar" class="sidebar col-md-4 col-lg-4">
+    {{! 首页：显示站点信息 }}
     {{#is "index"}}
         {{> "profile"}}
     {{/is}}
+
+    {{! 作者：显示作者信息 }}
+    {{#is "author"}}
+        {{> "author_info"}}
+    {{/is}}
+
     {{!tag_cloud limit="all"}}
+
+    {{! 全局：标签云 }}
     {{> "tag_cloud"}}
+
+    {{! 文章：显示文章目录 }}
     {{#is "post"}}
         {{> "toc"}}
     {{/is}}
