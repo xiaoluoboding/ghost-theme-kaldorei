@@ -566,32 +566,38 @@ body.nav-opened .site-wrapper {
     font-family: 'Microsoft Yahei', sans-serif;
     font-size: 16px;
     color: #2C3F51;
-    padding: 26px 10px 22px;
+    padding: 25px 20px;
 }
 .main-nav a:hover {
     color: #009a61;
+    border-bottom: 4px solid #009a61;
+    margin-bottom: -4px;
 }
 .main-nav-title {
-    margin: 26px 20px;
+    padding: 26px 20px;
     font-size: 30px;
+    color: #fff;
+    background: #009a61;
+    opacity: .9;
+    /*background: #2C3F51;*/
 }
 
 /* Navigation */
 
 .nav > ul {
-    margin: 0 35px;
+    margin: 0 20px;
     padding: 0;
     height: 80px;
 }
 .nav > ul > li {
     display: inline-block;
-    padding: 26px 10px 22px;
-    margin: 0;
+    padding: 22px 0px;
+    margin-top: 4px;
 }
-.nav > ul > li:hover {
+/*.nav > ul > li:hover {
     border-bottom: 4px solid #009a61;
     margin-bottom: -4px;
-}
+}*/
 
 /* The details of your blog. Defined in ghost/settings/ */
 
@@ -720,7 +726,6 @@ body.nav-opened .site-wrapper {
     border-left: none;
 }
 .post-meta-tags a {
-    opacity: 0.80;
     color: #017e66;
     background-color: rgba(1, 126, 102, .08);
     display: inline-block;
@@ -836,6 +841,16 @@ body.nav-opened .site-wrapper {
 .post-content a:hover {
     color: #004e31;
 }
+.post-content h3 {
+    margin-left: -20px;
+    padding-left: 15px;
+    border-left: 5px solid;
+}
+.post-content h4 {
+    margin-left: -20px;
+    padding-left: 16px;
+    border-left: 4px solid;
+}
 .footnotes {
     font-style: italic;
     font-size: 1.3rem;
@@ -872,19 +887,16 @@ body.nav-opened .site-wrapper {
 /* list of author links - location / url */
 
 .author-meta {
-    padding: 0;
+    padding: 10px 20px;
     margin: 0;
     list-style: none;
-    font-size: 1.4rem;
-    line-height: 1;
-    font-style: italic;
-    color: #9EABB3;
+    line-height: 1.5;
 }
 .author-meta a {
-    color: #9EABB3;
+    color: #009a61;
 }
 .author-meta a:hover {
-    color: #111;
+    color: #004e31;
 }
 
 /* author-info after post content */
@@ -1103,9 +1115,6 @@ body.nav-opened .site-wrapper {
     letter-spacing: 0;
     text-indent: 0;
 }
-.author-meta {
-    margin: 1.6rem 0;
-}
 
 /* Location, website, and link */
 
@@ -1116,7 +1125,7 @@ body.nav-opened .site-wrapper {
     font-size: 1.7rem;
 }
 .author-meta span {
-    display: inline-block;
+    display: block;
     margin: 0 2rem 1rem 0;
     word-wrap: break-word;
 }
@@ -1873,8 +1882,6 @@ body.nav-opened .site-wrapper {
 }*/
 
 .tag-cloud-content a {
-    opacity: 0.80;
-    filter: alpha(opacity=80);
     color: #017e66;
     /*color: #fff;*/
     background-color: rgba(1, 126, 102, .08);
@@ -1965,7 +1972,7 @@ body.nav-opened .site-wrapper {
 
 .widget-toc-fixed {
     top: 0px;
-    width: 330px;
+    width: 340px;
     position: fixed;
     z-index: 2;
 }

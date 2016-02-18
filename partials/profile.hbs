@@ -1,17 +1,15 @@
 {{! 站点信息 }}
 <div class="widget widget-profile">
     {{#if @blog.logo}}
-    <a class="widget-profile-logo" href="{{@blog.url}}">
-        <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
-    </a>
+        <a class="widget-profile-logo" href="{{@blog.url}}">
+            <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+        </a>
     {{/if}}
     <span class="widget-profile-title label label-xlg label-minty arrowed-in arrowed-in-right">{{@blog.title}}</span>
     <hr>
     <p class="widget-profile-desc">
         {{@blog.description}}
     </p>
-    <hr>
-    {{> "site_stat"}}
-    <hr>
-    {{> "social"}}
+    <hr> {{> "site_stat"}}
+    <hr> {{> "social"}}
 </div>

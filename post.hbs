@@ -21,7 +21,7 @@
     <div id="content" class="content col-sm-12 col-md-8 col-lg-8">
         <article class="{{post_class}}">
             <header class="post-header">
-                <h1 class="post-title">{{title}}</h1>
+                <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
                 <section class="post-meta">
                     <span class="post-meta-item">
                         <i class="fa fa-user"></i>
@@ -33,10 +33,12 @@
                         <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">({{date format="YYYY-MM-DD"}})</time>
                     </span>
                     <span class="post-meta-item post-meta-tags">
+                        <i class="fa fa-tag"></i>
                         {{tags}}
                     </span>
                     <span class="post-meta-item pull-right">
                         {{#comparison "is" left=author.name right="Malanore" }}
+                            <i class="fa fa-edit"></i>
                             <a href="{{@blog.url}}/ghost/editor/{{id}}/">编辑</a>
                         {{/comparison}}
                     </span>
