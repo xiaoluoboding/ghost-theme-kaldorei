@@ -398,7 +398,8 @@ code, tt {
 pre {
     padding: 0px !important;
     font-family: Monaco, monospace, sans-serif !important;
-    font-size: 0.9em !important;
+    font-size: 0.8em !important;
+    line-height: 1.6 !important;
     white-space: pre;
     background: #F7FAFB;
     border: 0px !important;
