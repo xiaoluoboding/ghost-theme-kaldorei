@@ -624,10 +624,10 @@ body.nav-opened .site-wrapper {
     background: #f5f8fa;
 }
 .no-cover .page-title {
-    color: rgba(0, 0, 0, 0.8);
+    color: #fff;
 }
 .no-cover .page-description {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Add subtle load-in animation for content on the home page */
@@ -1901,6 +1901,15 @@ body.nav-opened .site-wrapper {
   opacity: 1;
   filter: alpha(opacity=100);
 }*/
+.tag-meta.no-cover {
+    background: #2C3F51;
+    margin-bottom: 20px;
+    height: 80px;
+}
+.tag-meta.no-cover .tag-meta-content {
+    padding: 20px;
+    text-align: center;
+}
 
 
 /* ==========================================================================
