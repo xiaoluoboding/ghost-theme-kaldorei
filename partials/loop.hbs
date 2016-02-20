@@ -1,4 +1,19 @@
 <div id="content" class="content col-sm-12 col-md-8 col-lg-8">
+    {{#is "tag"}}
+    {{! 标签信息 }}
+    <section class="tag-meta {{#if @tag.image}}" style="background-image: url({{@tag.image}}){{else}}no-cover{{/if}}">
+        <div class="tag-meta-content">
+            <label class="page-title">标签：{{tag.name}}</label>
+            <span class="page-description">
+                {{#if tag.description}}
+                {{tag.description}}
+                {{else}}
+                共计 {{pagination.total}} 篇文章
+                {{/if}}
+            </span>
+        </div>
+    </section>
+    {{/is}}
     {{! This is the post loop - each post will be output using this markup }}
     {{#foreach posts}}
     <article class="{{post_class}}">

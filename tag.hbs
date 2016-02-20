@@ -13,20 +13,6 @@
     </nav>
 </header>
 
-{{! 标签信息 }}
-<section class="container tag-meta {{#if @tag.image}}" style="background-image: url({{@tag.image}}){{else}}no-cover{{/if}}">
-    <div class="tag-meta-content">
-        <h2 class="page-title">{{tag.name}}</h1>
-        <h3 class="page-description">
-            {{#if tag.description}}
-                {{tag.description}}
-            {{else}}
-                共计 {{pagination.total}} 篇文章
-            {{/if}}
-        </h3>
-    </div>
-</section>
-
 {{! The main container area on the homepage }}
 <main id="container" class="container" role="main">
 
