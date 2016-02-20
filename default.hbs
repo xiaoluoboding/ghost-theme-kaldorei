@@ -32,8 +32,10 @@
         {{{body}}}
 
         <footer class="site-footer clearfix">
-            <section class="copyright pull-left"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby pull-right">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+            <div class="footer-meta">
+                <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+                <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a>, Theme <a href="https://github.com/xiaoluoboding/OneGhost">OneGhost</a></section>
+            </div>
         </footer>
 
     </div>

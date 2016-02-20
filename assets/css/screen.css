@@ -187,7 +187,7 @@ table {
 /* Apply these base styles to all icons */
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: "casper-icons", "Open Sans", sans-serif;
+    font-family: "casper-icons", "Microsoft Yahei", "Monaco", sans-serif;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -282,7 +282,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
     font-weight: bold !important;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Microsoft Yahei", "Monaco", sans-serif;
     text-rendering: geometricPrecision;
 }
 h1 {
@@ -603,10 +603,10 @@ body.nav-opened .site-wrapper {
 
 .page-title {
     margin: 10px 0 10px 0;
-    font-size: 5rem;
+    font-size: 3rem;
     letter-spacing: -1px;
     font-weight: 700;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Microsoft Yahei", "Monaco", sans-serif;
     color: #fff;
 }
 .page-description {
@@ -614,7 +614,7 @@ body.nav-opened .site-wrapper {
     font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
-    font-family: "Merriweather", serif;
+    font-family: "Microsoft Yahei", "Monaco", sans-serif;
     letter-spacing: 0.01rem;
     color: rgba(255, 255, 255, 0.8);
 }
@@ -691,7 +691,7 @@ body.nav-opened .site-wrapper {
 .post-meta {
     display: block;
     margin: 1.75rem 0 0 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Microsoft Yahei", "Monaco", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
     color: #9EABB3;
@@ -1120,7 +1120,7 @@ body.nav-opened .site-wrapper {
 
 .author-profile .author-meta {
     margin: 2rem 0;
-    font-family: "Merriweather", serif;
+    font-family: "Microsoft Yahei", "Monaco", serif;
     letter-spacing: 0.01rem;
     font-size: 1.7rem;
 }
@@ -1202,7 +1202,7 @@ body.nav-opened .site-wrapper {
     padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.1rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Microsoft Yahei", "Monaco", sans-serif;
     color: rgba(255, 255, 255, 0.8);
     border: rgba(255, 255, 255, 0.5) 1px solid;
     border-radius: 4px;
@@ -1295,7 +1295,7 @@ body.nav-opened .site-wrapper {
     width: 100%;
     max-width: 750px;
     margin: 4rem auto;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Microsoft Yahei", "Monaco", sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -1373,12 +1373,13 @@ body.nav-opened .site-wrapper {
 
 .site-footer {
     /*position: relative;*/
-    margin: 8rem 0 0 0;
+    margin: 8rem auto 0;
     padding: 1rem 15px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
+    font-family: "Microsoft Yahei", "Monaco", sans-serif;
     line-height: 1.75em;
     color: #BBC7CC;
+    background: #415262;
+    border-top: 4px solid #009a61;
 }
 .site-footer a {
     color: #BBC7CC;
@@ -1386,7 +1387,11 @@ body.nav-opened .site-wrapper {
     font-weight: bold;
 }
 .site-footer a:hover {
-    border-bottom: #bbc7cc 1px solid;
+    color: #009a61;
+}
+.footer-meta {
+    width: 1080px;
+    margin: 0 auto;
 }
 .poweredby {
     display: block;
@@ -1415,7 +1420,7 @@ body.nav-opened .site-wrapper {
         height: auto;
         min-height: 240px;
         height: 60vh;
-        padding: 15% 0;
+        /*padding: 15% 0;*/
     }
     .scroll-down, .home-template .main-header:after {
         display: none;
@@ -1506,6 +1511,9 @@ body.nav-opened .site-wrapper {
     .read-next-story.no-cover + .read-next-story.no-cover {
         border-top: rgba(0, 0, 100, 0.06) 1px solid;
         border-left: none;
+    }
+    .sidebar {
+        display: none !important;
     }
 }
 
@@ -1902,12 +1910,10 @@ body.nav-opened .site-wrapper {
   filter: alpha(opacity=100);
 }*/
 .tag-meta.no-cover {
-    background: #2C3F51;
-    margin-bottom: 20px;
-    height: 80px;
+    background: #415262;
 }
 .tag-meta.no-cover .tag-meta-content {
-    padding: 20px;
+    padding: 26px 20px;
     text-align: center;
 }
 
@@ -2008,12 +2014,31 @@ body.nav-opened .site-wrapper {
     position: relative;
     left: 120px;
 }
-.widget-profile > a > img {
-    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+.widget-profile-header {
+    text-align: center;
+    margin: -50px auto auto;
+}
+.widget-profile-header > a > img {
+    /*box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);*/
     width: 10rem;
-    /*border: 2px solid rgba(0, 0, 0, 0.1);*/
-    border-radius: 50%;
-    margin-top: 30px;
+    border: 5px solid #fff;
+    border-radius: 100%;
+    background: #fff;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transition: .8s;
+    -moz-transition: .8s;
+    -o-transition: .8s;
+    -ms-transition: .8s;
+}
+.widget-profile-header > a > img:hover {
+    transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
+    filter: alpha(opacity=100) !important;
+    opacity: 1 !important;
 }
 .widget-profile-title {
     text-align: center;
@@ -2021,6 +2046,11 @@ body.nav-opened .site-wrapper {
     margin: 20px 80px !important;
     font-size: 18px !important;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.widget-profile-cover.overlay,.widget-profile-cover.no-cover {
+    background: #415262;
+    background-position: center center;
+    height: 100px;
 }
 .widget-profile-desc {
     padding: 0px 20px;
@@ -2238,6 +2268,7 @@ body.nav-opened .site-wrapper {
 #009a61
 #017e66
 #004e31
+#2C3F51
 */
 
 
