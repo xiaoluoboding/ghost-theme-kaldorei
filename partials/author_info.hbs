@@ -1,11 +1,14 @@
 {{! 作者信息 }}
 {{#author}}
     <div class="widget widget-profile">
-        {{#if image}}
-            <a class="widget-profile-logo" href="{{url}}">
-                <img src="{{image}}" alt="{{@blog.title}}" />
-            </a>
-        {{/if}}
+        <div class="widget-profile-cover overlay {{#if cover}}" style="background-image: url({{cover}}){{else}}no-cover{{/if}}"></div>
+        <div class="widget-profile-header">
+            {{#if image}}
+                <a class="widget-profile-logo" href="{{url}}">
+                    <img src="{{image}}" alt="{{@blog.title}}" />
+                </a>
+            {{/if}}
+        </div>
         <span class="widget-profile-title label label-xlg label-minty arrowed-in arrowed-in-right">{{name}}</span>
         <hr>
         <p class="widget-profile-desc">
