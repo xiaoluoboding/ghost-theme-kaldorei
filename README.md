@@ -1,7 +1,7 @@
 # kaldorei
 A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
-#Plan to do
+##Plan to do
 - [x] 主题基调定为小清新绿色
 
 - [x] 文章样式色调为墨蓝色，参考 [[马克飞象]](http://maxiang.io)
@@ -46,7 +46,7 @@ kaldorei 用两种方法实现了标签云，方法参见[我的博客](http://x
 
 kaldorei 优化了发布文章的时间展示，并汉化为中文，需要修改时间(date)助手，方法参见[我的博客](http://xlbd.me)。
 
-#Credit
+##Credit
 
 * [font-awesome](https://github.com/FortAwesome/Font-Awesome)
 * [bootstrap](https://github.com/twbs/bootstrap)
