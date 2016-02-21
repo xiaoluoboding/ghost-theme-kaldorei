@@ -1,4 +1,4 @@
-# OneGhost
+# kaldorei
 A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
 #Plan to do
