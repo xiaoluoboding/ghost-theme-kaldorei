@@ -1,5 +1,5 @@
 /**
- * Main JS file for OneGhost behaviours
+ * Main JS file for kaldorei behaviours
  */
 
 /* globals jQuery, document */
@@ -31,6 +31,52 @@
         $("#backTop").on("click", function() {
             scrollToTop();
         });
+
+        //highlight config
+        hljs.initHighlightingOnLoad();
+
+        //toc config
+        $("#toc").toc({
+            content: ".post-content",
+            headings: "h2,h3,h4,h5"
+        });
+
+        if ($("#toc").children().length == 0) $(".widget-toc").hide();
+
+        //toc animate effect
+        // bind click event to all internal page anchors
+        $('a.data-scroll').on('click', function(e) {
+            // prevent default action and bubbling
+            e.preventDefault();
+            e.stopPropagation();
+            // set target to anchor's "href" attribute
+            var target = $(this).attr('href');
+            // scroll to each target
+            $(target).velocity('scroll', {
+                duration: 500,
+                easing: 'ease-in-out'
+                    //easing: 'spring'
+            });
+        });
+
+        $('[data-rel=tooltip]').tooltip();
+
+        // var postReveal = {
+        //     delay: 1000,
+        //     scale: 0.9
+        // }
+        // var widgetReveal = {
+        //     delay: 400,
+        //     distance: '90px',
+        //     easing: 'ease-in-out',
+        //     rotate: {
+        //         z: 10
+        //     },
+        //     scale: 1.1
+        // };
+        // window.sr = ScrollReveal();
+        // sr.reveal('.post');
+        // sr.reveal('.widget', widgetReveal);
 
     });
 

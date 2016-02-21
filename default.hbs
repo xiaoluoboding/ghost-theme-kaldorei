@@ -20,6 +20,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset "plugins/font-awesome-4.5.0/css/font-awesome.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "plugins/bootstrap-3.3.5/css/bootstrap.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "plugins/highlight-9.1.0/styles/monokai-sublime.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "plugins/animate-3.5.1/animate.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "plugins/anijs-0.9.3/anicollection.min.css"}}" />
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -34,7 +36,7 @@
         <footer class="site-footer clearfix">
             <div class="footer-meta">
                 <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-                <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a>, Theme <a href="https://github.com/xiaoluoboding/OneGhost">OneGhost</a></section>
+                <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a>, Theme <a href="https://github.com/xiaoluoboding/kaldorei">kaldorei</a></section>
             </div>
         </footer>
 
@@ -59,34 +61,10 @@
     <script type="text/javascript" src="{{asset "plugins/jquery-toc-0.3.5/jquery.toc.js"}}"></script>
     <script type="text/javascript" src="{{asset "plugins/velocity-1.2.3/velocity.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "plugins/velocity-1.2.3/velocity.ui.min.js"}}"></script>
-    <script>
-        $(document).ready(function() {
-            //highlight config
-            hljs.initHighlightingOnLoad();
-
-            //toc config
-            $("#toc").toc({content: ".post-content", headings: "h2,h3,h4,h5"});
-
-            if($("#toc").children().length == 0) $(".widget-toc").hide();
-
-            //toc animate effect
-            // bind click event to all internal page anchors
-            $('a.data-scroll').on('click', function(e) {
-                // prevent default action and bubbling
-                e.preventDefault();
-                e.stopPropagation();
-                // set target to anchor's "href" attribute
-                var target = $(this).attr('href');
-                // scroll to each target
-                $(target).velocity('scroll', {
-                    duration: 500,
-                    easing: 'ease-in-out'
-                    //easing: 'spring'
-                });
-            });
-            $('[data-rel=tooltip]').tooltip();
-        });
-    </script>
+    <script type="text/javascript" src="{{asset "plugins/scrollreveal-3.0.9/scrollreveal.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "plugins/anijs-0.9.3/anijs-min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "plugins/anijs-0.9.3/anijs-helper-scrollreveal-min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "plugins/github-repo-jquery-widget/jquery.githubRepoWidget.min.js"}}"></script>
 
 </body>
 </html>
