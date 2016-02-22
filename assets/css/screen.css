@@ -271,8 +271,8 @@ body {
     color: #FFF;
 }
 ::selection {
-    background: #D6EDFF;
-    color: #666;
+    background: #16a085;
+    color: #FFF;
 }
 h1, h2, h3, h4, h5, h6 {
     -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
@@ -687,6 +687,11 @@ body.nav-opened .site-wrapper {
 }
 .read-more {
     text-decoration: none;
+}
+.featured h1 {
+    border-left: 5px solid;
+    padding-left: 15px;
+    margin-left: -20px;
 }
 .post-meta {
     display: block;
@@ -2061,7 +2066,7 @@ body.nav-opened .site-wrapper {
     color: #009a61;
 }
 .widget-profile-desc a:hover {
-    color: #004e31;   
+    color: #004e31;
 }
 .widget-profile hr {
     margin: 20px;

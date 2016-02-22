@@ -12,7 +12,9 @@
     </div>
     <div class="site-stat-item">
         <span class="site-stat-item-count">
-            <strong>0</strong>
+            {{#get "posts" filter="featured:true" as |featured featuredPages|}}
+                <strong>{{featuredPages.total}}</strong>
+            {{/get}}
         </span>
         <span class="site-stat-item-name">推荐</span>
     </div>
