@@ -2,16 +2,22 @@
 <div class="widget widget-profile">
     <div class="widget-profile-cover overlay {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}"></div>
     <div class="widget-profile-header">
-        {{#if @blog.logo}}
-            <a class="widget-profile-logo" href="{{@blog.url}}">
+        <a class="widget-profile-logo" href="{{@blog.url}}">
+            {{#if @blog.logo}}
                 <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
-            </a>
-        {{/if}}
+            {{else}}
+                <img src="{{asset "img/user-image.png"}}" alt="{{@blog.title}}" />
+            {{/if}}
+        </a>
     </div>
     <span class="widget-profile-title label label-xlg label-minty arrowed-in arrowed-in-right">{{@blog.title}}</span>
     <hr>
     <p class="widget-profile-desc">
-        {{@blog.description}}
+        {{#if @blog.description}}
+            {{@blog.description}}
+        {{else}}
+            <em><a href="{{@blog.url}}/ghost/settings/general/">(添加站点描述)</a></em>
+        {{/if}}
     </p>
     <hr> {{> "site_stat"}}
     <hr> {{> "social"}}

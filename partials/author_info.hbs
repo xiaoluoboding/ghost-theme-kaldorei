@@ -3,16 +3,22 @@
     <div class="widget widget-profile">
         <div class="widget-profile-cover overlay {{#if cover}}" style="background-image: url({{cover}}){{else}}no-cover{{/if}}"></div>
         <div class="widget-profile-header">
+            <a class="widget-profile-logo" href="{{url}}">
             {{#if image}}
-                <a class="widget-profile-logo" href="{{url}}">
-                    <img src="{{image}}" alt="{{@blog.title}}" />
-                </a>
+                <img src="{{image}}" alt="{{@blog.title}}" />
+            {{else}}
+                <img src="{{asset "img/user-image.png"}}" alt="{{@blog.title}}" />
             {{/if}}
+            </a>
         </div>
         <span class="widget-profile-title label label-xlg label-minty arrowed-in arrowed-in-right">{{name}}</span>
         <hr>
         <p class="widget-profile-desc">
-            {{#if bio}}{{bio}}{{/if}}
+            {{#if bio}}
+                {{bio}}
+            {{else}}
+                <em><a href="{{@blog.url}}/ghost/team/{{slug}}/">(添加签名档)</a></em>
+            {{/if}}
         </p>
         <hr>
         <div class="author-meta">

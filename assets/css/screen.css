@@ -2057,6 +2057,12 @@ body.nav-opened .site-wrapper {
     text-align: center;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
+.widget-profile-desc a {
+    color: #009a61;
+}
+.widget-profile-desc a:hover {
+    color: #004e31;   
+}
 .widget-profile hr {
     margin: 20px;
 }
