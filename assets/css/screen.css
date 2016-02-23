@@ -1929,6 +1929,7 @@ body.nav-opened .site-wrapper {
 
 .post-nav {
     border-top: 1px solid #EBF2F6;
+    border-bottom: 1px solid #EBF2F6;
     overflow: hidden;
     padding: 15px 20px;
     font-size: 14px;

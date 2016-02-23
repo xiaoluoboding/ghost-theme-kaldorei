@@ -37,10 +37,7 @@
                         {{tags}}
                     </span>
                     <span class="post-meta-item pull-right">
-                        <!-- {{#comparison "is" left=author.name right="Malanore" }}
-                            <i class="fa fa-edit"></i>
-                            <a href="{{@blog.url}}/ghost/editor/{{id}}/">编辑</a>
-                        {{/comparison}} -->
+
                     </span>
                 </section>
             </header>
@@ -73,6 +70,8 @@
             </span>
             {{/next_post}}
         </aside>
+        
+        {{> "comments"}}
     </div>
     {{> sidebar}}
 </main>
