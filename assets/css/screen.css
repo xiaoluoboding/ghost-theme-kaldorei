@@ -1464,7 +1464,7 @@ body.nav-opened .site-wrapper {
 .tag-meta.no-cover {
     background: #415262;
 }
-.tag-meta.no-cover .tag-meta-content {
+.tag-meta .tag-meta-content {
     padding: 26px 20px;
     text-align: center;
 }
@@ -1838,7 +1838,7 @@ body.nav-opened .site-wrapper {
         padding: 4px 0;
     }
     .page-title {
-        font-size: 4rem;
+        font-size: 3rem;
         letter-spacing: -1px;
     }
     .page-description {
@@ -1919,6 +1919,10 @@ body.nav-opened .site-wrapper {
     }
     .sidebar {
         display: none !important;
+    }
+    .tag-meta .tag-meta-content {
+        padding: 8px 20px;
+        text-align: center;
     }
 }
 
@@ -2020,13 +2024,13 @@ body.nav-opened .site-wrapper {
         padding-bottom: 2rem;
         line-height: 1.65em;
     }
-    .post-date {
+    .post-meta-date {
         display: none;
     }
     .post-template .post-header {
         margin-bottom: 2rem;
     }
-    .post-template .post-date {
+    .post-template .post-meta-date {
         display: inline-block;
     }
     hr {
@@ -2037,7 +2041,7 @@ body.nav-opened .site-wrapper {
         margin: 0 0 2.5rem 0;
     }
     .page-title {
-        font-size: 3rem;
+        font-size: 1.8rem;
     }
     .post-excerpt p {
         font-size: 0.85em;
