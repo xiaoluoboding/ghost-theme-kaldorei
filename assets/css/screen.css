@@ -16,15 +16,16 @@
     8.  Third Party Elements
     9.  Pagination
     10. Footer
-    11. Media Queries (Tablet)
-    12. Media Queries (Mobile)
-    13. Animations
-    14. Layout
-    15. Widget
-    16. Post Nav
-    17. BackTop Button
-    18. TOC
-    19. Profile
+    11. Media Queries (Tablet - Portrait)
+    12. Media Queries (Tablet - Landscape)
+    13. Media Queries (Mobile)
+    14. Animations
+    15. Layout
+    16. Widget
+    17. Post Nav
+    18. BackTop Button
+    19. TOC
+    20. Profile
 
 */
 
@@ -579,7 +580,6 @@ body.nav-opened .site-wrapper {
     color: #fff;
     background: #009a61;
     opacity: .9;
-    /*background: #2C3F51;*/
 }
 
 /* Navigation */
@@ -594,10 +594,10 @@ body.nav-opened .site-wrapper {
     padding: 22px 0px;
     margin-top: 4px;
 }
-/*.nav > ul > li:hover {
+.nav > ul > li:hover {
     border-bottom: 4px solid #009a61;
     margin-bottom: -4px;
-}*/
+}
 
 /* The details of your blog. Defined in ghost/settings/ */
 
@@ -1377,7 +1377,6 @@ body.nav-opened .site-wrapper {
    ========================================================================== */
 
 .site-footer {
-    /*position: relative;*/
     margin: 8rem auto 0;
     padding: 1rem 15px;
     font-family: "Microsoft Yahei", "Monaco", sans-serif;
@@ -1400,13 +1399,11 @@ body.nav-opened .site-wrapper {
 }
 .poweredby {
     display: block;
-    width: 45%;
     float: right;
     text-align: right;
 }
 .copyright {
     display: block;
-    width: 45%;
     float: left;
 }
 
@@ -1422,10 +1419,19 @@ body.nav-opened .site-wrapper {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        height: auto;
-        min-height: 240px;
-        height: 60vh;
-        /*padding: 15% 0;*/
+        height: 64px;
+    }
+    .main-nav {
+        height: 64px;
+    }
+    .main-nav-title {
+        padding: 18px 20px;
+    }
+    .nav > ul {
+        height: 64px;
+    }
+    .nav > ul > li {
+        padding: 14px 0;
     }
     .scroll-down, .home-template .main-header:after {
         display: none;
@@ -1523,7 +1529,20 @@ body.nav-opened .site-wrapper {
 }
 
 /* ==========================================================================
-   12. Media Queries - Smaller than 500px
+   12. Media Queries - Smaller than 1024px for (tablet - landscape)
+   ========================================================================== */
+
+@media only screen and (max-width: 1080px) {
+    .site-stat-item {
+        padding: 0 15px;
+    }
+    .navigation > ul > li {
+        padding: 0;
+    }
+}
+
+/* ==========================================================================
+   13. Media Queries - Smaller than 500px
    ========================================================================== */
 
 @media only screen and (max-width: 500px) {
@@ -1730,7 +1749,7 @@ body.nav-opened .site-wrapper {
 }
 
 /* ==========================================================================
-   13. Animations
+   14. Animations
    ========================================================================== */
 
 
@@ -1793,7 +1812,7 @@ body.nav-opened .site-wrapper {
 }
 
 /* ==========================================================================
-   14. Layout
+   15. Layout
    ========================================================================== */
 
 .container {
@@ -1806,12 +1825,12 @@ body.nav-opened .site-wrapper {
 }
 @media (min-width:768px) {
     .container {
-        width: 750px !important
+        width: 640px !important
     }
 }
 @media (min-width:992px) {
     .container {
-        width: 960px !important
+        width: 820px !important
     }
 }
 @media (min-width:1200px) {
@@ -1832,7 +1851,7 @@ body.nav-opened .site-wrapper {
 }
 
 /* ==========================================================================
-   15. Widget
+   16. Widget
    ========================================================================== */
 
 .widget {
@@ -1864,39 +1883,8 @@ body.nav-opened .site-wrapper {
     padding: 12px;
     font-size: 14px;
 }
-
-/*
-.tag-cloud-content a:nth-child(9n) {
-  background-color: #4A4A4A;
-}
-.tag-cloud-content a:nth-child(9n+1) {
-  background-color: #428BCA;
-}
-.tag-cloud-content a:nth-child(9n+2) {
-  background-color: #5CB85C;
-}
-.tag-cloud-content a:nth-child(9n+3) {
-  background-color: #D9534F;
-}
-.tag-cloud-content a:nth-child(9n+4) {
-  background-color: #567E95;
-}
-.tag-cloud-content a:nth-child(9n+5) {
-  background-color: #B433FF;
-}
-.tag-cloud-content a:nth-child(9n+6) {
-  background-color: #00ABA9;
-}
-.tag-cloud-content a:nth-child(9n+7) {
-  background-color: #B37333;
-}
-.tag-cloud-content a:nth-child(9n+8) {
-  background-color: #FF6600;
-}*/
-
 .tag-cloud-content a {
     color: #017e66;
-    /*color: #fff;*/
     background-color: rgba(1, 126, 102, .08);
     display: inline-block;
     margin: 0 5px 5px 0;
@@ -1908,12 +1896,6 @@ body.nav-opened .site-wrapper {
     color: #fff;
     background-color: #017e66;
 }
-
-/*.tag-cloud-content a:hover {
-  color: #fff;
-  opacity: 1;
-  filter: alpha(opacity=100);
-}*/
 .tag-meta.no-cover {
     background: #415262;
 }
@@ -1924,7 +1906,7 @@ body.nav-opened .site-wrapper {
 
 
 /* ==========================================================================
-   16. Post Nav
+   17. Post Nav
    ========================================================================== */
 
 .post-nav {
@@ -1951,7 +1933,7 @@ body.nav-opened .site-wrapper {
 }
 
 /* ==========================================================================
-   17. BackTop Button
+   18. BackTop Button
    ========================================================================== */
 
 .backTop {
@@ -1988,7 +1970,7 @@ body.nav-opened .site-wrapper {
 }
 
 /* ==========================================================================
-   18. TOC
+   19. TOC
    ========================================================================== */
 
 .widget-toc-fixed {
@@ -2013,7 +1995,7 @@ body.nav-opened .site-wrapper {
 }
 
 /* ==========================================================================
-   19. Profile
+   20. Profile
    ========================================================================== */
 
 .widget-profile > a {
@@ -2025,7 +2007,6 @@ body.nav-opened .site-wrapper {
     margin: -50px auto auto;
 }
 .widget-profile-header > a > img {
-    /*box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);*/
     width: 10rem;
     border: 5px solid #fff;
     border-radius: 100%;
@@ -2112,22 +2093,6 @@ body.nav-opened .site-wrapper {
     border-color: #abbac3;
     border-right-color: transparent;
     -moz-border-right-colors: none;
-}
-.label-info.arrowed:before {
-    border-right-color: #5BC0DE;
-    -moz-border-right-colors: #5BC0DE;
-}
-.label-info.arrowed-in:before {
-    border-color: #5BC0DE #5BC0DE #5BC0DE transparent;
-    -moz-border-right-colors: #5BC0DE;
-}
-.label-info.arrowed-right:after {
-    border-left-color: #5BC0DE;
-    -moz-border-left-colors: #5BC0DE;
-}
-.label-info.arrowed-in-right:after {
-    border-color: #5BC0DE transparent #5BC0DE #5BC0DE;
-    -moz-border-left-colors: #5BC0DE;
 }
 .label-minty {
     background-color: #009a61;
@@ -2274,14 +2239,6 @@ body.nav-opened .site-wrapper {
 .site-stat-item-name:hover {
     color: #004e31;
 }
-
-/* 备选色
-#16a085
-#009a61
-#017e66
-#004e31
-#2C3F51
-*/
 
 
 /* ==========================================================================
