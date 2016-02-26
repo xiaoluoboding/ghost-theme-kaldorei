@@ -24,7 +24,7 @@ A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
 - [ ] 全局搜索
 
-- [ ] 响应式设计
+- [x] 响应式设计
 
 - [ ] 隐藏侧边栏
 
