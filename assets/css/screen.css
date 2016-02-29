@@ -576,13 +576,18 @@ body.nav-opened .site-wrapper {
     margin-bottom: -4px;
 }
 .main-nav-title {
-    padding: 26px 20px;
-    font-size: 30px;
-    color: #fff;
+    padding: 23px 0;
     background: #009a61;
     opacity: .9;
 }
-
+.main-nav-title a {
+    font-size: 30px;
+    color: #fff;
+    padding: 20px;
+}
+.main-nav-title a:hover {
+    color: #fff;
+}
 /* Navigation */
 
 .nav > ul {
@@ -1367,7 +1372,7 @@ body.nav-opened .site-wrapper {
     font-family: "Microsoft Yahei", "Monaco", sans-serif;
     line-height: 1.75em;
     color: #BBC7CC;
-    background: #415262;
+    background: #34495e;
     border-top: 4px solid #009a61;
 }
 .site-footer a {
@@ -1462,7 +1467,7 @@ body.nav-opened .site-wrapper {
     background-color: #017e66;
 }
 .tag-meta.no-cover {
-    background: #415262;
+    background: #34495e;
 }
 .tag-meta .tag-meta-content {
     padding: 26px 20px;
@@ -1823,7 +1828,10 @@ body.nav-opened .site-wrapper {
         height: 64px;
     }
     .main-nav-title {
-        padding: 18px 20px;
+        padding: 15px 0;
+    }
+    .main-nav-title a {
+        padding: 12px 15px;
     }
     .nav > ul {
         height: 64px;
@@ -1991,8 +1999,11 @@ body.nav-opened .site-wrapper {
         border-color: transparent;
     }
     .main-nav-title {
-        font-size: 24px;
-        padding: 18px 24px;
+        padding: 17px 0px;
+    }
+    .main-nav-title a {
+        font-size: 20px;
+        padding: 18px;
     }
     .nav-title {
         top: 25px;
