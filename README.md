@@ -32,7 +32,9 @@ A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
 - [ ] 尝试让`markdown`支持更多功能
 
-- [ ] 图片暗箱效果以及延迟加载
+- [x] 图片暗箱效果
+
+- [ ] 延迟加载
 
 ##How to use
 
@@ -55,3 +57,4 @@ kaldorei 优化了发布文章的时间展示，并汉化为中文，需要修�
 * [jquery.toc.js](https://github.com/jgallen23/toc)
 * [anijs](https://github.com/anijs/anijs)
 * [jquery.githubRepoWidget.js](https://github.com/JoelSutherland/GitHub-jQuery-Repo-Widget)
+* [fancyBox](https://github.com/fancyapps/fancyBox)
