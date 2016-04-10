@@ -6,13 +6,13 @@
 </figure>
 {{/if}}
 {{/author}}
-<div class="author-info">
-    <div class="author-info-title">
+<figure class="author-info">
+    <section class="author-info-title">
         <span><time class="post-date pull-right" datetime="{{date format='YYYY-MM-DD'}}">发表于：{{date format="YYYY-MM-DD"}}</time></span>
         {{#author}}
         <span>作者：{{name}}</span>
-    </div>
-    <div class="author-info-content">
+    </section>
+    <section class="author-info-content">
         {{#if bio}}
         <span class="author-info-bio">{{bio}}</span>
         {{else}}
@@ -26,5 +26,5 @@
             <a href="https://segmentfault.com/u/xlbd" class="author-info-social-sf">SegmentFault</a>
         </section>
         {{/author}}
-    </div>
-</div>
+    </section>
+</figure>
