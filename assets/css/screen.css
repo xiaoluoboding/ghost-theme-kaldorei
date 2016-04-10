@@ -831,7 +831,7 @@ body.nav-opened .site-wrapper {
 
 .post-content img {
     display: block;
-    max-width: 126%;
+    max-width: 720px;
     height: auto;
     padding: 0.6em 0;
     /* Centers an image by (1) pushing its left edge to the
@@ -1407,6 +1407,8 @@ body.nav-opened .site-wrapper {
     max-width: 1080px;
     text-align: left;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 .content {
     background: #FFF;
