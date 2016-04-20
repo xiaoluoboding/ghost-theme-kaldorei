@@ -36,6 +36,12 @@ A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
 - [ ] 延迟加载
 
+- [ ] 推荐文章置顶
+
+- [ ] 管理员编辑文章按钮
+
+- [ ] 文章回复数统计
+
 ##How to use
 
 kaldorei 使用了ghost的api来做统计，所以需要开启ghost的实验室中的`Public API`功能。
