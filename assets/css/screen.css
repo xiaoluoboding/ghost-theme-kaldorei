@@ -26,6 +26,7 @@
     18. Media Queries (Tablet - Landscape)
     19. Media Queries (Mobile)
     20. Animations
+    21. Static Page
 
 
 */
@@ -2266,6 +2267,14 @@ body.nav-opened .site-wrapper {
     .container {
         width: 1080px !important
     }
+}
+
+/* ==========================================================================
+   20. Animations
+   ========================================================================== */
+
+.page-template .page {
+    max-width: 1080px
 }
 
 /* ==========================================================================

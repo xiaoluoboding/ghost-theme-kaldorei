@@ -1,7 +1,7 @@
 # kaldorei
 A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
-##Plan to do
+## Plan to do
 - [x] 主题基调定为小清新绿色
 
 - [x] 文章样式色调为墨蓝色，参考 [[马克飞象]](http://maxiang.io)
@@ -42,19 +42,30 @@ A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
 - [ ] 文章回复数统计
 
-##How to use
+## How to use
 
-kaldorei 使用了ghost的api来做统计，所以需要开启ghost的实验室中的`Public API`功能。
+## 统计
+kaldorei使用了ghost的api来做统计，所以需要开启ghost的实验室中的`Public API`功能。
 
 > 方法：ghost后台 > `labs` > `Enable Beta Features` > `勾选 Public API`
 
-##About ghost helpers
+## 开启Disqus
+kaldorei支持Disqus讨论插件，只需在后台`代码注入`处添加一段代码
+
+> 方法：ghost后台 > `Code Injection` > `Blog Header`
+
+```js
+<script>
+    var disqus_shortname = 'your_disqus_shortname';
+</script>
+```
+## About ghost helpers
 
 kaldorei 用两种方法实现了标签云，方法参见[我的博客](http://xlbd.me)。
 
 kaldorei 优化了发布文章的时间展示，并汉化为中文，需要修改时间(date)助手，方法参见[我的博客](http://xlbd.me)。
 
-##Credit
+## Credit
 
 * [font-awesome](https://github.com/FortAwesome/Font-Awesome)
 * [bootstrap](https://github.com/twbs/bootstrap)
