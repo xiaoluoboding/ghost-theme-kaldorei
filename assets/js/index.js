@@ -9,7 +9,6 @@
     var $document = $(document);
 
     $document.ready(function() {
-
         var $postContent = $(".post-content");
         $postContent.fitVids();
 
@@ -32,10 +31,22 @@
             scrollToTop();
         });
 
-        //highlight config
+        // highlight config
         hljs.initHighlightingOnLoad();
 
-        //toc config
+        // numbering for pre>code blocks
+        $(function() {
+            $('pre code').each(function() {
+                var lines = $(this).text().split('\n').length - 1;
+                var $numbering = $('<ul/>').addClass('pre-numbering');
+                $(this).addClass('has-numbering').parent().append($numbering);
+                for (var i = 1; i <= lines; i++) {
+                    $numbering.append($('<li/>').text(i));
+                }
+            });
+        });
+
+        // toc config
         $("#toc").toc({
             content: ".post-content",
             headings: "h2,h3,h4,h5"
@@ -43,7 +54,7 @@
 
         if ($("#toc").children().length == 0) $(".widget-toc").hide();
 
-        //toc animate effect
+        // toc animate effect
         // bind click event to all internal page anchors
         $('a.data-scroll').on('click', function(e) {
             // prevent default action and bubbling
@@ -59,25 +70,28 @@
             });
         });
 
+        // tooltip config
         $('[data-rel=tooltip]').tooltip();
 
-        // var postReveal = {
-        //     delay: 1000,
-        //     scale: 0.9
-        // }
-        // var widgetReveal = {
-        //     delay: 400,
-        //     distance: '90px',
-        //     easing: 'ease-in-out',
-        //     rotate: {
-        //         z: 10
-        //     },
-        //     scale: 1.1
-        // };
-        // window.sr = ScrollReveal();
-        // sr.reveal('.post');
-        // sr.reveal('.widget', widgetReveal);
+        // fancybox config
+        $('.post-content a:has(img)').addClass('fancybox');
+        $(".fancybox").attr('rel', 'gallery-group').fancybox({
+            helpers: {
+                overlay: {
+                    css: {
+                        'background': 'rgba(0, 154, 97, 0.33)'
+                    },
+                    locked: false
+                }
+            },
+            beforeShow : function() {
+                var alt = this.element.find('img').attr('alt');
 
+                this.inner.find('img').attr('alt', alt);
+
+                this.title = alt;
+            }
+        });
     });
 
     // Arctic Scroll by Paul Adam Davis

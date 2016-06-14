@@ -30,7 +30,33 @@
               {{content}}
           </section>
 
+          <footer class="post-footer">
+              {{> "post_author"}}
+          </footer>
+
       </article>
+
+      <aside class="post-nav">
+          {{#prev_post}}
+          <span class="post-nav-prev">
+              上一篇
+              <a href="{{url}}">
+                  {{title}}
+              </a>
+          </span>
+          {{/prev_post}}
+
+          {{#next_post}}
+          <span class="post-nav-next" >
+              <a href="{{url}}">
+                  {{title}}
+              </a>
+              下一篇
+          </span>
+          {{/next_post}}
+      </aside>
+
+      {{> "comments"}}
     <div>
 </main>
 {{/post}}

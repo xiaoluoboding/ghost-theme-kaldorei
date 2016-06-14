@@ -27,6 +27,7 @@
     19. Media Queries (Mobile)
     20. Animations
     21. Static Page
+    22. Highlight Code
 
 
 */
@@ -589,6 +590,7 @@ body.nav-opened .site-wrapper {
 .main-nav-title a:hover {
     color: #fff;
 }
+
 /* Navigation */
 
 .nav > ul {
@@ -1477,7 +1479,6 @@ body.nav-opened .site-wrapper {
     text-align: center;
 }
 
-
 /* ==========================================================================
    13. Post Nav
    ========================================================================== */
@@ -1607,7 +1608,7 @@ body.nav-opened .site-wrapper {
     font-size: 18px !important;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
 }
-.widget-profile-cover.overlay,.widget-profile-cover.no-cover {
+.widget-profile-cover.overlay, .widget-profile-cover.no-cover {
     background: #415262;
     background-position: center center;
     height: 100px;
@@ -2273,8 +2274,49 @@ body.nav-opened .site-wrapper {
    20. Animations
    ========================================================================== */
 
-.page-template .page {
+
+/* ==========================================================================
+  21. Static Page
+  ========================================================================== */
+
+.page-template .page, .page-template .comments {
     max-width: 1080px
+}
+
+/* ==========================================================================
+  22. Highlight Code
+  ========================================================================== */
+
+pre {
+    position: relative;
+    margin-bottom: 24px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+code.has-numbering {
+    margin-left: 32px;
+    padding: 0.5em;
+    white-space: pre;
+    display: block;
+}
+.pre-numbering {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    margin: 0;
+    padding: 0.5em;
+    line-height: 1.6;
+    border-right: 1px solid #23241F;
+    background-color: rgba(35, 36, 31, 0.9);
+    text-align: right;
+    font-size: 1em;
+    color: #999;
+}
+
+.pre-numbering li {
+    margin: 0;
+    list-style: none;
 }
 
 /* ==========================================================================
