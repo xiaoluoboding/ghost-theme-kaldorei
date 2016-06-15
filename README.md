@@ -1,6 +1,10 @@
 # Kaldorei
 A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
+# Preview
+
+![img](http://77g60s.com1.z0.glb.clouddn.com/xlbd.png)
+
 ## Plan to do
 - [x] 主题基调定为小清新绿色
 
