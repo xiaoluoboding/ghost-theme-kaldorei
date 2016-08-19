@@ -1555,6 +1555,7 @@ body.nav-opened .site-wrapper {
 }
 .toc {
     padding-bottom: 10px;
+    overflow-y: auto;
 }
 .toc a {
     font-size: 14px;

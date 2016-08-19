@@ -22,8 +22,12 @@
         $(window).scroll(function() {
             var scrollerToTop = $('.backTop');
             var scrollerTOC = $('.widget-toc');
-            document.documentElement.scrollTop + document.body.scrollTop > 200 ? scrollerToTop.fadeIn() : scrollerToTop.fadeOut();
-            document.documentElement.scrollTop + document.body.scrollTop > 250 ? scrollerTOC.addClass("widget-toc-fixed") : scrollerTOC.removeClass("widget-toc-fixed");
+            document.documentElement.scrollTop + document.body.scrollTop > 200 ?
+                scrollerToTop.fadeIn() :
+                scrollerToTop.fadeOut();
+            document.documentElement.scrollTop + document.body.scrollTop > 250 ?
+                scrollerTOC.addClass("widget-toc-fixed") :
+                scrollerTOC.removeClass("widget-toc-fixed");
         });
 
         // #backTop Button Event
@@ -46,13 +50,27 @@
             });
         });
 
+        var toc = $('.toc');
         // toc config
-        $("#toc").toc({
+        toc.toc({
             content: ".post-content",
             headings: "h2,h3,h4,h5"
         });
 
-        if ($("#toc").children().length == 0) $(".widget-toc").hide();
+        if (toc.children().length == 0) $(".widget-toc").hide();
+
+        var tocHieght = toc.height();
+        var tocFixedHeight = $(window).height() - 192;
+        tocHieght > tocFixedHeight ?
+            toc.css('height', tocFixedHeight) :
+            toc.css('height', tocHieght)
+
+        $(window).resize(function() {
+            var tocFixedHeight = $(this).height() - 192;
+            tocHieght > tocFixedHeight ?
+                toc.css('height', tocFixedHeight) :
+                toc.css('height', tocHieght)
+        })
 
         // toc animate effect
         // bind click event to all internal page anchors
@@ -66,7 +84,7 @@
             $(target).velocity('scroll', {
                 duration: 500,
                 easing: 'ease-in-out'
-                    //easing: 'spring'
+                //easing: 'spring'
             });
         });
 
@@ -84,7 +102,7 @@
                     locked: false
                 }
             },
-            beforeShow : function() {
+            beforeShow: function() {
                 var alt = this.element.find('img').attr('alt');
 
                 this.inner.find('img').attr('alt', alt);
@@ -99,11 +117,11 @@
     $.fn.arctic_scroll = function(options) {
 
         var defaults = {
-                elem: $(this),
-                speed: 500
-            },
+            elem: $(this),
+            speed: 500
+        },
 
-            allOptions = $.extend(defaults, options);
+        allOptions = $.extend(defaults, options);
 
         allOptions.elem.click(function(event) {
             event.preventDefault();
