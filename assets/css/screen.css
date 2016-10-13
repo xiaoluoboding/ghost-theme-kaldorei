@@ -1370,7 +1370,7 @@ body.nav-opened .site-wrapper {
    ========================================================================== */
 
 .site-footer {
-    margin: 8rem auto 0;
+    margin: 3rem auto 0;
     padding: 1rem 15px;
     font-family: "Microsoft Yahei", "Monaco", sans-serif;
     line-height: 1.75em;
@@ -1957,6 +1957,11 @@ body.nav-opened .site-wrapper {
    ========================================================================== */
 
 @media only screen and (max-width: 500px) {
+	.archives-list li {
+		width:100%;
+	    padding-bottom: 3px;
+	    overflow: hidden;
+	}
     .main-header {
         margin-bottom: 0px;
     }
@@ -2139,7 +2144,7 @@ body.nav-opened .site-wrapper {
         display: block;
     }
     .site-footer {
-        margin-top: 3rem;
+        margin-top: 1rem;
     }
     .author-profile {
         padding-bottom: 2rem;
@@ -2354,6 +2359,63 @@ code.has-numbering {
     font-family: monospace;
 }
 
+.busuzi-bottom{
+	text-align:center;
+}
+@media (max-width:500px){
+	.archives {
+		width:100%;
+	}
+	.archives .item {
+	    margin-left:-100px;
+	    padding: 20px 0 12px 120px;
+	    overflow: hidden;
+	    border-bottom: 1px solid #eee;
+	}
+	.archives-list {
+	    list-style: none;
+	    font-size: 14px;
+	    line-height: 20px;
+	}
+	.archives-list li {
+		width:100%;
+	    padding-bottom: 3px;
+	    overflow: hidden;
+	}
+	.busuzi-bottom{
+		text-align:center;
+		font-size:1.2rem;
+	}
+	.site-footer {
+	    margin: 0.5rem auto 0;
+	    padding: 1.75rem 15px;
+	    font-family: "Microsoft Yahei", "Monaco", sans-serif;
+	    line-height: 1.75em;
+	    color: #BBC7CC;
+	    background: #34495e;
+	    border-top: 4px solid #009a61;
+	}
+	.site-footer a {
+	    color: #BBC7CC;
+	    text-decoration: none;
+	    font-weight: bold;
+	}
+	.site-footer a:hover {
+	    color: #009a61;
+	}
+	.footer-meta {
+	    margin: 0 auto;
+	}
+	.poweredby {
+	    display: block;
+	    float: right;
+	    text-align: right;
+	}
+	.copyright {
+	    display: block;
+	    float: left;
+	}
+}
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
