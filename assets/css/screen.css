@@ -291,12 +291,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
     font-size: 3.6rem;
-    letter-spacing: -2px;
     text-indent: -3px;
 }
 h2 {
     font-size: 3rem;
-    letter-spacing: -1px;
     padding-bottom: 10px;
     border-bottom: 1px solid #EBF2F6;
 }
