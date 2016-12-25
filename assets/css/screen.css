@@ -1796,11 +1796,15 @@ body.nav-opened .site-wrapper {
 
 .site-stat-item {
     display: inline-block;
-    padding: 0px 30px;
-    border-left: 1px solid #EBF2F6;
+    padding: 0px 28px;
 }
 .site-stat-item:first-child {
     border-left: none;
+    border-right: 1px solid #EBF2F6;
+}
+.site-stat-item:last-child {
+    border-left: 1px solid #EBF2F6;
+    border-right: none;
 }
 .site-stat-item-count {
     display: block;
