@@ -882,7 +882,7 @@ body.nav-opened .site-wrapper {
 
 .post-footer {
     position: relative;
-    margin: 6rem 0 6rem;
+    margin: 6rem 0 1rem;
     padding: 6rem 0 0 0;
     border-top: #EBF2F6 1px solid;
 }
@@ -2320,6 +2320,40 @@ code.has-numbering {
 .pre-numbering li {
     margin: 0;
     list-style: none;
+}
+
+/**归档*/
+.archives {
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.archives .item {
+    padding: 20px 0 12px 120px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+.archives h3 {
+	font-size: 15px;
+    font-weight: bold;
+    margin: 4px 0 0 -120px;
+    float: left;
+}
+.archives-list {
+    list-style: none;
+    font-size: 14px;
+    line-height: 20px;
+}
+.archives-list li {
+    padding: 3px 0;
+    overflow: hidden;
+}
+.archives-list time {
+    margin-right: 5px;
+    color: #999;
+    display: inline-block;
+    width: 35px;
+    font-family: monospace;
 }
 
 /* ==========================================================================
