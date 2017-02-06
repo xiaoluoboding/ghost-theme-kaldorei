@@ -115,7 +115,6 @@
     // Arctic Scroll by Paul Adam Davis
     // https://github.com/PaulAdamDavis/Arctic-Scroll
     $.fn.arctic_scroll = function(options) {
-
         var defaults = {
             elem: $(this),
             speed: 500
@@ -147,7 +146,6 @@
                 }, allOptions.speed);
             }
         });
-
     };
 })(jQuery);
 

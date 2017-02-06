@@ -1,0 +1,56 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+
+    <header class="main-header">
+        <nav class="container main-nav clearfix">
+            <div class="main-nav-title pull-left">
+                <a class="blog-title" href="{{@blog.url}}">{{@blog.title}}</a>
+            </div>
+            {{#if @blog.navigation}}
+                {{navigation}}
+            {{/if}}
+        </nav>
+    </header>
+
+    {{! The main container area on the homepage }}
+    <main id="container" class="container" role="main">
+        <div id="content" class="content col-sm-12 col-md-12 col-lg-12">
+            <article class="archives">
+                <header class="archives-header">
+                </header>
+                <section class="archives-content">
+                    <span class="archives-top"></span>
+                    <span class="archives-total">
+                        {{! count posts }}
+                        {{#get "posts" as |posts postPages|}}
+                        {{! Use our pages (pagination) object }}
+                        <strong>非常好，目前共计{{postPages.total}}篇日志，继续努力！</strong>
+                        {{/get}}
+                    </span>
+                    {{#get "posts" limit="all" order="published_at desc"}}
+                        <!-- <div class="archives-title">
+                            <time class="archives-date" datetime="{{date format='YYYY'}}">{{date format="YYYY"}}</time>
+                        </div> -->
+                        {{#foreach posts}}
+                            <div class='archives-item' data-anijs="if: scroll, on: window, do: fadeInDown animated, before: scrollReveal">
+                                <div class='archives-info'>
+                                    <div class="archives-info-meta">
+                                        <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
+                                        <time class="archives-date" datetime="{{date published_at format='YYYY-MM-DD'}}">{{date published_at format="YYYY-MM-DD"}}日</time>
+                                        <a href='{{url}}'>{{title}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {{/foreach}}
+                    {{/get}}
+                </section>
+            </article>
+        <div>
+    </main>
+
+{{/post}}
