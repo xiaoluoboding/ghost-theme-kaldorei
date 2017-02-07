@@ -54,6 +54,12 @@ Kaldorei支持Disqus讨论插件，只需在后台`代码注入`处添加一段�
 
 > 方法：ghost后台 > `Code Injection` > `Blog Header`
 
+```js
+<script>
+    var disqus_shortname = 'your_disqus_shortname';
+</script>
+```
+
 ### 开启归档功能
 Kaldorei提供了简单的归档功能，使用ghost的api来生成归档，预览[博客归档](http://xlbd.me/archives-post)。
 
@@ -63,11 +69,6 @@ Kaldorei提供了简单的归档功能，使用ghost的api来生成归档，预�
 > * Navigation > 创建一个`归档`导航，地址为：http://your_blog_url/`archives-post`;
 > * 去博客首页看看你的归档吧，Have fun.
 
-```js
-<script>
-    var disqus_shortname = 'your_disqus_shortname';
-</script>
-```
 ## About ghost helpers
 
 Kaldorei用两种方法实现了标签云，方法参见[我的博客](http://xlbd.me)。
