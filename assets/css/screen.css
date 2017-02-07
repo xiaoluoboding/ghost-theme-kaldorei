@@ -2363,11 +2363,10 @@ code.has-numbering {
     left: 12px;
 }
 .archives .archives-item {
+    position: relative;
     margin: 30px 0;
     overflow: hidden;
-}
-.archives .archives-item.fadeInDown {
-    z-index: 2
+    z-index: 2;
 }
 .archives .archives-title {
     font-size: 15px;
@@ -2384,7 +2383,6 @@ code.has-numbering {
     transition-timing-function: ease-in-out;
     transition-delay: 0s;
     transition-property: border;
-    z-index: 2;
 }
 .archives-info .archives-info-meta {
     margin-left: 10px;
@@ -2406,7 +2404,6 @@ code.has-numbering {
     transition-timing-function: ease-in-out;
     transition-delay: 0s;
     transition-property: background;
-    z-index: 2;
 }
 .archives-info .archives-info-meta:hover {
     border-bottom: 1px dashed #2C3F51;
