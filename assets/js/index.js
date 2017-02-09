@@ -110,6 +110,21 @@
                 this.title = alt;
             }
         });
+
+        // add archives year
+        var yearArray = new Array();
+        $(".archives-item").each(function() {
+            var archivesYear = $(this).attr("date");
+            yearArray.push(archivesYear);
+        });
+        var uniqueYear = $.unique(yearArray);
+        for (var i = 0; i < uniqueYear.length; i++) {
+            var html = "<div class='archives-item fadeInDown animated'>" +
+                "<div class='archives-year'>" +
+                "<h3><time datetime='" + uniqueYear[i] + "'>" + uniqueYear[i] + "</time></h3>" +
+                "</div></div>";
+            $("[date='"+uniqueYear[i]+"']:first").before(html);
+        }
     });
 
     // Arctic Scroll by Paul Adam Davis

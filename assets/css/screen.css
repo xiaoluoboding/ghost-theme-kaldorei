@@ -2360,7 +2360,7 @@ code.has-numbering {
 .archives .archives-total {
     position: relative;
     top: 4px;
-    left: 12px;
+    left: 20px;
 }
 .archives .archives-item {
     position: relative;
@@ -2368,11 +2368,22 @@ code.has-numbering {
     overflow: hidden;
     z-index: 2;
 }
-.archives .archives-title {
-    font-size: 15px;
+.archives .archives-year {
     font-weight: bold;
-    margin: 4px 0 0 -120px;
-    float: left;
+    margin: 10px 20px;
+}
+.archives .archives-year::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    margin-left: -1px;
+    margin-top: 8px;
+    background: #555;
+    opacity: 0.5;
+    border: 1px solid #fff;
+    border-radius: 50%;
 }
 .archives-info {
     list-style: none;
@@ -2385,7 +2396,7 @@ code.has-numbering {
     transition-property: border;
 }
 .archives-info .archives-info-meta {
-    margin-left: 10px;
+    margin-left: 20px;
     padding: 4px 0;
     overflow: hidden;
     border-bottom: 1px dashed #ccc;

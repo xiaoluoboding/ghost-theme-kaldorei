@@ -29,7 +29,7 @@
                         {{! count posts }}
                         {{#get "posts" as |posts postPages|}}
                         {{! Use our pages (pagination) object }}
-                        <strong>非常好，目前共计{{postPages.total}}篇日志，继续努力！</strong>
+                        <strong>目前共计{{postPages.total}}篇日志，继续努力！</strong>
                         {{/get}}
                     </span>
                     {{#get "posts" limit="all" order="published_at desc"}}
@@ -37,11 +37,11 @@
                             <time class="archives-date" datetime="{{date format='YYYY'}}">{{date format="YYYY"}}</time>
                         </div> -->
                         {{#foreach posts}}
-                            <div class='archives-item' data-anijs="if: scroll, on: window, do: fadeInDown animated, before: scrollReveal">
+                            <div class='archives-item' date="{{date format='YYYY'}}" data-anijs="if: scroll, on: window, do: fadeInDown animated, before: scrollReveal">
                                 <div class='archives-info'>
                                     <div class="archives-info-meta">
                                         <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                                        <time class="archives-date" datetime="{{date published_at format='YYYY-MM-DD'}}">{{date published_at format="YYYY-MM-DD"}}</time>
+                                        <time class="archives-date" datetime="{{date published_at format='MM-DD'}}">{{date published_at format="MM-DD"}}</time>
                                         <a href='{{url}}'>{{title}}</a>
                                     </div>
                                 </div>
