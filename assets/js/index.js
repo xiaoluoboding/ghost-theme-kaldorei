@@ -123,7 +123,7 @@
                 "<div class='archives-year'>" +
                 "<h3><time datetime='" + uniqueYear[i] + "'>" + uniqueYear[i] + "</time></h3>" +
                 "</div></div>";
-            $("[date='"+uniqueYear[i]+"']:first").before(html);
+            $("[date='" + uniqueYear[i] + "']:first").before(html);
         }
     });
 
