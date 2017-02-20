@@ -1153,10 +1153,6 @@ body.nav-opened .site-wrapper {
    ========================================================================== */
 
 .read-next {
-    /*display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;*/
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
@@ -2300,6 +2296,7 @@ code.has-numbering {
     margin-left: 32px;
     padding: 0.5em;
     white-space: pre;
+    word-wrap: normal;
     display: block;
 }
 .pre-numbering {
