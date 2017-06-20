@@ -6,7 +6,11 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />{{! Page Meta }}
     <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
+    {{#if meta_description}}
+        <meta name="description" content="{{meta_description}}" />
+    {{else}}
+        <meta name="description" content="{{content words="100"}}" />
+    {{/if}}
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
