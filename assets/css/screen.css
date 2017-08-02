@@ -1144,7 +1144,7 @@ body.nav-opened .site-wrapper {
 /* Turn off meta for page2+ to make room for extra
    pagination prev/next links */
 
-.archive-template .author-profile .author-meta {
+.paged .author-profile .author-meta {
     display: none;
 }
 
