@@ -1141,12 +1141,6 @@ body.nav-opened .site-wrapper {
     text-decoration: none;
 }
 
-/* Turn off meta for page2+ to make room for extra
-   pagination prev/next links */
-
-.archive-template .author-profile .author-meta {
-    display: none;
-}
 
 /* ==========================================================================
    7. Read More - Next/Prev Post Links
