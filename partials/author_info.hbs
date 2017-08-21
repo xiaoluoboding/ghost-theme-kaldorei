@@ -5,7 +5,7 @@
         <div class="widget-profile-header">
             <a class="widget-profile-logo" href="{{url}}">
             {{#if profile_image}}
-                <img src="{{profile_image}}" alt="{{@blog.title}}" />
+                <img src="{{img_url profile_image}}" alt="{{@blog.title}}" />
             {{else}}
                 <img src="{{asset "img/user-image.png"}}" alt="{{@blog.title}}" />
             {{/if}}

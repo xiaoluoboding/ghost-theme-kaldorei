@@ -2,7 +2,7 @@
     "name": "kaldorei",
     "description": "A Simple And Elegant Ghost Theme Derive From Default Theme Casper",
     "homepage": "https://github.com/wangkezun/ghost-theme-kaldorei",
-    "version": "0.8.0",
+    "version": "1.0.0",
     "author": {
         "name": "wangkezun",
         "url": "https://wkz.io",
@@ -23,6 +23,7 @@
         "kaldorei"
     ],
     "engines": {
+        "ghost": ">=1.0.0",
         "node": ">= 4"
     },
     "config": {
