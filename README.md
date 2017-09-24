@@ -40,8 +40,6 @@ A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
 - [ ] 文章回复数统计
 
-- [ ] 尝试让`markdown`支持更多功能
-
 ## How to use
 
 ### 统计
@@ -71,9 +69,9 @@ Kaldorei提供了简单的归档功能，使用ghost的api来生成归档，预�
 
 ## About ghost helpers
 
-Kaldorei用两种方法实现了标签云，方法参见[我的博客](http://xlbd.me)。
+Kaldorei用两种方法实现了标签云，方法参见[我的博客](http://xlbd.me/how-to-add-the-tag-cloud-into-ghost-blog/)。
 
-Kaldorei优化了发布文章的时间展示，并汉化为中文，需要修改时间(date)助手，方法参见[我的博客](http://xlbd.me)。
+Kaldorei优化了发布文章的时间展示，并汉化为中文，需要修改时间(date)助手，方法参见[我的博客](http://xlbd.me/ghost-date-i18n/)。
 
 ## Credit
 
