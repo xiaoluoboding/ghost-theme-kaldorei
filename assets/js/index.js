@@ -79,7 +79,9 @@
             e.preventDefault();
             e.stopPropagation();
             // set target to anchor's "href" attribute
-            var target = $(this).attr('href');
+            // Thanks to @https://github.com/xiongchengqing fixed this bug.
+            var target = document.getElementById($(this).attr('href').split('#')[1]);
+            console.log(target);
             // scroll to each target
             $(target).velocity('scroll', {
                 duration: 500,
