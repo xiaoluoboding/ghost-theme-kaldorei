@@ -93,24 +93,14 @@
         // tooltip config
         $('[data-rel=tooltip]').tooltip();
 
-        // fancybox config
+        // fancybox 3.1.25 config
         $('.post-content a:has(img)').addClass('fancybox');
-        $(".fancybox").attr('rel', 'gallery-group').fancybox({
-            helpers: {
-                overlay: {
-                    css: {
-                        'background': 'rgba(0, 154, 97, 0.33)'
-                    },
-                    locked: false
-                }
-            },
-            beforeShow: function() {
-                var alt = this.element.find('img').attr('alt');
-
-                this.inner.find('img').attr('alt', alt);
-
-                this.title = alt;
-            }
+        $(".fancybox").attr('data-fancybox', 'images').fancybox({
+            selector       : '[data-fancybox="images"]',
+            loop           : true,
+            slidesToShow   : 3,
+            slidesToScroll : 3,
+            infinite       : true
         });
 
         // add archives year

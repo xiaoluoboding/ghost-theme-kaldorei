@@ -38,14 +38,15 @@ A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
 - [ ] 推荐文章置顶
 
-- [ ] 文章回复数统计
-
 ## How to use
 
 ### 统计
 Kaldorei使用了ghost的api来做统计，所以需要开启ghost的实验室中的`Public API`功能。
 
 > 方法：ghost后台 > `labs` > `Enable Beta Features` > `勾选 Public API`
+
+### 图片幻灯片
+Kaldorei集成了fancyBox，支持图片暗箱效果、幻灯片轮播、全屏预览、缩略图预览等功能。预览&使用方法[图片预览](http://xlbd.me/how-to-use-fancybox-in-ghost-blog/)
 
 ### 开启Disqus
 Kaldorei支持Disqus讨论插件，只需在后台`代码注入`处添加一段代码。

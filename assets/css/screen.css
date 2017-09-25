@@ -28,7 +28,8 @@
     20. Animations
     21. Static Page
     22. Highlight Code
-
+    23. Archives
+    24. Fancybox Setting
 
 */
 
@@ -2421,6 +2422,15 @@ code.has-numbering {
     margin-right: 4px;
     color: #999;
     display: inline-block;
+}
+
+/* ==========================================================================
+  24. Fancybox Setting
+  ========================================================================== */
+
+.fancybox-is-open .fancybox-bg {
+  opacity: 0.33 !important;
+  background: rgb(0, 154, 97);
 }
 
 /* ==========================================================================
