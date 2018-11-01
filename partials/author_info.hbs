@@ -1,5 +1,5 @@
 {{! 作者信息 }}
-{{#author}}
+{{#primary_author}}
     <div class="widget widget-profile">
         <div class="widget-profile-cover overlay {{#if cover_image}}" style="background-image: url({{cover_image}}){{else}}no-cover{{/if}}"></div>
         <div class="widget-profile-header">
@@ -27,4 +27,4 @@
             <span class="author-stats"><i class="fa fa-file-text-o"></i> {{plural ../pagination.total empty='作者很懒，什么都木有留下。' singular='只发表了 % 篇文章，有点少哎。' plural='共计发表 % 篇文章，继续努力。'}}</span>
         </div>
     </div>
-{{/author}}
+{{/primary_author}}
