@@ -89,8 +89,8 @@ mark {
     color: #000;
 }
 code, kbd, pre, samp {
-    font-family: Monaco, monospace, sans-serif !important;
-    font-size: 1em;
+    font-family: Monaco, Menlo, monospace, sans-serif !important;
+    font-size: .9em;
 }
 pre {
     white-space: pre-wrap;
@@ -262,7 +262,9 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "Microsoft Yahei", Helvetica, Arial, sans-serif, serif !important;
+    /* font-family: "Helvetica Neue",Helvetica,"PingFang SC","Segoe UI",Roboto,Ubuntu,"Microsoft YaHei","微软雅黑",Arial,sans-serif; */
+    font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif,
+ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     letter-spacing: 0.01rem;
     font-size: 1.6em !important;
     line-height: 1.75em !important;
@@ -271,6 +273,7 @@ body {
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
     text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
 }
 ::-moz-selection {
     background: #16a085;
@@ -284,33 +287,31 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    color: #2E2E2E;
-    line-height: 1.15em;
-    margin: 0 0 0.4em 0;
+    color: #2C3F51;
+    line-height: 1.2em;
+    margin: 1.6em 0 0.8em 0;
     font-weight: bold !important;
-    font-family: "Microsoft Yahei", "Monaco", sans-serif;
+    /* font-family: Menlo, Monaco, Microsoft Yahei, sans-serif; */
+    /* font-family: Athelas, STHeiti, Microsoft Yahei, serif; */
     text-rendering: geometricPrecision;
 }
 h1 {
-    font-size: 3.6rem;
-    text-indent: -3px;
+    font-size: 3.2rem;
 }
 h2 {
-    font-size: 3rem;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #EBF2F6;
-}
-h3 {
     font-size: 2.4rem;
 }
+h3 {
+    font-size: 2rem;
+}
 h4 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 h5 {
-    font-size: 1.6rem !important;
+    font-size: 1.4rem !important;
 }
 h6 {
-    font-size: 1.4rem !important;
+    font-size: 1.2rem !important;
 }
 a {
     color: #4A4A4A;
@@ -323,9 +324,9 @@ p, ul, ol, dl {
     -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
-    margin: 0 0 1.75em 0;
+    margin: 0 0 1.25em 0;
     text-rendering: geometricPrecision;
-    line-height: 1.75em;
+    line-height: 1.6;
 }
 ol, ul {
     padding-left: 3rem;
@@ -360,14 +361,14 @@ hr {
     height: 1px;
     border: 0;
     border-top: #EBF2F6 1px solid !important;
-    margin: 3.2em 0;
+    margin: 2em 0;
     padding: 0;
 }
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 15px 20px !important;
-    margin: 1.75em 0 1.75em -2.2em;
+    margin: 1.75em 0;
     font-size: 1.6rem !important;
     border-left: #4A4A4A 0.4em solid;
     background-color: rgba(102, 128, 153, 0.05);
@@ -391,12 +392,12 @@ blockquote cite a {
 mark {
     background-color: #fdffb6;
 }
-code, tt {
+tt {
     padding: 1px 3px;
     font-family: Monaco, monospace, sans-serif !important;
     font-size: 0.85em;
     white-space: pre-wrap;
-    background: #F7FAFB;
+    background: #f9f2f4;
     border-radius: 2px;
 }
 pre {
@@ -544,7 +545,7 @@ body.nav-opened .site-wrapper {
 .main-header {
     position: relative;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
     text-align: center;
     background: #FFF no-repeat center center;
     overflow: hidden;
@@ -567,7 +568,6 @@ body.nav-opened .site-wrapper {
 }
 .main-nav a {
     text-decoration: none;
-    font-family: 'Microsoft Yahei', sans-serif;
     font-size: 16px;
     color: #2C3F51;
     padding: 25px 20px;
@@ -601,7 +601,7 @@ body.nav-opened .site-wrapper {
 .nav > ul > li {
     display: inline-block;
     padding: 22px 0px;
-    margin-top: 4px;
+    /* margin-top: 4px; */
 }
 .nav > ul > li:hover {
     border-bottom: 4px solid #009a61;
@@ -611,11 +611,10 @@ body.nav-opened .site-wrapper {
 /* The details of your blog. Defined in ghost/settings/ */
 
 .page-title {
-    margin: 10px 0 10px 0;
-    font-size: 3rem;
+    margin: .8rem;
+    font-size: 3.2rem;
     letter-spacing: -1px;
     font-weight: 700;
-    font-family: "Microsoft Yahei", "Monaco", sans-serif;
     color: #fff;
 }
 .page-description {
@@ -623,7 +622,6 @@ body.nav-opened .site-wrapper {
     font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
-    font-family: "Microsoft Yahei", "Monaco", sans-serif;
     letter-spacing: 0.01rem;
     color: rgba(255, 255, 255, 0.8);
 }
@@ -659,8 +657,7 @@ body.nav-opened .site-wrapper {
 .post {
     position: relative;
     max-width: 750px;
-    margin: 20px;
-    padding-bottom: 2rem;
+    margin: 2em;
     border-bottom: #EBF2F6 1px solid;
     word-wrap: break-word;
 }
@@ -683,7 +680,8 @@ body.nav-opened .site-wrapper {
     box-shadow: #FFF 0 0 0 5px;
 }
 .post-title {
-    font-size: 30px;
+    margin: 0 auto .6em;
+    font-size: 3.2rem;
 }
 .post-title a {
     color: #2C3F51;
@@ -704,9 +702,8 @@ body.nav-opened .site-wrapper {
 }
 .post-meta {
     display: block;
-    margin: 1.75rem 0 0 0;
-    font-family: "Microsoft Yahei", "Monaco", sans-serif;
-    font-size: 1.5rem;
+    margin: 2rem 0;
+    font-size: 1.4rem;
     line-height: 2.2rem;
     color: #9EABB3;
 }
@@ -722,7 +719,8 @@ body.nav-opened .site-wrapper {
     text-decoration: none;
 }
 .post-meta a:hover {
-    text-decoration: underline;
+    color: #017e66;
+    text-decoration: none;
 }
 .user-meta {
     position: relative;
@@ -734,7 +732,8 @@ body.nav-opened .site-wrapper {
     padding-left: 12px;
     border-left: #d5dbde 1px solid;
 }
-.post-meta-item:first-child, .post-meta-item:last-child {
+.post-meta-item:first-child,
+.post-meta-item:last-child {
     margin-left: 0;
     padding-left: 0;
     border-left: none;
@@ -795,9 +794,6 @@ body.nav-opened .site-wrapper {
    5. Single Post - When you click on an individual post
    ========================================================================== */
 
-.post-template .post-header {
-    margin-bottom: 3.4rem;
-}
 .post-template .post-title {
     margin-bottom: 0;
 }
@@ -834,7 +830,7 @@ body.nav-opened .site-wrapper {
 
 .post-content img {
     display: block;
-    max-width: 720px;
+    max-width: 768px;
     height: auto;
     padding: 0.6em 0;
     /* Centers an image by (1) pushing its left edge to the
@@ -855,10 +851,17 @@ body.nav-opened .site-wrapper {
 .post-content a:hover {
     color: #004e31;
 }
+.post-content h1 {
+    margin: 1em 0 .75em;
+}
+.post-content h2 {
+    padding-bottom: 0.6em;
+    border-bottom: 1px solid #EBF2F6;
+}
 .post-content h3 {
-    margin-left: -20px;
+    /* margin-left: -20px;
     padding-left: 15px;
-    border-left: 5px solid;
+    border-left: 5px solid; */
 }
 .post-content h4 {
     margin-left: -20px;
@@ -884,8 +887,8 @@ body.nav-opened .site-wrapper {
 
 .post-footer {
     position: relative;
-    margin: 6rem 0 6rem;
-    padding: 6rem 0 0 0;
+    margin: 6rem 0 0;
+    padding: 6rem 0 0;
     border-top: #EBF2F6 1px solid;
 }
 .post-footer h4 {
@@ -1133,7 +1136,6 @@ body.nav-opened .site-wrapper {
 
 .author-profile .author-meta {
     margin: 2rem 0;
-    font-family: "Microsoft Yahei", "Monaco", serif;
     letter-spacing: 0.01rem;
     font-size: 1.7rem;
 }
@@ -1205,7 +1207,6 @@ body.nav-opened .site-wrapper {
     padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.1rem;
-    font-family: "Microsoft Yahei", "Monaco", sans-serif;
     color: rgba(255, 255, 255, 0.8);
     border: rgba(255, 255, 255, 0.5) 1px solid;
     border-radius: 4px;
@@ -1297,8 +1298,7 @@ body.nav-opened .site-wrapper {
     position: relative;
     width: 100%;
     max-width: 750px;
-    margin: 4rem auto;
-    font-family: "Microsoft Yahei", "Monaco", sans-serif;
+    margin: 0 auto 2em;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -1363,9 +1363,8 @@ body.nav-opened .site-wrapper {
    ========================================================================== */
 
 .site-footer {
-    margin: 8rem auto 0;
+    margin: 1.25em auto 0;
     padding: 1rem 15px;
-    font-family: "Microsoft Yahei", "Monaco", sans-serif;
     line-height: 1.75em;
     color: #BBC7CC;
     background: #34495e;
@@ -1380,7 +1379,7 @@ body.nav-opened .site-wrapper {
     color: #009a61;
 }
 .footer-meta {
-    margin: 0 auto;
+    margin: 0 auto !important;
 }
 .poweredby {
     display: block;
@@ -1399,8 +1398,8 @@ body.nav-opened .site-wrapper {
 .container {
     min-width: 320px;
     padding: 0px !important;
-    margin: 0px auto 10px;
-    max-width: 1080px;
+    margin: 0px auto;
+    max-width: 1152px;
     text-align: left;
     position: relative;
     margin-left: auto;
@@ -1424,7 +1423,7 @@ body.nav-opened .site-wrapper {
 
 .widget {
     clear: both;
-    margin-bottom: 10px;
+    margin-bottom: 1.25em;
     background-color: #FFF;
 }
 .widget-title {
@@ -1503,17 +1502,22 @@ body.nav-opened .site-wrapper {
    14. BackTop Button
    ========================================================================== */
 
-.backTop {
+.back-top {
     position: fixed;
-    right: 20px;
-    bottom: 20px;
+    right: 28px;
+    bottom: 28px;
     z-index: 999;
-    width: 50px;
+    width: 56px;
     display: none;
 }
-.backTop .btn {
+.back-top:focus,
+.back-top .btn:focus,
+.back-top .btn:active:focus {
+    outline: none;
+}
+.back-top .btn {
     margin-top: 2px;
-    height: 50px;
+    height: 56px;
     display: block;
     padding: 0;
     width: 100%;
@@ -1526,12 +1530,15 @@ body.nav-opened .site-wrapper {
 .btn-minty {
     background: #009a61;
 }
-.backTop .btn:hover {
+.back-top .btn:hover {
     background: #009a61;
     opacity: .9;
     color: #FFF !important;
 }
-.backTop .btn i {
+.back-top .btn:active {
+    opacity: .6;
+}
+.back-top .btn i {
     position: relative;
     top: -1px;
 }
@@ -1542,7 +1549,7 @@ body.nav-opened .site-wrapper {
 
 .widget-toc-fixed {
     top: 0px;
-    width: 340px;
+    width: 364px;
     position: fixed;
     z-index: 2;
 }
@@ -1715,9 +1722,8 @@ body.nav-opened .site-wrapper {
     border-width: 10px 5px;
 }
 .label-xlg {
-    padding: 0.3em 0.7em 0.4em;
     font-size: 14px;
-    line-height: 1.3;
+    line-height: 1;
     height: 28px;
 }
 .label-xlg.arrowed {
@@ -1752,15 +1758,14 @@ body.nav-opened .site-wrapper {
 /* Social Style */
 
 .navigation.social {
-    padding-bottom: 10px;
+    padding-bottom: 0.8em;
 }
-.navigation > ul {
+.navigation.social > ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
     list-style: none;
-}
-.navigation > ul > li {
-    display: inline-block;
-    padding: 10px;
-    margin: 5px;
 }
 .social > li > a {
     color: #8F8F8F;
@@ -1784,28 +1789,22 @@ body.nav-opened .site-wrapper {
     font-size: 1.6em !important;
 }
 .navigation.site-stat {
-    padding: 0px 25px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 1.25em;
 }
 
 /* Site Stat Style */
 
 .site-stat-item {
-    display: inline-block;
-    padding: 0px 28px;
+    width: 100%;
 }
-.site-stat-item:first-child {
-    border-left: none;
+.site-stat-item:not(:last-child) {
     border-right: 1px solid #EBF2F6;
 }
-.site-stat-item:last-child {
-    border-left: 1px solid #EBF2F6;
-    border-right: none;
-}
-.site-stat-item-count {
-    display: block;
-    text-align: center;
-}
+.site-stat-item-count,
 .site-stat-item-name {
+    display: block;
     text-align: center;
 }
 .site-stat-item-name:hover {
@@ -1856,7 +1855,7 @@ body.nav-opened .site-wrapper {
         line-height: 1.5em;
     }
     .post {
-        font-size: 0.95em
+        font-size: 0.95em;
     }
     body:not(.post-template) .post-title {
         font-size: 3.2rem;
@@ -2182,6 +2181,12 @@ body.nav-opened .site-wrapper {
     }
 }
 
+@media only screen and (max-width: 1472px) {
+    .widget-toc-fixed {
+        width: 300px;
+    }
+}
+
 /* ==========================================================================
    20. Animations
    ========================================================================== */
@@ -2254,17 +2259,22 @@ body.nav-opened .site-wrapper {
 }
 @media (min-width:768px) {
     .container {
-        width: 640px !important
+        width: auto;
     }
 }
-@media (min-width:992px) {
+@media (min-width:1088px) {
     .container {
-        width: 820px !important
+        width: 960px !important;
     }
 }
-@media (min-width:1200px) {
+@media (min-width:1280px) {
     .container {
-        width: 1080px !important
+        width: 960px !important;
+    }
+}
+@media (min-width:1472px) {
+    .container {
+        width: 1152px !important;
     }
 }
 
@@ -2277,8 +2287,15 @@ body.nav-opened .site-wrapper {
   21. Static Page
   ========================================================================== */
 
-.page-template .page, .page-template .comments {
-    max-width: 1080px
+.page-template .page,
+.page-template .comments {
+    max-width: 1152px;
+}
+.page-template .post {
+    border-bottom: none;
+}
+.page-template .post::after {
+    display: none;
 }
 
 /* ==========================================================================
@@ -2287,8 +2304,8 @@ body.nav-opened .site-wrapper {
 
 pre {
     position: relative;
-    margin-bottom: 24px;
-    border-radius: 3px;
+    margin-bottom: 1.5em;
+    border-radius: 4px;
     overflow: hidden;
 }
 code.has-numbering {
@@ -2297,6 +2314,9 @@ code.has-numbering {
     white-space: pre;
     word-wrap: normal;
     display: block;
+}
+code.hljs {
+    padding: 1.2em 2em;
 }
 .pre-numbering {
     position: absolute;
@@ -2323,22 +2343,19 @@ code.has-numbering {
   ========================================================================== */
 
 .archives {
-    width:90%;
-    margin-left:auto;
-    margin-right:auto;
+    width: 90%;
+    margin: 40px auto;
 }
-.archives .archives-header {
-    margin-top: 40px;
-}
-.archives .archives-content::before, .archives .archives-content::after {
+.archives .archives-content::before,
+.archives .archives-content::after {
     content: " ";
     position: absolute;
 }
 .archives .archives-content::after {
     top: 60px;
-    margin-left: 2px;
+    bottom: 50px;
     width: 4px;
-    height: 100%;
+    margin-left: 2px;
     background: #f5f5f5;
     z-index: 1;
 }
@@ -2442,7 +2459,7 @@ code.has-numbering {
   ========================================================================== */
 
 .post-content .kg-width-wide img {
-    max-width: 720px;
+    max-width: 768px;
 }
 
 .post-content .kg-width-full img {
@@ -2452,7 +2469,7 @@ code.has-numbering {
 .kg-gallery-container {
     display: flex;
     flex-direction: column;
-    max-width: 720px;
+    max-width: 768px;
     width: 100vw;
 }
 
