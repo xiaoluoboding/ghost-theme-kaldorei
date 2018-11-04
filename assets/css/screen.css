@@ -561,6 +561,7 @@ body.nav-opened .site-wrapper {
     text-decoration: none !important;
 }
 .main-nav {
+    display: flex;
     position: relative;
     padding: 35px 40px;
     margin: 0 auto 0 !important;
@@ -570,7 +571,7 @@ body.nav-opened .site-wrapper {
     text-decoration: none;
     font-size: 16px;
     color: #2C3F51;
-    padding: 25px 20px;
+    padding: 1.5em .8em;
 }
 .main-nav a:hover {
     color: #009a61;
@@ -593,6 +594,11 @@ body.nav-opened .site-wrapper {
 
 /* Navigation */
 
+.main-header .nav {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
 .nav > ul {
     margin: 0 20px;
     padding: 0;
@@ -1952,6 +1958,14 @@ body.nav-opened .site-wrapper {
     .navigation > ul > li {
         padding: 0;
     }
+    .nav {
+        display: flex;
+        justify-content: flex-end;
+        flex: 1;
+    }
+    .main-nav a {
+        padding: 2rem 1rem;
+    }
 }
 
 /* ==========================================================================
@@ -2006,11 +2020,11 @@ body.nav-opened .site-wrapper {
         border-color: transparent;
     }
     .main-nav-title {
-        padding: 17px 0px;
+        padding: 17px 12px;
     }
     .main-nav-title a {
         font-size: 20px;
-        padding: 18px;
+        padding: 0;
     }
     .nav-title {
         top: 25px;
@@ -2019,9 +2033,14 @@ body.nav-opened .site-wrapper {
         position: absolute;
         top: 18px;
     }
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+    }
     .nav > ul {
         height: 64px;
-        margin: 0 15px;
+        margin: 0;
     }
     .nav ul a {
         padding: 25px 6px;
@@ -2034,12 +2053,8 @@ body.nav-opened .site-wrapper {
     }
     .post {
         width: auto;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        margin-left: 16px;
-        margin-right: 16px;
-        padding-top: 1rem;
-        padding-bottom: 2rem;
+        margin: 1rem 1.33rem;
+        padding: 1rem 0;
         line-height: 1.65em;
     }
     .post-meta-date {
@@ -2193,6 +2208,9 @@ body.nav-opened .site-wrapper {
     }
     .post-content img {
         max-width: 640px;
+    }
+    .main-nav a {
+        padding: 1.5em .4em;
     }
 }
 

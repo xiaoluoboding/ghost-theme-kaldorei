@@ -3,7 +3,7 @@ A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
 # Preview
 
-![img](assets/img/preview.png)
+![img](assets/img/preview_mbp.png)
 
 ## Plan to do
 - [x] 主题基调定为小清新绿色
@@ -64,8 +64,8 @@ Kaldorei提供了简单的归档功能，使用ghost的api来生成归档，预�
 > * Navigation > 创建一个`归档`导航，地址为：http://your_blog_url/`archives`;
 > * 去博客首页看看你的归档吧，Have fun.
 
-## 配置喜欢的代码主题风格
-Kaldorei使用[highlight.js](https://github.com/isagalaev/highlight.js)实现代码高亮，默认使用的主题风格为 `monokai-sublime`
+### 配置喜欢的代码主题风格
+Kaldorei使用[highlight.js](https://github.com/isagalaev/highlight.js)实现代码高亮，默认使用的主题风格为 `monokai-sublime`
 
 > 方法：ghost后台 > `Code Injection` > `Blog Header`
 
