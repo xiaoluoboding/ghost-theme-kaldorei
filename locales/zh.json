@@ -30,8 +30,8 @@
   "% min read": "% min read",
   "Previous": "上一页",
   "Next": "下一页",
-  "Tags": "标签云",
   "Tag": "标签",
+  "Tag Cloud": "标签云",
   "Profile Posts": "文章",
   "Profile Features": "推荐",
   "Profile Tags": "标签",
@@ -45,5 +45,6 @@
   "Publish At": "发表于",
   "Read": "阅读此作者的",
   "more posts": "更多文章",
-  "by this author": " "
+  "by this author": " ",
+  "toc": "文章目录"
 }
