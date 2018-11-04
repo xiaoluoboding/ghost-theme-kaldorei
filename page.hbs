@@ -1,57 +1,54 @@
-{{!< default}}
-{{#post}}
-
-<header class="main-header">
-    <nav class="container main-nav clearfix">
-        <div class="main-nav-title pull-left">
-            <a class="blog-title" href="{{@blog.url}}">{{@blog.title}}</a>
-        </div>
-        {{#if @blog.navigation}}
-            {{navigation}}
-        {{/if}}
-    </nav>
+{{!< default}} {{#post}} <header class="main-header">
+<nav class="container main-nav clearfix">
+    <div class="main-nav-title pull-left">
+        <a class="blog-title" href="{{@blog.url}}">{{@blog.title}}</a>
+    </div>
+    {{#if @blog.navigation}}
+    {{navigation}}
+    {{/if}}
+</nav>
 </header>
 
 {{! The main container area on the homepage }}
 <main id="container" class="container" role="main">
     <div id="content" class="content col-sm-12 col-md-12 col-lg-12">
-      <article class="{{post_class}}">
+        <article class="{{post_class}}">
 
-          <header class="post-header">
-              <h1 class="post-title">{{title}}</h1>
-          </header>
+            <header class="post-header">
+                <h1 class="post-title">{{title}}</h1>
+            </header>
 
-          <section class="post-content">
-              {{content}}
-          </section>
+            <section class="post-content">
+                {{content}}
+            </section>
 
-          <footer class="post-footer">
-              {{> "post_author"}}
-          </footer>
+            <footer class="post-footer">
+                {{> "post_author"}}
+            </footer>
 
-      </article>
+        </article>
 
-      <aside class="post-nav">
-          {{#prev_post}}
-          <span class="post-nav-prev">
-              上一篇
-              <a href="{{url}}">
-                  {{title}}
-              </a>
-          </span>
-          {{/prev_post}}
+        <aside class="post-nav">
+            {{#prev_post}}
+            <span class="post-nav-prev">
+                <a href="{{url}}">
+                    <i class="fa fa-chevron-left"></i>
+                    {{title}}
+                </a>
+            </span>
+            {{/prev_post}}
 
-          {{#next_post}}
-          <span class="post-nav-next" >
-              <a href="{{url}}">
-                  {{title}}
-              </a>
-              下一篇
-          </span>
-          {{/next_post}}
-      </aside>
+            {{#next_post}}
+            <span class="post-nav-next">
+                <a href="{{url}}">
+                    {{title}}
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+            </span>
+            {{/next_post}}
+        </aside>
 
-      {{> "comments"}}
-    <div>
+        {{> "comments"}}
+        <div>
 </main>
 {{/post}}

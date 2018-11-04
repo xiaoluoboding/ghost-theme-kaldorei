@@ -21,15 +21,15 @@
 <main id="container" class="container" role="main">
     <div id="content" class="content col-sm-12 col-md-12 col-lg-12">
         <article class="archives">
-            <header class="archives-header">
-            </header>
             <section class="archives-content">
                 <span class="archives-top"></span>
                 <span class="archives-total">
                     {{! count posts }}
                     {{#get "posts" as |posts postPages|}}
-                    {{! Use our pages (pagination) object }}
-                    <strong>目前共计{{postPages.total}}篇日志，继续努力！</strong>
+                        {{! Use our pages (pagination) object }}
+                        <strong>
+                            {{plural postPages.total empty=(t "No posts") singular=(t "A collection of 1 post") plural=(t "A collection of % posts")}}
+                        </strong>
                     {{/get}}
                 </span>
                 {{#get "posts" limit="all" order="published_at desc"}}
