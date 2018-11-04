@@ -573,11 +573,11 @@ body.nav-opened .site-wrapper {
     color: #2C3F51;
     padding: 1.5em .8em;
 }
-.main-nav a:hover {
+/* .main-nav a:hover {
     color: #009a61;
     border-bottom: 4px solid #009a61;
     margin-bottom: -4px;
-}
+} */
 .main-nav-title {
     padding: 23px 0;
     background: #009a61;
@@ -607,7 +607,6 @@ body.nav-opened .site-wrapper {
 .nav > ul > li {
     display: inline-block;
     padding: 22px 0px;
-    /* margin-top: 4px; */
 }
 .nav > ul > li:hover {
     border-bottom: 4px solid #009a61;
@@ -864,11 +863,11 @@ body.nav-opened .site-wrapper {
     padding-bottom: 0.6em;
     border-bottom: 1px solid #EBF2F6;
 }
-.post-content h3 {
+/* .post-content h3 {
     margin-left: -32px;
     padding-left: 27px;
     border-left: 5px solid;
-}
+} */
 .post-content h4 {
     margin-left: -32px;
     padding-left: 28px;
@@ -2024,7 +2023,7 @@ body.nav-opened .site-wrapper {
     }
     .main-nav-title a {
         font-size: 20px;
-        padding: 0;
+        padding: 0 !important;
     }
     .nav-title {
         top: 25px;
@@ -2040,7 +2039,7 @@ body.nav-opened .site-wrapper {
     }
     .nav > ul {
         height: 64px;
-        margin: 0;
+        margin: 0 10px;
     }
     .nav ul a {
         padding: 25px 6px;
@@ -2199,6 +2198,16 @@ body.nav-opened .site-wrapper {
     }
     .read-more {
         display: none;
+    }
+    .featured h1 {
+        border-left: 4px solid;
+        padding-left: 12px;
+        margin-left: -16px !important;
+    }
+    .post-content h4 {
+        border-left: 4px solid;
+        padding-left: 12px;
+        margin-left: -16px !important;
     }
 }
 
