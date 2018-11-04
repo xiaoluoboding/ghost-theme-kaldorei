@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{lang}}">
 
 <head>
     {{! Document Settings }}
@@ -11,13 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">{{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <!-- <link rel="stylesheet" type="text/css" href="//fonts.useso.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" /> -->
     <link rel="stylesheet" type="text/css" href="{{asset "plugins/font-awesome-4.5.0/css/font-awesome.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "plugins/bootstrap-3.3.5/css/bootstrap.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "plugins/highlight-9.1.0/styles/monokai-sublime.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "plugins/anijs-0.9.3/anicollection.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "plugins/fancybox-3.1.25/jquery.fancybox.min.css"}}" />{{! Ghost outputs important style and meta data with this tag }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     {{ghost_head}}
 </head>
 
@@ -37,7 +37,7 @@
 
     </div>
 
-    <div id="backTop" class="backTop">
+    <div id="backTop" class="back-top">
         <button class="btn btn-inverse">
             <i class="fa fa-chevron-up"></i>
         </button>

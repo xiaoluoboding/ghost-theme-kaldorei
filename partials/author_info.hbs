@@ -24,7 +24,10 @@
         <div class="author-meta">
             {{#if location}}<span class="author-location"><i class="fa fa-map-marker"></i> {{location}}</span>{{/if}}
             {{#if website}}<span class="author-link"><i class="fa fa-link"></i> <a href="{{website}}">{{website}}</a></span>{{/if}}
-            <span class="author-stats"><i class="fa fa-file-text-o"></i> {{plural ../pagination.total empty='作者很懒，什么都木有留下。' singular='只发表了 % 篇文章，有点少哎。' plural='共计发表 % 篇文章，继续努力。'}}</span>
+            <span class="author-stats">
+                <i class="fa fa-file-text-o"></i>
+                {{plural ../pagination.total empty='作者很懒，什么都木有留下。' singular='只发表了 % 篇文章，有点少哎。' plural='共计发表 % 篇文章，继续努力。'}}
+            </span>
         </div>
     </div>
 {{/primary_author}}

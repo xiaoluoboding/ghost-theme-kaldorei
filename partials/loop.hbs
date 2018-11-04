@@ -3,12 +3,12 @@
     {{! 标签信息 }}
     <section class="tag-meta {{#if @tag.image}}" style="background-image: url({{@tag.image}}){{else}}no-cover{{/if}}">
         <div class="tag-meta-content">
-            <label class="page-title">标签：{{tag.name}}</label>
+            <label class="page-title">{{t "Tag"}}：{{tag.name}}</label>
             <span class="page-description">
                 {{#if tag.description}}
-                {{tag.description}}
+                    {{tag.description}}
                 {{else}}
-                共计 {{pagination.total}} 篇文章
+                    {{plural pagination.total empty=(t "No posts") singular=(t "A collection of 1 post") plural=(t "A collection of % posts")}}
                 {{/if}}
             </span>
         </div>
@@ -31,14 +31,14 @@
             <span class="post-meta-item post-meta-date">
                 <i class="fa fa-clock-o"></i>
                 <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="ture"}}</time>
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">({{date format="YYYY-MM-DD"}})</time>
+                {{!-- <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">({{date format="YYYY-MM-DD"}})</time> --}}
             </span>
             <span class="post-meta-item post-meta-tags">
                 <i class="fa fa-tag"></i>
                 {{tags}}
             </span>
             <span class="post-meta-item pull-right">
-                <a class="read-more" href="{{url}}">阅读全文 <i class="fa fa-angle-double-right"></i></a>
+                <a class="read-more" href="{{url}}">{{t "Read More"}} <i class="fa fa-angle-double-right"></i></a>
             </span>
         </footer>
     </article>

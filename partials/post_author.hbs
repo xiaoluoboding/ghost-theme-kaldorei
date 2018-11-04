@@ -8,21 +8,22 @@
 {{/primary_author}}
 <figure class="author-info">
     <section class="author-info-title">
-        <span><time class="post-date pull-right" datetime="{{date format='YYYY-MM-DD'}}">发表于：{{date format="YYYY-MM-DD"}}</time></span>
+        <span class="pull-right">{{t "Publish At"}}：<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time></span>
         {{#primary_author}}
-        <span>作者：{{name}}</span>
+        <span>{{t "Author"}}：{{name}}</span>
     </section>
     <section class="author-info-content">
         {{#if bio}}
             <span class="author-info-bio">{{bio}}</span>
         {{else}}
-            <p>查看此作者的 <a href="{{url}}">更多文章</a> 。</p>
+            <p>{{t "Read"}} <a href="{{url}}">{{t "more posts"}}</a> {{t "by this author"}}</p>
+            {{!-- <p>{{{t "Read <a href='{url}'>more posts</a> by this author" url=@url}}}</p> --}}
         {{/if}}
         <section class="author-info-social">
-            {{#if website}}<a href="{{website}}" class="author-info-social-website">我的站点</a>{{/if}}
+            {{!-- {{#if website}}<a href="{{website}}" class="author-info-social-website">我的站点</a>{{/if}} --}}
             {{!-- <a href="{{url}}" class="author-info-social-feature">我的专栏</a> --}}
-            <a href="https://github.com/xiaoluoboding" class="author-info-social-github" target="_blank">GitHub</a>
-            <a href="http://weibo.com/17064042" class="author-info-social-weibo" target="_blank">新浪微博</a>
+            <a href="https://github.com/xiaoluoboding" class="author-info-social-github" target="_blank">{{t "Github"}}</a>
+            <a href="http://weibo.com/17064042" class="author-info-social-weibo" target="_blank">{{t "Weibo"}}</a>
             <a href="https://segmentfault.com/u/xlbd" class="author-info-social-sf" target="_blank">SegmentFault</a>
             <a href="https://juejin.im/user/5624b5fa60b296e5979b7284/posts" class="author-info-social-jj" target="_blank">掘金专栏</a>
         </section>
