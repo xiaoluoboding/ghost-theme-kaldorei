@@ -4,7 +4,7 @@
 {{! If we have a tag cover, display that - else blog cover - else nothing }}
 <header class="main-header">
     <nav class="container main-nav clearfix">
-        <div class="main-nav-title pull-left">
+        <div class="main-nav__brand">
             <a class="blog-title" href="{{@blog.url}}">{{@blog.title}}</a>
         </div>
         {{#if @blog.navigation}}
