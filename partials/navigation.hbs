@@ -3,7 +3,11 @@
     <ul>
         {{#foreach navigation}}
             <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation">
-                <a href="{{url absolute="true"}}">{{label}}</a>
+                <a href="{{url absolute="true"}}">
+                    <span class="nav_menuitem-name">
+                        {{label}}
+                    </span>
+                </a>
             </li>
         {{/foreach}}
     </ul>
