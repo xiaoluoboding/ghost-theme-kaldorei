@@ -2061,7 +2061,7 @@ body.nav-opened .site-wrapper {
         align-items: center;
         justify-content: center;
         width: 100%;
-        padding: .8rem 0;
+        padding: 1.6rem 0 0;
     }
     .main-nav__brand a {
         font-size: 20px;
