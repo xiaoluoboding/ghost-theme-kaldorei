@@ -158,16 +158,6 @@
             }
         });
     };
-
-    // show m-nav-panel
-    $('.btn-m-panel').on('click', function (e) {
-        $('body').css('overflow', 'hidden');
-        $('.m-nav-panel').css('display', 'block');
-    })
-    $('.btn-m-close').on('click', function (e) {
-        $('body').css('overflow', 'auto')
-        $('.m-nav-panel').css('display', 'none');
-    })
 })(jQuery);
 
 function scrollToTop(name, speed) {

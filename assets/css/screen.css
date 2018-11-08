@@ -31,7 +31,6 @@
     23. Archives
     24. Fancybox Setting
     25. Koenig Styles in Ghost 2.x
-    26. Menu in Mobile
 
 */
 
@@ -1974,12 +1973,23 @@ body.nav-opened .site-wrapper {
 
 @media only screen and (max-width: 500px) {
     .main-header {
+        height: 96px;
+        max-height: 96px;
         margin-bottom: 0px;
+    }
+    .main-header .main-nav__menu {
+        display: flex;
+        justify-content: space-around;
     }
     .no-cover.main-header {
         height: 30vh;
     }
     .main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 96px;
         padding: 5px;
         margin-bottom: 2rem;
         background: #009a61;
@@ -2017,12 +2027,14 @@ body.nav-opened .site-wrapper {
     }
     .main-nav__brand {
         display: flex;
-        width: 100%;
         align-items: center;
-        padding: 0 12px;
+        justify-content: center;
+        width: 100%;
+        padding: .8rem 0;
     }
     .main-nav__brand a {
         font-size: 20px;
+        font-weight: 500;
         padding: 0 !important;
     }
     .nav-title {
@@ -2033,13 +2045,21 @@ body.nav-opened .site-wrapper {
         top: 18px;
     }
     .main-nav__menu > ul {
-        display: none !important;
-        height: 64px;
-        margin: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        margin: 0;
+    }
+    .main-nav__menu > ul > li {
+        padding: 0;
+        margin: 0;
     }
     .main-nav__menu ul a {
-        padding: 25px 6px;
+        color: #fff;
+        padding: 0 .4rem;
         font-size: 14px;
+        font-weight: 500;
     }
     .main-nav__menu > .btn.btn-link {
         display: block;
@@ -2051,7 +2071,8 @@ body.nav-opened .site-wrapper {
     }
     .inner, .pagination {
         width: auto;
-        margin: 2rem auto;
+        padding: 1.2rem 0;
+        margin: 0;
         display: block !important;
     }
     .content {
@@ -2068,14 +2089,12 @@ body.nav-opened .site-wrapper {
         margin: 0 auto;
         padding: 2rem 0;
     }
-    .post-meta-tags {
+    .post-meta-tags,
+    .post-meta-date {
         display: none;
     }
     .post-template .post-header {
         margin-bottom: 2rem;
-    }
-    .post-template .post-meta-date {
-        display: inline-block;
     }
     hr {
         margin: 1.75em 0;
@@ -2204,9 +2223,6 @@ body.nav-opened .site-wrapper {
         display: block;
         text-align: center;
         float: none;
-    }
-    .read-more {
-        display: none;
     }
     .featured h1 {
         border-left: 4px solid;
@@ -2538,90 +2554,6 @@ code.hljs {
     margin: 0;
     width: 100%;
     height: 100%;
-}
-
-.m-nav-panel {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1008;
-    display: none;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    text-align: center;
-    background: #fff;
-    /* opacity: .4; */
-    -webkit-animation: mPanelIn .4s;
-    animation: mPanelIn .4s;
-}
-.m-nav-panel > .m-nav-panel__main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100% - 64px);
-}
-.m-nav-panel > .m-nav-panel__header {
-    display: flex;
-    justify-content: flex-end;
-    height: 64px;
-}
-.m-nav-panel .m-nav-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    list-style: none;
-    z-index: 2018;
-}
-.m-nav-panel .btn.btn-link {
-    display: block;
-    font-size: 20px;
-    color: #009a61;
-}
-.m-nav-panel .btn.btn-link:focus {
-    outline: none;
-}
-.m-nav-menu .m-nav-menuitem {
-    padding: 1rem;
-}
-.m-nav-menu .m-nav-menuitem a {
-    color: #009a61;
-    font-size: 2rem;
-}
-
-/* menu hover effect */
-.m-nav-menu .m-nav-menuitem a:hover {
-    color: #34495e;
-}
-.m-nav-menu .m-nav-menuitem a:hover .m-nav_menuitem-name::before {
-    transform: scale3d(1,1,1);
-}
-.m-nav-menu .m-nav-menuitem a .m-nav_menuitem-name {
-    position: relative;
-    font-weight: bold;
-    line-height: 1.4;
-    padding: 0 0.35em;
-    transition: color 0.5s;
-    transition-timing-function: cubic-bezier(0.2,1,0.3,1);    
-}
-.m-nav-menu .m-nav-menuitem a .m-nav_menuitem-name::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: #34495e;
-    opacity: 0.3;
-    transform: scale3d(0,1,1);
-    transform-origin: 0% 50%;
-    transition: transform 0.5s;
-    transition-timing-function: cubic-bezier(0.2,1,0.3,1);
 }
 
 /* ==========================================================================

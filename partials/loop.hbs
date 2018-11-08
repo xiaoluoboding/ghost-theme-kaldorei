@@ -21,7 +21,7 @@
             <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
         </header>
         <section class="post-excerpt">
-            <p>{{excerpt words="26"}} ... </p>
+            <p>{{excerpt words="20"}} ... </p>
         </section>
         <footer class="post-meta">
             <span class="post-meta-item post-meta-author">
@@ -37,11 +37,11 @@
                 <i class="fa fa-tag"></i>
                 {{tags}}
             </span>
-            {{!-- <span class="post-meta-item post-meta-reading_time">
+            <span class="post-meta-item post-meta-reading_time">
                 <i class="fa fa-clock-o"></i>
                 {{reading_time}}
-            </span> --}}
-            <span class="post-meta-item pull-right">
+            </span>
+            <span class="post-meta-item post-read-more pull-right">
                 <a class="read-more" href="{{url}}">{{t "Read More"}} <i class="fa fa-angle-double-right"></i></a>
             </span>
         </footer>

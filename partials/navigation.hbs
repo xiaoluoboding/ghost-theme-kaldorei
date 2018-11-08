@@ -7,25 +7,4 @@
             </li>
         {{/foreach}}
     </ul>
-
-    <button type="button" class="btn btn-link btn-m-panel"><i class="fa fa-bars"></i></button>
-
-    <div class="m-nav-panel" style="display: none;">
-        <header class="m-nav-panel__header">
-            <button type="button" class="btn btn-link btn-m-close"><i class="fa fa-times"></i></button>
-        </header>
-        <main class="m-nav-panel__main">
-            <ul class="m-nav-menu">
-                {{#foreach navigation}}
-                <li class="m-nav-menuitem m-nav-{{label}}{{#if current}} nav-current{{/if}}" role="presentation">
-                    <a href="{{url absolute="true"}}">
-                        <span class="m-nav_menuitem-name">
-                            {{label}}
-                        </span>
-                    </a>
-                </li>
-                {{/foreach}}
-            </ul>
-        </main>
-    </div>
 </div>
