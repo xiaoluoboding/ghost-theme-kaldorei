@@ -36,7 +36,13 @@ A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
 ## How to use
 
-### 统计
+### 切换语言
+
+Ghost2.x版本中支持了语言的切换，Kaldorei 同时也支持了中/英文的切换，默认为英文 `en`。
+
+> 方法：ghost后台 > `General` > `Publication Language` 改为 `zh` 即可
+
+### 标签统计
 Kaldorei使用了ghost的api来做统计，所以需要开启ghost的实验室中的`Public API`功能。
 
 > 方法：ghost后台 > `labs` > `Enable Beta Features` > `勾选 Public API`
