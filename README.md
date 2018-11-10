@@ -3,7 +3,7 @@ A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
 # Preview
 
-![img](assets/img/preview_mbp.png)
+![img](assets/img/preview.png)
 
 ## Plan to do
 - [x] 主题基调定为小清新绿色
