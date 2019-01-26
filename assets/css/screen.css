@@ -980,7 +980,7 @@ body.nav-opened .site-wrapper {
     background-color: #D9534F;
 }
 .author-info-social .author-info-social-github {
-    background-color: #4A4A4A;
+    background-color: #212931;
 }
 .author-info-social .author-info-social-sf {
     background-color: #5CB85C;
@@ -991,6 +991,16 @@ body.nav-opened .site-wrapper {
 .author-info-social .author-info-social-feature {
     background-color: #567E95;
 }
+.author-info-social .author-info-social-js {
+    background-color: #D37265;
+}
+.author-info-social .author-info-social-db {
+    background-color: #007711;
+}
+.author-info-social .author-info-social-twitter {
+    background-color: #1FADE7;
+}
+
 
 /* Create some space to the right for the share links */
 
@@ -1786,6 +1796,12 @@ body.nav-opened .site-wrapper {
 }
 .social .social-weibo:hover {
     color: #D9534F;
+}
+.social .social-twitter:hover {
+    color: #1DA1F2;
+}
+.social .social-douban:hover {
+    color: #007711;
 }
 .social .social-github:hover {
     color: #4A4A4A;
