@@ -2,8 +2,9 @@
     {{#if prev}}
         <a rel="next" class="newer-posts" href="{{page_url prev}}"><i class="fa fa-chevron-left"></i>&nbsp;{{t "Previous"}}</a>
     {{/if}}
-    <span class="page-number">Page {{page}} of {{pages}}</span>
+    <span class="page-number">{{t "Page {page} of {pages}" page=page pages=pages}}</span>
     {{#if next}}
         <a rel="prev" class="older-posts" href="{{page_url next}}">{{t "Next"}}&nbsp;<i class="fa fa-chevron-right"></i></a>
     {{/if}}
 </nav>
+

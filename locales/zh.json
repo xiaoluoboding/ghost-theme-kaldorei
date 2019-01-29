@@ -2,7 +2,7 @@
   "Back": "返回",
   "Newer Posts": "Newer Posts",
   "Older Posts": "Older Posts",
-  "Page {page} of {pages}": "Page {page} of {pages}",
+  "Page {page} of {pages}": "第 {page} 页 / 共 {pages} 页",
   "Subscribe": "Subscribe",
   "Subscribe to {blogtitle}": "Subscribe to {blogtitle}",
   "Subscribed!": "Subscribed!",
