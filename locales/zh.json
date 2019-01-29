@@ -15,7 +15,7 @@
   "Get the latest posts delivered right to your inbox": "Get the latest posts delivered right to your inbox",
   "Latest Posts": "最新文章",
   "<a href='{url}'>More posts</a> by {name}": "<a href='{url}'>More posts</a> by {name}",
-  "No posts": "暂无文章",
+  "No posts": "作者很懒，什么都木有留下。",
   " (Page %)": " (Page %)",
   "Read More": "阅读全文",
   "Read <a href='{url}'>more posts</a> by this author": "阅读此作者的  <a href='{url}'>更多文章</a>",
@@ -24,8 +24,8 @@
   "Stay up to date! Get all the latest & greatest posts delivered straight to your inbox": "Stay up to date! Get all the latest & greatest posts delivered straight to your inbox",
   "This post was a collaboration between": "This post was a collaboration between",
   "youremail@example.com": "youremail@example.com",
-  "1 post": "1 篇文章",
-  "% posts": "% 篇文章",
+  "1 post": "只发表了 % 篇文章，有点少哎",
+  "% posts": "共计发表 % 篇文章，继续努力",
   "1 min read": "1 分钟读完",
   "% min read": "% 分钟读完",
   "Previous": "上一页",
@@ -50,5 +50,6 @@
   "more posts": "更多文章",
   "by this author": " ",
   "toc": "文章目录",
+  "Click to add bio": "添加签名档",
   "Proudly published with {ghost_link}, Theme {theme_link}, Modified by {ctheme_link}":"本站由 {ghost_link} 强力驱动，主题 {theme_link}，修改 {ctheme_link}"
 }

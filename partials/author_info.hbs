@@ -17,7 +17,7 @@
         {{#if bio}}
             {{bio}}
         {{else}}
-            <em><a href="{{@blog.url}}/ghost/team/{{slug}}/">(添加签名档)</a></em>
+            <em><a href="{{@blog.url}}/ghost/team/{{slug}}/">{{t "Click to add bio"}}</a></em>
         {{/if}}
     </p>
     <hr>
@@ -25,9 +25,16 @@
         {{#if location}}<span class="author-location"><i class="fa fa-map-marker"></i> {{location}}</span>{{/if}}
         {{#if website}}<span class="author-link"><i class="fa fa-link"></i> <a href="{{website}}">{{website}}</a></span>{{/if}}
         <span class="author-stats">
-            <i class="fa fa-file-text-o"></i>
-            {{plural ../pagination.total empty='作者很懒，什么都木有留下。' singular='只发表了 % 篇文章，有点少哎。' plural='共计发表 % 篇文章，继续努力。'}}
+            {{#get "posts" filter="primary_author:{{slug}}" as |posts postPages|}}
+                {{! Use our pages (pagination) object }}
+                <i class="fa fa-file-text-o"></i>
+                {{plural postPages.total
+                    empty=(t "No posts")
+                    singular=(t "% post")
+                    plural=(t "% posts")}}
+            {{/get}}
         </span>
     </div>
+    <hr>
 </div>
 {{!-- {{/primary_author}} --}}
