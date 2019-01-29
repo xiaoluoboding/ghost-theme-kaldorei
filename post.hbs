@@ -27,10 +27,13 @@
                         <i class="fa fa-user"></i>
                         {{authors limit="1"}}
                     </span>
-                    <span class="post-meta-item">
+                    <span class="post-meta-item post-meta-date">
                         <i class="fa fa-clock-o"></i>
-                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="ture"}}</time>
-                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">({{date format="YYYY-MM-DD"}})</time>
+                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time>
+                    </span>
+                    <span class="post-meta-item post-meta-date">
+                        <i class="fa fa-hourglass-o"></i>
+                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><i>{{date timeago="ture"}}</i></time>
                     </span>
                     <span class="post-meta-item post-meta-tags">
                         <i class="fa fa-tag"></i>

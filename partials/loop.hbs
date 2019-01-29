@@ -24,22 +24,27 @@
             <p>{{excerpt words="20"}} ... </p>
         </section>
         <footer class="post-meta">
-            <span class="post-meta-item post-meta-author">
-                <i class="fa fa-user"></i>
-                {{authors limit="1"}}
-            </span>
-            <span class="post-meta-item post-meta-date">
-                <i class="fa fa-clock-o"></i>
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="ture"}}</time>
-                {{!-- <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">({{date format="YYYY-MM-DD"}})</time> --}}
-            </span>
             <span class="post-meta-item post-meta-tags">
                 <i class="fa fa-tag"></i>
                 {{tags}}
             </span>
+        </footer>
+        <footer class="post-meta">
+            <span class="post-meta-item post-meta-author">
+                <i class="fa fa-user"></i>
+                {{authors limit="1"}}
+            </span>
             <span class="post-meta-item post-meta-reading_time">
                 <i class="fa fa-clock-o"></i>
                 {{reading_time}}
+            </span>
+            <span class="post-meta-item post-meta-date">
+                <i class="fa fa-clock-o"></i>
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time>
+            </span>
+            <span class="post-meta-item post-meta-date">
+                <i class="fa fa-hourglass-o"></i>
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><i>{{date timeago="ture"}}</i></time>
             </span>
             <span class="post-meta-item post-read-more pull-right">
                 <a class="read-more" href="{{url}}">{{t "Read More"}} <i class="fa fa-angle-double-right"></i></a>

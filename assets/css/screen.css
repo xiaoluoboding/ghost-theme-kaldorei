@@ -763,7 +763,8 @@ body.nav-opened .site-wrapper {
     white-space: nowrap;
 }
 .post-meta-reading_time {
-    display: none;
+    /* display: none; */
+    display: inline-block;
 }
 .user-image {
     position: absolute;

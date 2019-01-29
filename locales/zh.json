@@ -49,5 +49,6 @@
   "Read": "阅读此作者的",
   "more posts": "更多文章",
   "by this author": " ",
-  "toc": "文章目录"
+  "toc": "文章目录",
+  "Proudly published with {ghost_link}, Theme {theme_link}, Modified by {ctheme_link}":"本站由 {ghost_link} 强力驱动，主题 {theme_link}，修改 {ctheme_link}"
 }

@@ -49,5 +49,6 @@
   "Read": "Read",
   "more posts": "more posts",
   "by this author": "by this author",
-  "toc": "Table of contents"
+  "toc": "Table of contents",
+  "Proudly published with {ghost_link}, Theme {theme_link}, Modified by {ctheme_link}":"Proudly published with {ghost_link}, Theme {theme_link}, Modified by {ctheme_link}"
 }
