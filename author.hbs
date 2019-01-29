@@ -1,6 +1,7 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
+
 {{! The big featured header }}
 <header class="main-header">
     <nav class="container main-nav clearfix">
@@ -19,6 +20,8 @@
     {{! The tag below includes the post loop - partials/loop.hbs }}
     {{> "loop"}}
 
-    {{> "sidebar"}}
+    {{#author}}
+        {{> "sidebar"}}
+    {{/author}}
 
 </main>

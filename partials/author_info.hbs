@@ -1,33 +1,33 @@
 {{! 作者信息 }}
-{{#primary_author}}
-    <div class="widget widget-profile">
-        <div class="widget-profile-cover overlay {{#if cover_image}}" style="background-image: url({{cover_image}}){{else}}no-cover{{/if}}"></div>
-        <div class="widget-profile-header">
-            <a class="widget-profile-logo" href="{{url}}">
-            {{#if profile_image}}
-                <img src="{{img_url profile_image}}" alt="{{@blog.title}}" />
-            {{else}}
-                <img src="{{asset "img/user-image.png"}}" alt="{{@blog.title}}" />
-            {{/if}}
-            </a>
-        </div>
-        <span class="widget-profile-title label label-xlg label-minty arrowed-in arrowed-in-right">{{name}}</span>
-        <hr>
-        <p class="widget-profile-desc">
-            {{#if bio}}
-                {{bio}}
-            {{else}}
-                <em><a href="{{@blog.url}}/ghost/team/{{slug}}/">(添加签名档)</a></em>
-            {{/if}}
-        </p>
-        <hr>
-        <div class="author-meta">
-            {{#if location}}<span class="author-location"><i class="fa fa-map-marker"></i> {{location}}</span>{{/if}}
-            {{#if website}}<span class="author-link"><i class="fa fa-link"></i> <a href="{{website}}">{{website}}</a></span>{{/if}}
-            <span class="author-stats">
-                <i class="fa fa-file-text-o"></i>
-                {{plural ../pagination.total empty='作者很懒，什么都木有留下。' singular='只发表了 % 篇文章，有点少哎。' plural='共计发表 % 篇文章，继续努力。'}}
-            </span>
-        </div>
+{{!-- {{#primary_author}} --}}
+<div class="widget widget-profile">
+    <div class="widget-profile-cover overlay {{#if cover_image}}" style="background-image: url({{cover_image}}){{else}}no-cover{{/if}}"></div>
+    <div class="widget-profile-header">
+        <a class="widget-profile-logo" href="{{url}}">
+        {{#if profile_image}}
+            <img src="{{img_url profile_image}}" alt="{{@blog.title}}" />
+        {{else}}
+            <img src="{{asset "img/user-image.png"}}" alt="{{@blog.title}}" />
+        {{/if}}
+        </a>
     </div>
-{{/primary_author}}
+    <span class="widget-profile-title label label-xlg label-minty arrowed-in arrowed-in-right">{{name}}</span>
+    <hr>
+    <p class="widget-profile-desc">
+        {{#if bio}}
+            {{bio}}
+        {{else}}
+            <em><a href="{{@blog.url}}/ghost/team/{{slug}}/">(添加签名档)</a></em>
+        {{/if}}
+    </p>
+    <hr>
+    <div class="author-meta">
+        {{#if location}}<span class="author-location"><i class="fa fa-map-marker"></i> {{location}}</span>{{/if}}
+        {{#if website}}<span class="author-link"><i class="fa fa-link"></i> <a href="{{website}}">{{website}}</a></span>{{/if}}
+        <span class="author-stats">
+            <i class="fa fa-file-text-o"></i>
+            {{plural ../pagination.total empty='作者很懒，什么都木有留下。' singular='只发表了 % 篇文章，有点少哎。' plural='共计发表 % 篇文章，继续努力。'}}
+        </span>
+    </div>
+</div>
+{{!-- {{/primary_author}} --}}
