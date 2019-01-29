@@ -24,7 +24,7 @@
         "kaldorei"
     ],
     "engines": {
-        "ghost": ">=2.0.0",
+        "ghost": ">=2.0.1",
         "ghost-api": "v2",
         "node": ">= 6"
     },
