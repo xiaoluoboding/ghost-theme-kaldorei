@@ -2464,7 +2464,7 @@ code.hljs {
   ========================================================================== */
 
 .archives {
-    width: 90%;
+    width: 80%;
     margin: 40px auto;
 }
 .archives .archives-content::before,
@@ -2498,7 +2498,7 @@ code.hljs {
 }
 .archives .archives-item {
     position: relative;
-    margin: 30px 0;
+    margin: 15px 0px 0px 0px;
     overflow: hidden;
     z-index: 2;
 }
@@ -2518,6 +2518,9 @@ code.hljs {
     opacity: 0.5;
     border: 1px solid #fff;
     border-radius: 50%;
+}
+.archives .archives-year h3 {
+    margin: 0.6em 0 0.3em 0;
 }
 .archives-info {
     list-style: none;
