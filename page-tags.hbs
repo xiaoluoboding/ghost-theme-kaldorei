@@ -1,0 +1,41 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+
+<header class="main-header">
+    <nav class="container main-nav clearfix">
+        <div class="main-nav__brand">
+            <a class="blog-title" href="{{@blog.url}}">{{@blog.title}}</a>
+        </div>
+        {{#if @blog.navigation}}
+            {{navigation}}
+        {{/if}}
+    </nav>
+</header>
+
+{{! The main container area on the homepage }}
+<main id="container" class="container" role="main">
+    <div id="content" class="content col-sm-12 col-md-12 col-lg-12">
+        <article class="archives">
+            <section class="archives-content">
+                    <!-- {{#foreach tags}}
+                    <a href="{{url}}" class="tag-item">{{name}}<span class="post-count">{{post_count}}</span></a>
+                    {{/foreach}} -->
+                    {{! Tag Cloud }}
+                    {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
+                        {{#foreach tags}}
+                        <div class="tag-cloud-content">
+                            <a href="/tag/{{slug}}" class="tag-item">{{name}} ({{count.posts}})</a>
+                        </div>
+                        {{/foreach}}
+                    {{/get}}
+            </section>
+        </article>
+    <div>
+</main>
+
+{{/post}}

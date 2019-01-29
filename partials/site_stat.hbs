@@ -1,6 +1,7 @@
 {{! 站点统计 }}
 <nav class="navigation site-stat">
     <div class="site-stat-item">
+        <a href="/archives">
         <span class="site-stat-item-count">
             {{! count posts }}
             {{#get "posts" as |posts postPages|}}
@@ -9,16 +10,20 @@
             {{/get}}
         </span>
         <span class="site-stat-item-name">{{t "Profile Posts"}}</span>
+        </a>
     </div>
     <div class="site-stat-item">
+        <a href="/featured">
         <span class="site-stat-item-count">
             {{#get "posts" filter="featured:true" as |featured featuredPages|}}
                 <strong>{{featuredPages.total}}</strong>
             {{/get}}
         </span>
         <span class="site-stat-item-name">{{t "Profile Featured"}}</span>
+        </a>
     </div>
     <div class="site-stat-item">
+        <a href="/tags">
         <span class="site-stat-item-count">
             {{! count tags }}
             {{#get "tags" as |tags tagPages|}}
@@ -27,5 +32,6 @@
             {{/get}}
         </span>
         <span class="site-stat-item-name">{{t "Profile Tags"}}</span>
+        </a>
     </div>
 </nav>
