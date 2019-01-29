@@ -16,6 +16,7 @@
     {{/is}}
     {{! This is the post loop - each post will be output using this markup }}
     {{#foreach posts}}
+        <a class="block" href="{{url}}">
     <article class="{{post_class}}" data-anijs="if: scroll, on: window, do: fadeInDown animated, before: scrollReveal">
         <header class="post-header">
             <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
@@ -39,18 +40,23 @@
                 {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
             </span>
             <span class="post-meta-item post-meta-date">
-                <i class="fa fa-clock-o"></i>
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time>
+                <i class="fa fa-plus-square-o"></i>
+                <time class="post-date" datetime="{{date published_at format='YYYY-MM-DD'}}">
+                    <i>{{date published_at format="YYYY-MM-DD"}}</i>
+                </time>
             </span>
             <span class="post-meta-item post-meta-date">
-                <i class="fa fa-hourglass-o"></i>
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><i>{{date timeago="ture"}}</i></time>
+                <i class="fa fa-pencil"></i>
+                <time class="post-date" datetime="{{date updated_at format='YYYY-MM-DD'}}">
+                    <i>{{date updated_at format='YYYY-MM-DD'}}</i>
+                </time>
             </span>
             <span class="post-meta-item post-read-more pull-right">
                 <a class="read-more" href="{{url}}">{{t "Read More"}} <i class="fa fa-angle-double-right"></i></a>
             </span>
         </footer>
     </article>
+        </a>
     {{/foreach}}
 
     {{! Previous/next page links - displayed on every page }}

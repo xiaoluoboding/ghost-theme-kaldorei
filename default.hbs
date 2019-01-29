@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset "plugins/anijs-0.9.3/anicollection.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "plugins/fancybox-3.1.25/jquery.fancybox.min.css"}}" />{{! Ghost outputs important style and meta data with this tag }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <script type="text/javascript" src="{{asset "plugins/moment-2.24.0/moment-with-locales.min.js"}}"></script>
     {{ghost_head}}
 </head>
 
@@ -31,8 +32,8 @@
 
         <footer class="site-footer clearfix">
             <div class="footer-meta container">
-                <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>             
-                <section class="poweredby">{{{t "Proudly published with {ghost_link}, Theme {theme_link}, Modified by {ctheme_link}" 
+                <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+                <section class="poweredby">{{{t "Proudly published with {ghost_link}, Theme {theme_link}, Modified by {ctheme_link}"
                                             ghost_link='<a href=\"https://ghost.org\">Ghost</a>'
                                             theme_link='<a href="https://github.com/xiaoluoboding/kaldorei">Kaldorei</a>'
                                             ctheme_link='<a href="https://github.com/JiapengLi/ghost-theme-kaldorei">Jiapeng</a>'
@@ -67,6 +68,8 @@
     <script type="text/javascript" src="{{asset "plugins/anijs-0.9.3/anijs-helper-scrollreveal-min.js"}}"></script>
     <script type="text/javascript" src="{{asset "plugins/github-repo-jquery-widget/jquery.githubRepoWidget.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "plugins/fancybox-3.1.25/jquery.fancybox.min.js"}}"></script>
+
+
 </body>
 
 </html>

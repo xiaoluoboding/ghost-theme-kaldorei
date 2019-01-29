@@ -28,19 +28,30 @@
                         {{authors limit="1"}}
                     </span>
                     <span class="post-meta-item post-meta-date">
-                        <i class="fa fa-clock-o"></i>
-                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time>
+                        {{!-- <i class="fa fa-clock-o"></i> --}}
+                        <i class="fa fa-plus-square-o"></i>
+                        <time class="post-date" datetime="{{date published_at format='YYYY-MM-DD'}}">
+                            {{t "Created on"}} {{date published_at format="YYYY-MM-DD"}}
+                        </time>
                     </span>
-                    <span class="post-meta-item post-meta-date">
+                    {{!-- <span class="post-meta-item post-meta-date">
                         <i class="fa fa-hourglass-o"></i>
-                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><i>{{date timeago="ture"}}</i></time>
+                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+                            <i>{{date timeago="ture"}}</i>
+                        </time>
+                    </span> --}}
+                    <span class="post-meta-item post-meta-date">
+                        <i class="fa fa-pencil"></i>
+                        <time id="updated_at_time" class="post-date" datetime="{{date updated_at format='YYYY-MM-DD'}}">
+                        {{t "Last edited"}} {{date updated_at format='YYYY-MM-DD'}}
+                        </time>
                     </span>
+                    <span></span>
+                </section>
+                <section class="post-meta">
                     <span class="post-meta-item post-meta-tags">
                         <i class="fa fa-tag"></i>
                         {{tags}}
-                    </span>
-                    <span class="post-meta-item pull-right">
-
                     </span>
                 </section>
             </header>
@@ -79,3 +90,16 @@
     {{> sidebar}}
 </main>
 {{/post}}
+
+<script type="text/javascript">
+    var t = document.getElementById("updated_at_time");
+    console.log(t)
+    console.log(document.getElementsByTagName("html")[0].getAttribute("lang"))
+    if (document.getElementsByTagName("html")[0].getAttribute("lang") == 'zh') {
+        moment.locale('zh-cn');
+    } else {
+        moment.locale('en');
+    }
+    //console.log(moment.locales())
+    t.innerHTML += '( ' + moment(t.getAttribute("datetime"),'YYYY-MM-DD').fromNow() + ' )';
+</script>

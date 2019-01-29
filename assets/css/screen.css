@@ -758,7 +758,7 @@ body.nav-opened .site-wrapper {
 }
 .post-date {
     display: inline-block;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 1.4rem;
     white-space: nowrap;
 }
@@ -2608,6 +2608,10 @@ code.hljs {
     margin: 0;
     width: 100%;
     height: 100%;
+}
+
+.block{
+    display: block;
 }
 
 /* ==========================================================================
