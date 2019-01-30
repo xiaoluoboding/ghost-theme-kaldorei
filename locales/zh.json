@@ -53,5 +53,7 @@
   "Click to add bio": "添加签名档",
   "Created on": "创建于",
   "Last edited": "编辑于",
+  "Comments board loading ...": "由于某种不存在的原因，评论区正在努力加载中……",
+  "Site views": "总访问量",
   "Proudly published with {ghost_link}, Theme {theme_link}, Modified by {ctheme_link}":"本站由 {ghost_link} 强力驱动，主题 {theme_link}，修改 {ctheme_link}"
 }

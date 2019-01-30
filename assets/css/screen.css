@@ -1414,7 +1414,11 @@ body.nav-opened .site-wrapper {
     display: block;
     float: left;
 }
-
+.sitestat {
+    display: block;
+    float: right;
+    padding-left: 1em;
+}
 /* ==========================================================================
    11. Layout
    ========================================================================== */
@@ -2274,6 +2278,12 @@ body.nav-opened .site-wrapper {
         display: block;
         text-align: center;
         float: none;
+    }
+    .sitestat {
+        display: block;
+        text-align: center;
+        float: none;
+        padding-left: 0;
     }
     .featured h1 {
         border-left: 4px solid;

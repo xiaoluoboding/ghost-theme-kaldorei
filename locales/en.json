@@ -53,5 +53,7 @@
   "Click to add bio": "Click to add bio",
   "Created on": "Created on",
   "Last edited": "Last edited",
+  "Comments board loading ...": "Comments board loading ...",
+  "Site views": "Site views",
   "Proudly published with {ghost_link}, Theme {theme_link}, Modified by {ctheme_link}":"Proudly published with {ghost_link}, Theme {theme_link}, Modified by {ctheme_link}"
 }

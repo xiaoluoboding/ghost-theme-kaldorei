@@ -33,11 +33,17 @@
         <footer class="site-footer clearfix">
             <div class="footer-meta container">
                 <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-                <section class="poweredby">{{{t "Proudly published with {ghost_link}, Theme {theme_link}, Modified by {ctheme_link}"
-                                            ghost_link='<a href=\"https://ghost.org\">Ghost</a>'
-                                            theme_link='<a href="https://github.com/xiaoluoboding/kaldorei">Kaldorei</a>'
-                                            ctheme_link='<a href="https://github.com/JiapengLi/ghost-theme-kaldorei">Jiapeng</a>'
-                                            }}}
+                <section class="poweredby">
+                    {{{t "Proudly published with {ghost_link}, Theme {theme_link}, Modified by {ctheme_link}"
+                        ghost_link='<a href=\"https://ghost.org\">Ghost</a>'
+                        theme_link='<a href="https://github.com/xiaoluoboding/kaldorei">Kaldorei</a>'
+                        ctheme_link='<a href="https://github.com/JiapengLi/ghost-theme-kaldorei">Jiapeng</a>'
+                        }}}
+                    <script async="" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                    <span class="sitestat" id="busuanzi_container_site_pv" title='{{t "Site views"}}' >
+                        <i class="fa fa-eye"></i>
+                        <span class="busuanzi-value" id="busuanzi_value_site_pv"><i class="fa fa-spinner"></i></span>
+                    </span>
                 </section>
             </div>
         </footer>
