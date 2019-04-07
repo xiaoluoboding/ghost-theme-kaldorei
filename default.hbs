@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{lang}}">
+<html lang="{{@site.lang}}">
 
 <head>
     {{! Document Settings }}
@@ -31,7 +31,7 @@
 
         <footer class="site-footer clearfix">
             <div class="footer-meta container">
-                <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+                <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
                 <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a>, Theme <a href="https://github.com/xiaoluoboding/kaldorei">Kaldorei</a></section>
             </div>
         </footer>
@@ -62,6 +62,7 @@
     <script type="text/javascript" src="{{asset "plugins/anijs-0.9.3/anijs-helper-scrollreveal-min.js"}}"></script>
     <script type="text/javascript" src="{{asset "plugins/github-repo-jquery-widget/jquery.githubRepoWidget.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "plugins/fancybox-3.1.25/jquery.fancybox.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "plugins/ghost-search-1.0.0/ghost-search.min.js"}}"></script>
 </body>
 
 </html>

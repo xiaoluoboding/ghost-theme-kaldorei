@@ -1,10 +1,10 @@
 {{! Everything inside the #author tags pulls data from the author }}
 {{#primary_author}}
-{{#if profile_image}}
-<figure class="author-image">
-    <a class="img" href="{{url}}" style="background-image: url({{img_url profile_image}})"><span class="hidden">{{name}}'s Picture</span></a>
-</figure>
-{{/if}}
+    {{#if profile_image}}
+        <figure class="author-image">
+            <a class="img" href="{{url}}" style="background-image: url({{img_url profile_image}})"><span class="hidden">{{name}}'s Picture</span></a>
+        </figure>
+    {{/if}}
 {{/primary_author}}
 <figure class="author-info">
     <section class="author-info-title">
