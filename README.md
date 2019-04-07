@@ -1,6 +1,9 @@
 # Kaldorei
 A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
+![Ghost 2.x](https://img.shields.io/badge/Ghost-v2.x-blue.svg?style=flat-square)
+![Kaldorei 2.1.0](https://img.shields.io/badge/Kaldorei-v2.1.0-009a61.svg?style=flat-square)
+
 # Preview
 
 ![img](assets/img/preview.png)
@@ -8,7 +11,7 @@ A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 ## Plan to do
 - [x] 主题基调定为小清新绿色
 
-- [x] 文章样式色调为墨蓝色，参考 [[马克飞象]](http://maxiang.io)
+- [x] 文章样式色调为墨蓝色
 
 - [x] 返回顶部
 
@@ -32,22 +35,24 @@ A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
 - [x] 图片暗箱效果
 
-- [ ] 全局搜索
+- [x] 博客搜索
+
+- [ ] 更改配色
 
 ## How to use
 
-### 切换语言
+### 🌐 切换语言
 
 Ghost2.x版本中支持了语言的切换，Kaldorei 同时也支持了中/英文的切换，默认为英文 `en`。
 
 > 方法：ghost后台 > `General` > `Publication Language` 改为 `zh` 即可
 
-### 标签统计
+### 🏷️ 标签统计
 Kaldorei使用了ghost的api来做统计，所以需要开启ghost的实验室中的`Public API`功能。
 
 > 方法：ghost后台 > `labs` > `Enable Beta Features` > `勾选 Public API`
 
-### 图片幻灯片
+### 🌄 图片幻灯片
 Kaldorei集成了fancyBox，支持图片暗箱效果、幻灯片轮播、全屏预览、缩略图预览等功能。预览&使用方法[图片预览](http://xlbd.me/how-to-use-fancybox-in-ghost-blog/)
 
 ### 开启Disqus
@@ -61,7 +66,7 @@ Kaldorei支持Disqus讨论插件，只需在后台`代码注入`处添加一段�
 </script>
 ```
 
-### 开启归档功能
+### 🗂开启归档功能
 Kaldorei提供了简单的归档功能，使用ghost的api来生成归档，预览[博客归档](http://xlbd.me/archives)。
 
 > 方法：ghost后台:
@@ -70,7 +75,7 @@ Kaldorei提供了简单的归档功能，使用ghost的api来生成归档，预�
 > * Navigation > 创建一个`归档`导航，地址为：http://your_blog_url/`archives`;
 > * 去博客首页看看你的归档吧，Have fun.
 
-### 配置喜欢的代码主题风格
+### 🌈 配置喜欢的代码主题风格
 Kaldorei使用[highlight.js](https://github.com/isagalaev/highlight.js)实现代码高亮，默认使用的主题风格为 `monokai-sublime`
 
 > 方法：ghost后台 > `Code Injection` > `Blog Header`
@@ -82,13 +87,39 @@ Kaldorei使用[highlight.js](https://github.com/isagalaev/highlight.js)实现代
 
 [完整主题列表](https://highlightjs.org/static/demo/)
 
+### 🔍配置搜索功能
+
+搜索引擎默认支持按博文标题搜索，此功能需要安装的 `ghost` 版本 >= `2.10.x`。
+
+分为两步：
+
+#### 1、创建自定义集成
+
+> 方法：ghost后台 > `Integrations` > `Add custom integration`
+
+![img](assets/img/apikey.png)
+
+#### 2、配置变量
+
+> 方法：ghost后台 > `Code Injection` > `Blog Header`
+
+```javascript
+// 
+<script>
+  var searchSettings = {
+    key: '__CONTENT__API__KEY__',  // Your custom integration Content API Key
+    host: '__API__URL__',  // Your custom integration API URL
+  };
+</script>
+```
+
 ## About ghost helpers
 
 Kaldorei用两种方法实现了标签云，方法参见[我的博客](http://xlbd.me/how-to-add-the-tag-cloud-into-ghost-blog/)。
 
 Kaldorei优化了发布文章的时间展示，并汉化为中文，需要修改时间(date)助手，方法参见[我的博客](http://xlbd.me/ghost-date-i18n/)。
 
-## Credit
+## Credits
 
 * [font-awesome](https://github.com/FortAwesome/Font-Awesome)
 * [bootstrap](https://github.com/twbs/bootstrap)
@@ -98,3 +129,8 @@ Kaldorei优化了发布文章的时间展示，并汉化为中文，需要修改
 * [anijs](https://github.com/anijs/anijs)
 * [jquery.githubRepoWidget.js](https://github.com/JoelSutherland/GitHub-jQuery-Repo-Widget)
 * [fancyBox](https://github.com/fancyapps/fancyBox)
+* [Ghost Search](https://github.com/HauntedThemes/ghost-search)
+
+## License
+
+MIT © [xiaoluoboding](https://github.com/xiaoluoboding)
