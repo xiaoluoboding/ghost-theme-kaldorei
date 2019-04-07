@@ -2,67 +2,76 @@
 <html lang="{{@site.lang}}">
 
 <head>
-    {{! Document Settings }}
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />{{! Page Meta }}
-    <title>{{meta_title}}</title>
+  {{! Document Settings }}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />{{! Page Meta }}
+  <title>{{meta_title}}</title>
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">{{! Styles'n'Scripts }}
-    <!-- <link rel="stylesheet" type="text/css" href="//fonts.useso.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" /> -->
-    <link rel="stylesheet" type="text/css" href="{{asset "plugins/font-awesome-4.5.0/css/font-awesome.min.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "plugins/bootstrap-3.3.5/css/bootstrap.min.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "plugins/highlight-latest/styles/monokai-sublime.css"}}" />
-    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "plugins/prism-latest/styles/coy.css"}}" /> --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "plugins/anijs-0.9.3/anicollection.min.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "plugins/fancybox-3.1.25/jquery.fancybox.min.css"}}" />{{! Ghost outputs important style and meta data with this tag }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-    {{ghost_head}}
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">{{! Styles'n'Scripts }}
+  <!-- <link rel="stylesheet" type="text/css" href="//fonts.useso.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" /> -->
+  <link rel="stylesheet" type="text/css" href="{{asset "plugins/font-awesome-4.5.0/css/font-awesome.min.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "plugins/bootstrap-3.3.5/css/bootstrap.min.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "plugins/highlight-latest/styles/monokai-sublime.css"}}" />
+  {{!-- <link rel="stylesheet" type="text/css" href="{{asset "plugins/prism-latest/styles/coy.css"}}" /> --}}
+  <link rel="stylesheet" type="text/css" href="{{asset "plugins/anijs-0.9.3/anicollection.min.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "plugins/fancybox-3.1.25/jquery.fancybox.min.css"}}" />
+  {{! Ghost outputs important style and meta data with this tag }}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+  {{ghost_head}}
 </head>
 
 <body class="{{body_class}} nav-closed" data-spy="scroll" data-target="#tocScrollspy">
 
-    <div class="site-wrapper">
+  <div class="site-wrapper">
 
-        {{! Everything else gets inserted here }}
-        {{{body}}}
+    {{! Everything else gets inserted here }}
+    {{{body}}}
 
-        <footer class="site-footer clearfix">
-            <div class="footer-meta container">
-                <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
-                <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a>, Theme <a href="https://github.com/xiaoluoboding/kaldorei">Kaldorei</a></section>
-            </div>
-        </footer>
+    <footer class="site-footer clearfix">
+      <div class="footer-meta container">
+        <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a>, Theme <a
+            href="https://github.com/xiaoluoboding/kaldorei">Kaldorei</a></section>
+      </div>
+    </footer>
 
-    </div>
+  </div>
 
-    <div id="backTop" class="back-top">
-        <button class="btn btn-inverse">
-            <i class="fa fa-chevron-up"></i>
-        </button>
-    </div>
+  {{!-- Search box --}}
+  {{>"search"}}
 
-    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script type="text/javascript" src="{{asset "js/jquery-1.12.0.min.js"}}"></script>
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
+  <div id="backTop" class="back-top">
+    <button class="btn btn-inverse">
+      <i class="fa fa-chevron-up"></i>
+    </button>
+  </div>
 
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-    {{! The main JavaScript file for Kaldorei }}
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-    <script type="text/javascript" src="{{asset "plugins/bootstrap-3.3.5/js/bootstrap.min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "plugins/highlight-latest/highlight.pack.js"}}"></script>
-    {{!-- <script type="text/javascript" src="{{asset "plugins/prism-latest/prism.js"}}"></script> --}}
-    <script type="text/javascript" src="{{asset "plugins/jquery-toc-0.3.5/jquery.toc.js"}}"></script>
-    <script type="text/javascript" src="{{asset "plugins/velocity-1.2.3/velocity.min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "plugins/velocity-1.2.3/velocity.ui.min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "plugins/anijs-0.9.3/anijs-min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "plugins/anijs-0.9.3/anijs-helper-scrollreveal-min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "plugins/github-repo-jquery-widget/jquery.githubRepoWidget.min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "plugins/fancybox-3.1.25/jquery.fancybox.min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "plugins/ghost-search-1.0.0/ghost-search.min.js"}}"></script>
+  {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+  <script type="text/javascript" src="{{asset "js/jquery-1.12.0.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+
+  {{! Ghost outputs important scripts and data with this tag }}
+  {{ghost_foot}}
+
+  {{!-- Content API --}}
+  <script src="https://unpkg.com/@tryghost/content-api@1.0.0/umd/content-api.min.js" defer></script>
+  <script type="text/javascript" src="{{asset "plugins/bootstrap-3.3.5/js/bootstrap.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "plugins/highlight-latest/highlight.pack.js"}}"></script>
+  {{!-- <script type="text/javascript" src="{{asset "plugins/prism-latest/prism.js"}}"></script> --}}
+  <script type="text/javascript" src="{{asset "plugins/jquery-toc-0.3.5/jquery.toc.js"}}"></script>
+  <script type="text/javascript" src="{{asset "plugins/velocity-1.2.3/velocity.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "plugins/velocity-1.2.3/velocity.ui.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "plugins/anijs-0.9.3/anijs-min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "plugins/anijs-0.9.3/anijs-helper-scrollreveal-min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "plugins/github-repo-jquery-widget/jquery.githubRepoWidget.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "plugins/fancybox-3.1.25/jquery.fancybox.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "plugins/ghost-search-1.0.0/ghost-search.min.js"}}"></script>
+
+  {{! The main JavaScript file for Kaldorei }}
+  <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 </body>
 
 </html>

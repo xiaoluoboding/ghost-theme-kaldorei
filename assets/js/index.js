@@ -15,11 +15,6 @@
 
         $(".scroll-down").arctic_scroll();
 
-        $(".menu-button, .nav-cover, .nav-close").on("click", function(e) {
-            e.preventDefault();
-            $("body").toggleClass("nav-opened nav-closed");
-        });
-
         $(window).scroll(function() {
             var scrollerToTop = $('.back-top');
             var scrollerTOC = $('.widget-toc');
@@ -84,13 +79,11 @@
             // set target to anchor's "href" attribute
             // Thanks to @https://github.com/xiongchengqing fixed this bug.
             var target = document.getElementById($(this).attr('href').split('#')[1]);
-            // console.log(target);
             // scroll to each target
             $(target).velocity('scroll', {
                 duration: 500,
                 offset: -8,
                 easing: 'ease-in-out'
-                //easing: 'spring'
             });
         });
 
@@ -121,6 +114,22 @@
                 "</div></div>";
             $("[date='" + uniqueYear[i] + "']:first").before(html);
         }
+
+        // global search
+        $("#globalSearch").on("click", function () {
+            var searchIconEl = $('.search-icon')
+            if (searchIconEl.hasClass("fa-search")) {
+                searchIconEl.removeClass("fa-search").addClass('fa-times')
+            } else {
+                searchIconEl.removeClass('fa-times').addClass("fa-search");
+            }
+            $("body").toggleClass("is-search");
+            $(".site-search").toggleClass("is-hidden")
+        });
+        var ghostSearch = new GhostSearch({
+            key: searchSettings.key,
+            host: searchSettings.host
+        })
     });
 
     // Arctic Scroll by Paul Adam Davis
@@ -175,9 +184,9 @@ function scrollToTop(name, speed) {
     }
 }
 
-function dynamicInjectHljsStyle() {
-    const $link = $('<link rel="stylesheet">')
-    console.log($link)
-    const href = `/assets/plugins/prism-latest/styles/okaidia.css`
-    $link.appendTo('head').attr({ href })
-}
+// function dynamicInjectHljsStyle() {
+//     const $link = $('<link rel="stylesheet">')
+//     console.log($link)
+//     const href = `/assets/plugins/prism-latest/styles/okaidia.css`
+//     $link.appendTo('head').attr({ href })
+// }

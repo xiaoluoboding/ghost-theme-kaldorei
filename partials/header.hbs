@@ -1,0 +1,14 @@
+<header class="main-header">
+  <nav class="container main-nav clearfix">
+    <div class="main-nav__brand">
+      <a class="blog-title" href="{{@site.url}}">{{@site.title}}</a>
+    </div>
+    {{#if @site.navigation}}
+      {{navigation}}
+    {{/if}}
+    {{!-- Toggle Search --}}
+    <a id="globalSearch" href="#" class="search-toggle">
+      <i class="search-icon fa fa-lg fa-search"></i>
+    </a>
+  </nav>
+</header>
