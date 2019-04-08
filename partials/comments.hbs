@@ -2,7 +2,9 @@
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_identifier = '{{comment_id}}'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
-
+        if (typeof disqus_shortname === "undefined") {
+            disqus_shortname = '';
+        }
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
             var dsq = document.createElement('script');

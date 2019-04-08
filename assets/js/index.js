@@ -101,7 +101,7 @@
         });
 
         // add archives year
-        var yearArray = new Array();
+        var yearArray = [];
         $(".archives-item").each(function() {
             var archivesYear = $(this).attr("date");
             yearArray.push(archivesYear);
@@ -114,22 +114,28 @@
                 "</div></div>";
             $("[date='" + uniqueYear[i] + "']:first").before(html);
         }
-
+        
         // global search
-        $("#globalSearch").on("click", function () {
-            var searchIconEl = $('.search-icon')
-            if (searchIconEl.hasClass("fa-search")) {
-                searchIconEl.removeClass("fa-search").addClass('fa-times')
-            } else {
-                searchIconEl.removeClass('fa-times').addClass("fa-search");
-            }
-            $("body").toggleClass("is-search");
-            $(".site-search").toggleClass("is-hidden")
-        });
-        var ghostSearch = new GhostSearch({
-            key: searchSettings.key,
-            host: searchSettings.host
-        })
+        if (typeof searchSettings === "undefined") {
+            window.searchSettings = {};
+        }
+        if (searchSettings && searchSettings.key && searchSettings.host) {
+            $(".search-toggle").css("display", "block");
+            $("#globalSearch").on("click", function () {
+                var searchIconEl = $('.search-icon')
+                if (searchIconEl.hasClass("fa-search")) {
+                    searchIconEl.removeClass("fa-search").addClass('fa-times')
+                } else {
+                    searchIconEl.removeClass('fa-times').addClass("fa-search");
+                }
+                $("body").toggleClass("is-search");
+                $(".site-search").toggleClass("is-hidden")
+            });
+            var ghostSearch = new GhostSearch({
+                key: searchSettings.key,
+                host: searchSettings.host
+            })
+        }
     });
 
     // Arctic Scroll by Paul Adam Davis

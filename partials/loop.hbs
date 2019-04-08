@@ -33,10 +33,12 @@
                 <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="ture"}}</time>
                 {{!-- <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">({{date format="YYYY-MM-DD"}})</time> --}}
             </span>
+            {{#if tags}}
             <span class="post-meta-item post-meta-tags">
                 <i class="fa fa-tag"></i>
                 {{tags}}
             </span>
+            {{/if}}
             <span class="post-meta-item post-meta-reading_time">
                 <i class="fa fa-clock-o"></i>
                 {{reading_time}}

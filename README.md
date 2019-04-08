@@ -75,7 +75,7 @@ Kaldorei提供了简单的归档功能，使用ghost的api来生成归档，预�
 > * Navigation > 创建一个`归档`导航，地址为：http://your_blog_url/`archives`;
 > * 去博客首页看看你的归档吧，Have fun.
 
-### 🌈 配置喜欢的代码主题风格
+### 🌈 更换代码主题
 Kaldorei使用[highlight.js](https://github.com/isagalaev/highlight.js)实现代码高亮，默认使用的主题风格为 `monokai-sublime`
 
 > 方法：ghost后台 > `Code Injection` > `Blog Header`
@@ -87,7 +87,7 @@ Kaldorei使用[highlight.js](https://github.com/isagalaev/highlight.js)实现代
 
 [完整主题列表](https://highlightjs.org/static/demo/)
 
-### 🔍配置搜索功能
+### 🔍搜索功能
 
 搜索引擎默认支持按博文标题搜索，此功能需要安装的 `ghost` 版本 >= `2.10.x`。
 
