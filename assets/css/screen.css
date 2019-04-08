@@ -315,7 +315,7 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     z-index: 10;
     min-height: 100%;
-    background: #F5F7F9;
+    background: var(--background-color);
     -webkit-transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
 }
@@ -380,7 +380,7 @@ margin on the iframe, cause it breaks stuff. */
     flex: 1;
 }
 .main-nav__menu > ul {
-    margin: 0 20px;
+    margin: 0 1.25em;
     padding: 0;
     height: 80px;
 }
@@ -494,7 +494,7 @@ margin on the iframe, cause it breaks stuff. */
     margin: 2rem 0;
     font-size: 1.4rem;
     line-height: 2.2rem;
-    color: #9EABB3;
+    color: var(--post-meta);
 }
 .author-thumb {
     width: 24px;
@@ -504,11 +504,11 @@ margin on the iframe, cause it breaks stuff. */
     border-radius: 100%;
 }
 .post-meta a {
-    color: #9EABB3;
+    color: var(--post-meta);
     text-decoration: none;
 }
 .post-meta a:hover {
-    color: var(--primary-color-hover);
+    color: var(--primary-light-hover);
     text-decoration: none;
 }
 .user-meta {
@@ -528,7 +528,7 @@ margin on the iframe, cause it breaks stuff. */
     border-left: none;
 }
 .post-meta-tags a {
-    color: var(--primary-color-hover);
+    color: var(--primary-light-hover);
     background-color: rgba(1, 126, 102, .08);
     display: inline-block;
     margin: 0 5px;
@@ -539,7 +539,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 .post-meta-tags a:hover {
     color: #fff;
-    background-color: var(--primary-color-hover);
+    background-color: var(--primary-light-hover);
 }
 .post-date {
     display: inline-block;
@@ -641,7 +641,7 @@ margin on the iframe, cause it breaks stuff. */
     color: var(--primary-color);
 }
 .post-content a:hover {
-    color: var(--darkgreen);
+    color: var(--primary-dark-hover);
 }
 .post-content h1 {
     margin: 1em 0 .75em;
@@ -705,7 +705,7 @@ margin on the iframe, cause it breaks stuff. */
     color: var(--primary-color);
 }
 .author-meta a:hover {
-    color: var(--darkgreen);
+    color: var(--primary-dark-hover);
 }
 
 /* author-info after post content */
@@ -732,7 +732,7 @@ margin on the iframe, cause it breaks stuff. */
     color: var(--primary-color);
 }
 .author-info .author-info-content .author-info-bio-placeholder a:hover {
-    color: var(--darkgreen);
+    color: var(--primary-dark-hover);
 }
 .author-info-bio {
     font-size: 1.4rem;
@@ -1098,11 +1098,11 @@ margin on the iframe, cause it breaks stuff. */
     max-width: 750px;
     margin: 0 auto 2em;
     font-size: 1.3rem;
-    color: #9EABB3;
+    color: var(--post-meta);
     text-align: center;
 }
 .pagination a {
-    color: #9EABB3;
+    color: var(--post-meta);
     transition: all 0.2s ease;
     text-decoration: none !important;
 }
@@ -1239,7 +1239,7 @@ margin on the iframe, cause it breaks stuff. */
 .widget-title-meta {
     display: inline-block;
     height: 30px;
-    border-bottom: 2px solid var(--primary-color-hover);
+    border-bottom: 2px solid var(--primary-light-hover);
     margin-bottom: -2px;
 }
 
@@ -1250,7 +1250,7 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 14px;
 }
 .tag-cloud-content a {
-    color: var(--primary-color-hover);
+    color: var(--primary-light-hover);
     background-color: rgba(1, 126, 102, .08);
     display: inline-block;
     margin: 0 5px 5px 0;
@@ -1260,7 +1260,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 .tag-cloud-content a:hover {
     color: #fff;
-    background-color: var(--primary-color-hover);
+    background-color: var(--primary-light-hover);
 }
 .tag-meta.no-cover {
     background: var(--font-color);
@@ -1294,7 +1294,7 @@ margin on the iframe, cause it breaks stuff. */
     color: var(--primary-color);
 }
 .post-nav a:hover {
-    color: var(--darkgreen);
+    color: var(--primary-dark-hover);
 }
 
 /* ==========================================================================
@@ -1361,7 +1361,7 @@ margin on the iframe, cause it breaks stuff. */
     color: var(--primary-color);
 }
 .toc a:hover {
-    color: var(--darkgreen);
+    color: var(--primary-dark-hover);
 }
 .toc > li.active > a, .toc > li li.active > a {
     color: var(--font-color);
@@ -1422,7 +1422,7 @@ margin on the iframe, cause it breaks stuff. */
     color: var(--primary-color);
 }
 .widget-profile-desc a:hover {
-    color: var(--darkgreen);
+    color: var(--primary-dark-hover);
 }
 .widget-profile hr {
     margin: 20px;
@@ -1607,7 +1607,7 @@ margin on the iframe, cause it breaks stuff. */
     text-align: center;
 }
 .site-stat-item-name:hover {
-    color: var(--darkgreen);
+    color: var(--primary-dark-hover);
 }
 
 /* ==========================================================================
@@ -1732,6 +1732,14 @@ margin on the iframe, cause it breaks stuff. */
         padding: 8px 20px;
         text-align: center;
     }
+    .search-toggle {
+        display: none;
+        padding: 1.25em 1em 1.25em .5em !important;
+    }
+    .site-search {
+        top: 64px !important;
+        padding: 24px 64px !important;
+    }
 }
 
 /* ==========================================================================
@@ -1766,6 +1774,11 @@ margin on the iframe, cause it breaks stuff. */
 
     .main-nav a {
         padding: 1.5em .4em;
+    }
+
+    .main-nav a.search-toggle {
+        display: none;
+        padding: 1.75em 1em 1.75em .5em;
     }
 }
 
@@ -2063,6 +2076,9 @@ margin on the iframe, cause it breaks stuff. */
         padding-left: 12px;
         margin-left: -16px !important;
     }
+    .search-toggle {
+        display: none !important;
+    }
 }
 
 /* ==========================================================================
@@ -2357,8 +2373,9 @@ body.is-search {
     overflow: hidden;
 }
 
-.search-toggle {
-    padding: 28px 0 !important;
+.main-nav a.search-toggle {
+    display: none;
+    padding: 1.75em 1em 1.75em .5em;
 }
 
 .search-toggle:focus {
@@ -2400,7 +2417,7 @@ body.is-search {
 
 .site-search .search-form {
     position: relative;
-    max-width: 1152px;
+    width: 100%;
     margin: 40px auto 0;
 }
 
@@ -2442,8 +2459,7 @@ body.is-search {
 }
 
 .site-search .search-results {
-    max-width: 1152px;
-    width: 66%;
+    width: 100%;
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
 }
@@ -2458,7 +2474,7 @@ body.is-search {
 }
 
 .site-search .search-results a:hover {
-    color: var(--darkgreen);
+    color: var(--primary-dark-hover);
 }
 
 /* ==========================================================================
