@@ -37,7 +37,7 @@ A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
 - [x] 博客搜索
 
-- [ ] 更改配色
+- [x] 更改配色与字体
 
 ## How to use
 
@@ -55,7 +55,7 @@ Kaldorei使用了ghost的api来做统计，所以需要开启ghost的实验室�
 ### 🌄 图片幻灯片
 Kaldorei集成了fancyBox，支持图片暗箱效果、幻灯片轮播、全屏预览、缩略图预览等功能。预览&使用方法[图片预览](http://xlbd.me/how-to-use-fancybox-in-ghost-blog/)
 
-### 开启Disqus
+### 💬 开启Disqus
 Kaldorei支持Disqus讨论插件，只需在后台`代码注入`处添加一段代码。
 
 > 方法：ghost后台 > `Code Injection` > `Blog Header`
@@ -66,7 +66,7 @@ Kaldorei支持Disqus讨论插件，只需在后台`代码注入`处添加一段�
 </script>
 ```
 
-### 🗂开启归档功能
+### 🗂 开启归档功能
 Kaldorei提供了简单的归档功能，使用ghost的api来生成归档，预览[博客归档](http://xlbd.me/archives)。
 
 > 方法：ghost后台:
@@ -87,7 +87,7 @@ Kaldorei使用[highlight.js](https://github.com/isagalaev/highlight.js)实现代
 
 [完整主题列表](https://highlightjs.org/static/demo/)
 
-### 🔍搜索功能
+### 🔍 搜索功能
 
 搜索引擎默认支持按博文标题搜索，此功能需要安装的 `ghost` 版本 >= `2.10.x`。
 
