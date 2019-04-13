@@ -113,6 +113,26 @@ Kaldorei使用[highlight.js](https://github.com/isagalaev/highlight.js)实现代
 </script>
 ```
 
+### 🌈 自定义配色与字体
+
+`kaldorei` v2.1.0 版本开始，支持了用户可以自定义站点的配色与字体。
+
+![banner_colors](assets/img/banner_colors.png)
+
+> 方法：ghost后台 > `Code Injection` > `Blog Header`
+
+```html
+<style>
+:root {
+  --primary-color: #4af;
+  --primary-light-hover: #4cf;
+  --primary-dark-hover: #49f;
+}
+</style>
+```
+
+完整可替换变量，参见[这里](https://github.com/xiaoluoboding/ghost-theme-kaldorei/blob/master/assets/css/variables.css)
+
 ## About ghost helpers
 
 Kaldorei用两种方法实现了标签云，方法参见[我的博客](http://xlbd.me/how-to-add-the-tag-cloud-into-ghost-blog/)。
