@@ -2456,6 +2456,7 @@ body.is-search {
 .site-search .search-list {
     display: flex;
     justify-content: center;
+    margin: 1px auto;
 }
 
 .site-search .search-results {

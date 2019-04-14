@@ -121,15 +121,15 @@
         }
         if (searchSettings && searchSettings.key && searchSettings.host) {
             $(".search-toggle").css("display", "block");
-            $("#globalSearch").on("click", function () {
-                var searchIconEl = $('.search-icon')
+            $("#globalSearch").on("touchdown click", function () {
+                var searchIconEl = $('.search-icon');
                 if (searchIconEl.hasClass("fa-search")) {
-                    searchIconEl.removeClass("fa-search").addClass('fa-times')
+                    searchIconEl.removeClass("fa-search").addClass('fa-times');
                 } else {
                     searchIconEl.removeClass('fa-times').addClass("fa-search");
                 }
                 $("body").toggleClass("is-search");
-                $(".site-search").toggleClass("is-hidden")
+                $(".site-search").toggleClass("is-hidden");
             });
             var ghostSearch = new GhostSearch({
                 key: searchSettings.key,
