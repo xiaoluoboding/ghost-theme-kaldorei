@@ -2457,9 +2457,10 @@ body.is-search {
 .site-search .search-list {
     display: flex;
     justify-content: center;
+    overflow-y: auto;
     margin: 1px auto;
     max-height: 330px;
-    overflow-y: auto;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .site-search .search-results {
@@ -2474,7 +2475,10 @@ body.is-search {
     background: #fff;
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+}
+
+.site-search .search-results a + a {
+    border-top: 1px solid var(--border-color);
 }
 
 .site-search .search-results a:hover {
