@@ -61,6 +61,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
+    width: 100%;
     font-family: var(--sans-serif);
     font-size: 1.6em;
     line-height: 1.6em;
