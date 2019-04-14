@@ -2370,6 +2370,7 @@ code.hljs {
   ========================================================================== */
 
 body.is-search {
+    position: fixed;
     overflow: hidden;
 }
 
@@ -2457,12 +2458,12 @@ body.is-search {
     display: flex;
     justify-content: center;
     margin: 1px auto;
+    max-height: 330px;
+    overflow-y: auto;
 }
 
 .site-search .search-results {
     width: 100%;
-    border-left: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
 }
 
 .site-search .search-results a {
@@ -2471,6 +2472,8 @@ body.is-search {
     padding: 20px;
     color: var(--primary-color);
     background: #fff;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
 
