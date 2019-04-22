@@ -63,7 +63,7 @@ body {
     max-height: 100%;
     width: 100%;
     font-family: var(--sans-serif);
-    font-size: 1.6em;
+    font-size: 1.6em !important;
     line-height: 1.6em;
     font-weight: 400;
     font-style: normal;
