@@ -32,6 +32,7 @@
     24. Fancybox Setting
     25. Koenig Styles in Ghost 2.x
     26. Search
+    27. Bookmark card
 
 */
 
@@ -81,9 +82,7 @@ body {
     color: #FFF;
 }
 h1, h2, h3, h4, h5, h6 {
-    -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    
     color: var(--font-color);
     line-height: 1.2em;
     margin: 1.6em 0 0.8em 0;
@@ -618,26 +617,6 @@ margin on the iframe, cause it breaks stuff. */
     display: none;
 }
 
-/* Keep images centered, and allow images wider than the main
-   text column to break out. */
-
-.post-content img {
-    display: block;
-    max-width: 768px;
-    height: auto;
-    padding: 0.6em 0;
-    /* Centers an image by (1) pushing its left edge to the
-       center of its container and (2) shifting the entire image
-       in the opposite direction by half its own width.
-       Works for images that are larger than their containers. */
-    position: relative;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    /* for Safari and iOS */
-    -ms-transform: translateX(-50%);
-    /* for IE9 */
-    transform: translateX(-50%);
-}
 .post-content a {
     color: var(--primary-color);
 }
@@ -1769,8 +1748,8 @@ margin on the iframe, cause it breaks stuff. */
         width: 300px;
     }
 
-    .post-content img {
-        max-width: 640px;
+    .post-content .kg-image-card img {
+        max-width: 640px !important;
     }
 
     .main-nav a {
@@ -2338,12 +2317,35 @@ code.hljs {
   25. Koenig Styles in Ghost 2.x
   ========================================================================== */
 
-.post-content .kg-width-wide img {
+.post-content .kg-image-card {
+    margin: .8em 0 2em;
+}
+/* Keep images centered, and allow images wider than the main
+text column to break out. */
+
+.post-content .kg-image-card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    /* Centers an image by (1) pushing its left edge to the
+       center of its container and (2) shifting the entire image
+       in the opposite direction by half its own width.
+       Works for images that are larger than their containers. */
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    /* for Safari and iOS */
+    -ms-transform: translateX(-50%);
+    /* for IE9 */
+    transform: translateX(-50%);
+
+}
+.post-content .kg-image-card.kg-width-wide img {
     max-width: 768px;
 }
 
-.post-content .kg-width-full img {
-    max-width: 100vw;
+.post-content .kg-image-card.kg-width-full img {
+    max-width: 768px;
 }
 
 .kg-gallery-container {
@@ -2484,6 +2486,105 @@ body.is-search {
 
 .site-search .search-results a:hover {
     color: var(--primary-dark-hover);
+}
+
+/* ==========================================================================
+  27. Bookmark card
+  ========================================================================== */
+
+.kg-bookmark-card {
+    width: 100%;
+    position: relative;
+    margin: 0 0 1.5em;
+    border: 1px solid #e5eff5;
+    border-radius: 5px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .06),
+    0 2px 6px rgba(0, 0, 0, .03);
+    overflow: hidden;
+}
+
+.kg-bookmark-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    color: currentColor;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.kg-bookmark-container:hover {
+    text-decoration: none;
+}
+
+.kg-bookmark-content {
+    flex-basis: 0;
+    flex-grow: 999;
+    padding: 20px;
+    order: 1;
+    color: var(--font-color);
+}
+
+.kg-bookmark-title {
+    font-weight: 600;
+}
+
+.kg-bookmark-metadata,
+.kg-bookmark-description {
+    margin-top: .5em;
+}
+
+.kg-bookmark-metadata {
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kg-bookmark-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.kg-bookmark-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: text-bottom;
+    margin-right: .5em;
+    margin-bottom: .05em;
+}
+
+.kg-bookmark-thumbnail {
+    display: flex;
+    flex-basis: 24rem;
+    flex-grow: 1;
+}
+
+.kg-bookmark-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    object-fit: cover;
+}
+
+.kg-bookmark-author {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.kg-bookmark-publisher::before {
+    content: "•";
+    margin: 0 .5em;
+}
+
+.kg-bookmark-card figcaption {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+    border-top: 1px solid #e5eff5;
 }
 
 /* ==========================================================================
