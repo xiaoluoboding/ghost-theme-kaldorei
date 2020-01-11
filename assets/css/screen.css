@@ -2200,14 +2200,51 @@ pre {
     overflow: hidden;
 }
 code.has-numbering {
+    display: block;
     margin-left: 32px;
     padding: 0.5em;
     white-space: pre;
     word-wrap: normal;
-    display: block;
 }
 code.hljs {
     padding: 1.2em 2em;
+}
+
+pre .line-numbering {
+    position: absolute;
+    top: 0;
+    width: 3.5rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+    padding: 1.25rem 0;
+    line-height: 1.4;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+pre .line-numbering.light {
+    color: currentColor;
+}
+
+pre code.has-numbering::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 3.5rem;
+    height: 100%;
+    border-radius: 6px 0 0 6px;
+    border-right: 1px solid rgba(0, 0, 0, 0.66);
+    background-color: var(--linenumber-dark-bg);
+}
+
+pre code.has-numbering.light::after {
+    background-color: var(--linenumber-light-bg);
+    border-right: currentColor;
 }
 
 /* ==========================================================================

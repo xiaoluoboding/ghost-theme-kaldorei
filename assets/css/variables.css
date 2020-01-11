@@ -14,6 +14,8 @@
   --midgrey: #738a94;
   --lightgrey: #c5d2d9;
   --whitegrey: #e5eff5;
+  --linenumber-dark-bg: #282c34;
+  --linenumber-light-bg: #c5d2d9;
 
   /* font-family */
   --sans-serif: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

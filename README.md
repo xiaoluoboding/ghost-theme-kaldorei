@@ -1,14 +1,16 @@
 # Kaldorei
+
 A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 
-![Ghost 2.x](https://img.shields.io/badge/Ghost-v2.x-blue.svg?style=flat-square)
-![Kaldorei 2.1.0](https://img.shields.io/badge/Kaldorei-v2.1.0-009a61.svg?style=flat-square)
+![Ghost 3.x](https://img.shields.io/badge/Ghost-v3.x-blue.svg?style=flat-square)
+![Kaldorei 3.0.0](https://img.shields.io/badge/Kaldorei-v3.0.0-009a61.svg?style=flat-square)
 
-# Preview
+## Preview
 
 ![img](assets/img/preview.png)
 
 ## Plan to do
+
 - [x] 主题基调定为小清新绿色
 
 - [x] 文章样式色调为墨蓝色
@@ -48,14 +50,17 @@ Ghost2.x版本中支持了语言的切换，Kaldorei 同时也支持了中/英�
 > 方法：ghost后台 > `General` > `Publication Language` 改为 `zh` 即可
 
 ### 🏷️ 标签统计
+
 Kaldorei使用了ghost的api来做统计，所以需要开启ghost的实验室中的`Public API`功能。
 
 > 方法：ghost后台 > `labs` > `Enable Beta Features` > `勾选 Public API`
 
 ### 🌄 图片幻灯片
+
 Kaldorei集成了fancyBox，支持图片暗箱效果、幻灯片轮播、全屏预览、缩略图预览等功能。预览&使用方法[图片预览](http://xlbd.me/how-to-use-fancybox-in-ghost-blog/)
 
 ### 💬 开启Disqus
+
 Kaldorei支持Disqus讨论插件，只需在后台`代码注入`处添加一段代码。
 
 > 方法：ghost后台 > `Code Injection` > `Blog Header`
@@ -67,6 +72,7 @@ Kaldorei支持Disqus讨论插件，只需在后台`代码注入`处添加一段�
 ```
 
 ### 🗂 开启归档功能
+
 Kaldorei提供了简单的归档功能，使用ghost的api来生成归档，预览[博客归档](http://xlbd.me/archives)。
 
 > 方法：ghost后台:
@@ -76,6 +82,7 @@ Kaldorei提供了简单的归档功能，使用ghost的api来生成归档，预�
 > * 去博客首页看看你的归档吧，Have fun.
 
 ### 🎨 更换代码主题
+
 Kaldorei使用[highlight.js](https://github.com/isagalaev/highlight.js)实现代码高亮，默认使用的主题风格为 `monokai-sublime`
 
 > 方法：ghost后台 > `Code Injection` > `Blog Header`
@@ -86,6 +93,34 @@ Kaldorei使用[highlight.js](https://github.com/isagalaev/highlight.js)实现代
 ```
 
 [完整主题列表](https://highlightjs.org/static/demo/)
+
+### 🔢 开启显示代码行号
+
+> 主题版本 3.x 新增
+
+Kaldorei 实现了配置的方式开启显示代码行号，默认是关闭的，支持 `dark` / `light` 两种模式
+
+> 方法：ghost后台 > `Code Injection` > `Blog Header`
+
+```js
+<script>
+  var hljsSettings = {
+    lineNumber: true,  // 可选值 flase / true, 默认为 false
+    mode: 'light'  // 可选值 dark / light，默认为 'dark'
+  };
+</script>
+```
+
+不仅行号可以配置，行号的背景色也可以自定义，默认行号背景色如下：
+
+```html
+<style>
+:root {
+  --linenumber-dark-bg: #282c34;
+  --linenumber-light-bg: #c5d2d9;
+}
+</style>
+```
 
 ### 🔍 搜索功能
 

@@ -31,21 +31,29 @@
             scrollToTop();
         });
 
+        // hljs settings
+        if (typeof hljsSettings === "undefined") {
+            window.hljsSettings = {};
+        }
+
         // highlight config
         hljs.initHighlightingOnLoad();
         // dynamicInjectHljsStyle()
 
         // numbering for pre>code blocks
-        // $(function() {
-        //     $('pre code').each(function() {
-        //         var lines = $(this).text().split('\n').length - 1;
-        //         var $numbering = $('<ul/>').addClass('pre-numbering');
-        //         $(this).addClass('has-numbering').parent().append($numbering);
-        //         for (var i = 1; i <= lines; i++) {
-        //             $numbering.append($('<li/>').text(i));
-        //         }
-        //     });
-        // });
+        if (hljsSettings.lineNumber) {
+            $(function () {
+                $('pre code').each(function () {
+                    var lines = $(this).text().split('\n').length - 1;
+                    var mode = hljsSettings.mode || 'dark'
+                    var $numbering = $('<div/>').addClass('line-numbering').addClass(mode);
+                    $(this).addClass('has-numbering').addClass(mode).parent().append($numbering);
+                    for (var i = 1; i <= lines; i++) {
+                        $numbering.append($('<span/>').text(i));
+                    }
+                });
+            });
+        }
 
         // toc config
         var toc = $('.toc');
