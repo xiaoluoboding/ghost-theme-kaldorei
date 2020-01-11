@@ -92,6 +92,9 @@
 
         // fancybox 3.1.25 config
         $('.post-content a:has(img)').addClass('fancybox');
+        // if use bookmark remove the fancybox class
+        $('.post-content a.kg-bookmark-container').removeClass('fancybox');
+
         $(".fancybox").attr('data-fancybox', 'images').fancybox({
             selector       : '[data-fancybox="images"]',
             loop           : true,

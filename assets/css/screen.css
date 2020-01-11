@@ -616,7 +616,20 @@ margin on the iframe, cause it breaks stuff. */
 .post-template .post:after {
     display: none;
 }
+/* Keep images centered, and allow images wider than the main
+   text column to break out. */
 
+.post-content img:not(.kg-bookmark-icon):not(.kg-bookmark-thumbnail) {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    left: 50%;
+    padding: .8em 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
 .post-content a {
     color: var(--primary-color);
 }
