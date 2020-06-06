@@ -5,65 +5,73 @@ A Simple And Elegant Ghost Theme Derive From Default Theme Casper
 ![Ghost 3.x](https://img.shields.io/badge/Ghost-v3.x-blue.svg?style=flat-square)
 ![Kaldorei 3.0.0](https://img.shields.io/badge/Kaldorei-v3.0.0-009a61.svg?style=flat-square)
 
+English | [简体中文](README_zh.md)
+
 ## Preview
 
 ![img](assets/img/preview.png)
 
-## Plan to do
+## Features
 
-- [x] 主题基调定为小清新绿色
+- [x] Blog main theme is set to be fresh green
 
-- [x] 文章样式色调为墨蓝色
+- [x] The post's font color is ink blue
 
-- [x] 返回顶部
+- [x] Back To Top
 
-- [x] 代码高亮
+- [x] Code Highlight
 
-- [x] 侧边栏 - 标签云
+- [x] Side Bar
 
-- [x] 侧边栏 - 文章目录
+    - [x] Tag Cloud
 
-- [x] 侧边栏 - 站点信息
+    - [x] Table of Content
+    
+    - [x] Site Info
+    
+    - [x] Author Info
+    
+- [x] Post Page
+    
+    - [x] Author Info
 
-- [x] 侧边栏 - 作者信息
+- [x] Loading Posts Animation
 
-- [x] 文章栏 - 作者信息
+- [x] Responsive Design
 
-- [x] 首页加载文章动画
+- [x] Archives
 
-- [x] 响应式设计
+- [x] Image LightBox
 
-- [x] 归档功能
+- [x] Blog Global Search
 
-- [x] 图片暗箱效果
+- [x] Color & Fonts
 
-- [x] 博客搜索
+- [ ] Dark mode
 
-- [x] 更改配色与字体
+## Config Reference
 
-## How to use
+### 🌐 Language ^2.x
 
-### 🌐 切换语言
+Ghost2.x version supports set the language of your site, `Kaldorei` also supports Chinese/English switching, the default value is `en`.
 
-Ghost2.x版本中支持了语言的切换，Kaldorei 同时也支持了中/英文的切换，默认为英文 `en`。
+> Configure：ghost admin > `General` > `Publication Language` Enter `zh`
 
-> 方法：ghost后台 > `General` > `Publication Language` 改为 `zh` 即可
+### 🏷️ Tag Statistics ^2.x
 
-### 🏷️ 标签统计
+In Ghost2.x version, Kaldorei uses the ghost api for statistics. so you need to enable the `Public API` function in the Ghost Labs.
 
-Kaldorei使用了ghost的api来做统计，所以需要开启ghost的实验室中的`Public API`功能。
+> Configure：ghost admin > `Labs` > `Enable Beta Features` > `Checked Public API`
 
-> 方法：ghost后台 > `labs` > `Enable Beta Features` > `勾选 Public API`
+### 🌄 Lightbox ^2.x
 
-### 🌄 图片幻灯片
+Kaldorei integrates fancyBox 3，supports picture lightbox effect, slide show carousel, full screen preview, thumbnail preview and other fancy features. Preview & usage [Preview_Usage](http://blog.xlbd.me/how-to-use-fancybox-in-ghost-blog/)
 
-Kaldorei集成了fancyBox，支持图片暗箱效果、幻灯片轮播、全屏预览、缩略图预览等功能。预览&使用方法[图片预览](http://xlbd.me/how-to-use-fancybox-in-ghost-blog/)
+### 💬 Disqus ^2.x
 
-### 💬 开启Disqus
+Kaldorei supports Disqus plugins，only need a short code snippet in the ghost admin `code injection`.
 
-Kaldorei支持Disqus讨论插件，只需在后台`代码注入`处添加一段代码。
-
-> 方法：ghost后台 > `Code Injection` > `Blog Header`
+> Configure：ghost admin > `Code Injection` > `Blog Header`
 
 ```js
 <script>
@@ -71,47 +79,56 @@ Kaldorei支持Disqus讨论插件，只需在后台`代码注入`处添加一段�
 </script>
 ```
 
-### 🗂 开启归档功能
+### 🗂 Archives ^2.x
 
-Kaldorei提供了简单的归档功能，使用ghost的api来生成归档，预览[博客归档](http://xlbd.me/archives)。
+Kaldorei provides simple archives features, using ghost api to generate site archives. Preview[Blog Archives](http://blog.xlbd.me/archives)。
 
-> 方法：ghost后台:
-> * New Post > 标题输入`Archives`，这时文章的地址默认为`archives`;
-> * Post Settings > 勾选`Turn this post into a page`，然后Publish;
-> * Navigation > 创建一个`归档`导航，地址为：http://your_blog_url/`archives`;
-> * 去博客首页看看你的归档吧，Have fun.
+> Ghost 3.x Configure：ghost admin
 
-### 🎨 更换代码主题
+1. Pages -> New Page -> Enter the title "Archives", At this time, the page url is `archives` by default.
+2. Design > Create an archive navigation，URL：http://your_blog_url/archives;
+3. Done! Go to your site find your archives page. Have fun.
 
-Kaldorei使用[highlight.js](https://github.com/isagalaev/highlight.js)实现代码高亮，默认使用的主题风格为 `monokai-sublime`
+> Ghost 2.x Configure：ghost admin
 
-> 方法：ghost后台 > `Code Injection` > `Blog Header`
+1. New Post > Enter the title "Archives", At this time, the page url is `archives` by default.
+2. Post Settings > 勾选Turn this post into a page，然后Publish;
+3. Navigation > Create an archive navigation，URL：http://your_blog_url/archives;
+4. Done! Go to your site find your archives page. Have fun.
+
+### 🎨 Code Highlighting Theme ^2.x
+
+Kaldorei uses [highlight.js](https://github.com/isagalaev/highlight.js) to achieve code highlight，the default theme is: `monokai-sublime`
+
+> Configuration：ghost admin > `Code Injection` > `Blog Header`
 
 ```html
 <!-- use solarized-light style -->
 <link rel="stylesheet" type="text/css" href="/assets/plugins/highlight-latest/styles/solarized-light.css" />
 ```
 
-[完整主题列表](https://highlightjs.org/static/demo/)
+[Fully Themes List](https://highlightjs.org/static/demo/)
 
-### 🔢 开启显示代码行号
+### 🔢 Show code line number ^3.x
 
-> 主题版本 3.x 新增
+> New feature in Version 3.x
 
-Kaldorei 实现了配置的方式开启显示代码行号，默认是关闭的，支持 `dark` / `light` 两种模式
+Kaldorei supports config the line number of code snippets，show line numbers to the left of each code blocks, it's closed by default，also support `dark` / `light` mode
 
-> 方法：ghost后台 > `Code Injection` > `Blog Header`
+> Configuration：ghost admin > `Code Injection` > `Blog Header`
 
 ```js
 <script>
   var hljsSettings = {
-    lineNumber: true,  // 可选值 flase / true, 默认为 false
-    mode: 'light'  // 可选值 dark / light，默认为 'dark'
+    // Optional value: flase / true, default: false
+    lineNumber: true,
+    // Optional value: dark / light，default: 'dark'
+    mode: 'light'
   };
 </script>
 ```
 
-不仅行号可以配置，行号的背景色也可以自定义，默认行号背景色如下：
+Not only the line number can be configured, but also the background color of the line number can be customized. The default line number background color is as follows:
 
 ```html
 <style>
@@ -122,21 +139,21 @@ Kaldorei 实现了配置的方式开启显示代码行号，默认是关闭的�
 </style>
 ```
 
-### 🔍 搜索功能
+### 🔍 Global Search ^2.x
 
-搜索引擎默认支持按博文标题搜索，此功能需要安装的 `ghost` 版本 >= `2.10.x`。
+Search engine supports search by blog title by default，This feature need the `ghost` version >= `2.10.x`。
 
-分为两步：
+Configure by two steps：
 
-#### 1、创建自定义集成
+#### 1、Create Custom Integrations
 
-> 方法：ghost后台 > `Integrations` > `Add custom integration`
+> Configure：ghost admin > `Integrations` > `Add custom integration`
 
 ![img](assets/img/apikey.png)
 
-#### 2、配置变量
+#### 2、Configure Variables
 
-> 方法：ghost后台 > `Code Injection` > `Blog Header`
+> Configure：ghost admin > `Code Injection` > `Blog Header`
 
 ```javascript
 // 
@@ -148,13 +165,13 @@ Kaldorei 实现了配置的方式开启显示代码行号，默认是关闭的�
 </script>
 ```
 
-### 🌈 自定义配色与字体
+### 🌈 Custom Color & Fonts ^2.x
 
-`kaldorei` v2.1.0 版本开始，支持了用户可以自定义站点的配色与字体。
+Starting from `kaldorei` v2.1.0 version, users can customize the color and font of your site.
 
 ![banner_colors](assets/img/banner_colors.png)
 
-> 方法：ghost后台 > `Code Injection` > `Blog Header`
+> Configure：ghost admin > `Code Injection` > `Blog Header`
 
 ```html
 <style>
@@ -166,13 +183,15 @@ Kaldorei 实现了配置的方式开启显示代码行号，默认是关闭的�
 </style>
 ```
 
-完整可替换变量，参见[这里](https://github.com/xiaoluoboding/ghost-theme-kaldorei/blob/master/assets/css/variables.css)
+Fully replaceable [variables](https://github.com/xiaoluoboding/ghost-theme-kaldorei/blob/master/assets/css/variables.css)
 
-## About ghost helpers
+### 🔖 Bookmark card ^3.x
 
-Kaldorei用两种方法实现了标签云，方法参见[我的博客](http://xlbd.me/how-to-add-the-tag-cloud-into-ghost-blog/)。
+Starting from `Ghost` v3.x version, It provides a new bookmark card feature, it can show the page title、excerpt、author、publisher and even a preview image. Like this:
 
-Kaldorei优化了发布文章的时间展示，并汉化为中文，需要修改时间(date)助手，方法参见[我的博客](http://xlbd.me/ghost-date-i18n/)。
+![bookmark](assets/img/ghost_bookmark.jpg)
+
+`Kaldorei` supports bookmark card feature in the 3.x version, How to Configure, go to [official website](https://ghost.org/changelog/bookmark-cards/)
 
 ## Credits
 
