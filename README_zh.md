@@ -185,8 +185,6 @@ Kaldorei 实现了配置的方式开启显示代码行号，默认是关闭的�
 
 ### 🔖 书签卡片 ^3.x
 
-Starting from `Ghost` v3.x version, It provides a new bookmark card feature, it can show the page title、excerpt、author、publisher and even a preview image of a website. Like this:
-
 `Ghost` 3.x 起，提供了一个新的书签卡片功能，它可以展示一个站点的页面标题、摘要信息、作者、发布者以及一个预览缩略图。就像这样：
 
 ![bookmark](assets/img/ghost_bookmark.jpg)

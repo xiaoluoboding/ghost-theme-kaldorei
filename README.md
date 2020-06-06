@@ -1,6 +1,6 @@
 # Kaldorei
 
-A Simple And Elegant Ghost Theme Derive From Default Theme Casper
+A Simple And Elegant Ghost Theme Derive From Default Theme Casper.
 
 ![Ghost 3.x](https://img.shields.io/badge/Ghost-v3.x-blue.svg?style=flat-square)
 ![Kaldorei 3.0.0](https://img.shields.io/badge/Kaldorei-v3.0.0-009a61.svg?style=flat-square)
@@ -92,7 +92,7 @@ Kaldorei provides simple archives features, using ghost api to generate site arc
 > Ghost 2.x Configure：ghost admin
 
 1. New Post > Enter the title "Archives", At this time, the page url is `archives` by default.
-2. Post Settings > 勾选Turn this post into a page，然后Publish;
+2. Post Settings > Checked `Turn this post into a page`，Then Publish;
 3. Navigation > Create an archive navigation，URL：http://your_blog_url/archives;
 4. Done! Go to your site find your archives page. Have fun.
 
@@ -191,7 +191,7 @@ Starting from `Ghost` v3.x version, It provides a new bookmark card feature, it 
 
 ![bookmark](assets/img/ghost_bookmark.jpg)
 
-`Kaldorei` supports bookmark card feature in the 3.x version, How to Configure, go to [official website](https://ghost.org/changelog/bookmark-cards/)
+`Kaldorei` supports bookmark card feature in the 3.x version, How to Configure, Checkout [official website](https://ghost.org/changelog/bookmark-cards/)
 
 ## Credits
 
